@@ -59,6 +59,7 @@ import admin__company_reports__get from "./api/admin/company-reports/GET";
 import admin__company_reports__id__resolve__post from "./api/admin/company-reports/[id]/resolve/POST";
 import admin__activity__get from "./api/admin/activity/GET";
 import { listPublicEvents, listAdminEvents, createEvent, updateEvent, deleteEvent, approveEvent, rejectEvent, sendFeaturedEmail } from "./api/events/handlers";
+import { inclusionCourseStatus, inclusionCourseSubmit } from "./api/inclusion-course/handlers";
 import { listCompanyEvents, submitCompanyEvent, updateCompanyEvent, payCompanyEvent, confirmCompanyEventPayment, deleteCompanyEvent } from "./api/company/events/handlers";
 import company_applications__post from "./api/company-applications/POST";
 import company_reports__post from "./api/company-reports/POST";
@@ -263,6 +264,8 @@ app.post("/api/admin/members/:id/reinstate", requireAdmin, admin__members__id__r
 app.get("/api/admin/company-reports", requireAdmin, admin__company_reports__get);
 app.post("/api/admin/company-reports/:id/resolve", requireAdmin, admin__company_reports__id__resolve__post);
 app.get("/api/admin/activity", requireAdmin, admin__activity__get);
+app.get("/api/inclusion-course/status", inclusionCourseStatus);
+app.post("/api/inclusion-course/submit", inclusionCourseSubmit);
 app.get("/api/events", listPublicEvents);
 app.get("/api/admin/events", requireAdmin, listAdminEvents);
 app.post("/api/admin/events", requireAdmin, createEvent);

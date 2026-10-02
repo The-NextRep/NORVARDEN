@@ -152,6 +152,9 @@ export const verifiedCompanies = mysqlTable('verified_companies', {
   blockedAt: timestamp('blocked_at'),
   // Access granted by an admin outside Stripe (e.g. Founding partners on invoice)
   manualAccessUntil: timestamp('manual_access_until'),
+  // Last time someone at the company passed the inclusion course; the
+  // "Inclusion Certified" badge shows for 12 months after it.
+  inclusionCertifiedAt: timestamp('inclusion_certified_at'),
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow().onUpdateNow(),
 });
@@ -554,4 +557,15 @@ export const events = mysqlTable('events', {
   featuredEmailSentAt: timestamp('featured_email_sent_at'),
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow().onUpdateNow(),
+});
+
+// ─── Inclusion course ────────────────────────────────────────────────────────
+// One row per passed attempt; each employee who passes gets a certificate.
+export const inclusionCourseCompletions = mysqlTable('inclusion_course_completions', {
+  id: int('id').primaryKey().autoincrement(),
+  companyId: int('company_id').notNull().references(() => verifiedCompanies.id, { onDelete: 'cascade' }),
+  userId: varchar('user_id', { length: 36 }).notNull(),
+  participantName: varchar('participant_name', { length: 120 }).notNull(),
+  score: int('score').notNull(),
+  passedAt: timestamp('passed_at').notNull().defaultNow(),
 });

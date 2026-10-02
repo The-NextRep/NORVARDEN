@@ -9,7 +9,7 @@ import { useNavigate, Link } from 'react-router';
 import {
   Building2, Briefcase, Users, MessageSquare, CreditCard,
   Settings, ChevronRight, ArrowRight, CheckCircle,
-  AlertTriangle, Shield, PlusCircle, ExternalLink, CalendarDays,
+  AlertTriangle, Shield, PlusCircle, ExternalLink, CalendarDays, HeartHandshake,
 } from 'lucide-react';
 import { AuthGuard } from '@/components/auth/RouteGuards';
 import { useCurrentUser } from '@/lib/auth/use-current-user';
@@ -401,8 +401,14 @@ function CompanyDashboardInner() {
               <QuickLink
                 icon={Users}
                 label="Browse candidates"
-                sublabel="Search athlete, coach, and veteran profiles"
+                sublabel="Search member profiles"
                 href="/company/candidates"
+              />
+              <QuickLink
+                icon={HeartHandshake}
+                label="Inclusion course"
+                sublabel="15-minute course for your team. Pass it to earn the Inclusion Certified badge"
+                href="/inclusion-course"
               />
               <QuickLink
                 icon={CalendarDays}

@@ -35,6 +35,7 @@ export default async function handler(req: Request, res: Response) {
         orgType: verifiedCompanies.orgType,
         isStaffingAgency: verifiedCompanies.isStaffingAgency,
         skillbridgePartner: verifiedCompanies.skillbridgePartner,
+        inclusionCertifiedAt: verifiedCompanies.inclusionCertifiedAt,
         missionDiscountUnlocked: verifiedCompanies.missionDiscountUnlocked,
       })
       .from(jobPosts)

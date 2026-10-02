@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Helmet } from '@dr.pogodin/react-helmet';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { for_companies } from 'virtual:content';
 import { pricing } from 'virtual:content';
 import { ContentListContext } from '@airo/content';
-import { Shield, CheckCircle, ChevronRight, Mail, ChevronDown } from 'lucide-react';
+import { Shield, CheckCircle, ChevronRight, Mail, ChevronDown, HeartHandshake } from 'lucide-react';
 import {
   DISCOUNT_NOTE,
   MISSION_APPLIED_NOTE,
@@ -288,6 +288,34 @@ export default function ForCompaniesPage() {
                 </div>
               </ContentListContext>
             </div>
+          </div>
+        </section>
+
+        {/* ── INCLUSION COURSE ──────────────────────────────────────────── */}
+        <section className="px-6 md:px-12 lg:px-16 pt-24 max-w-7xl mx-auto" aria-label="Inclusion course">
+          <div
+            className="flex flex-col md:flex-row md:items-center gap-6 justify-between p-8 md:p-10 rounded-md"
+            style={{ background: 'hsl(var(--hero-navy-mid))', border: '1px solid hsl(var(--hero-gold) / 0.35)' }}
+          >
+            <div className="flex gap-5 items-start max-w-2xl">
+              <HeartHandshake size={34} aria-hidden="true" style={{ color: 'hsl(var(--hero-gold))', flexShrink: 0 }} />
+              <div className="flex flex-col gap-2">
+                <h2 className="font-bodoni" style={{ fontSize: 'clamp(1.5rem, 2.6vw, 2rem)', color: 'hsl(var(--hero-white))', lineHeight: 1.2 }}>
+                  Earn the Inclusion Certified badge
+                </h2>
+                <p className="font-barlow" style={{ fontSize: '16px', lineHeight: 1.7, color: 'hsl(var(--hero-ice-60))' }}>
+                  A free 15-minute course for your hiring team on etiquette, accessible interviews and accommodations.
+                  Pass the quiz and every job you post shows the badge for 12 months.
+                </p>
+              </div>
+            </div>
+            <Link
+              to="/inclusion-course"
+              className="gold-shimmer-bg font-barlow-condensed uppercase inline-flex items-center gap-2 self-start md:self-auto whitespace-nowrap"
+              style={{ fontSize: '12px', fontWeight: 600, letterSpacing: '0.24em', padding: '16px 28px', borderRadius: '6px', color: 'hsl(var(--hero-navy))' }}
+            >
+              Start the course <ChevronRight size={14} aria-hidden="true" />
+            </Link>
           </div>
         </section>
 

@@ -29,6 +29,7 @@ const ResumeBuilderPage  = lazy(() => import('./pages/resume-builder'));
 const InterviewTipsPage  = lazy(() => import('./pages/interview-tips'));
 const ResourcesPage      = lazy(() => import('./pages/resources'));
 const AboutPage          = lazy(() => import('./pages/about'));
+const InclusionCoursePage = lazy(() => import('./pages/inclusion-course'));
 const EventsPage         = lazy(() => import('./pages/events'));
 const AdminEventsPage    = lazy(() => import('./pages/admin/events'));
 const CompanyEventsPage  = lazy(() => import('./pages/company/events'));
@@ -54,6 +55,7 @@ export type Path =
   | '/jobs'
   | '/resources'
   | '/about'
+  | '/inclusion-course'
   | '/events'
   | '/admin/events'
   | '/company/events'
@@ -104,6 +106,7 @@ export const routes: RouteObject[] = [
   { path: '/interview-tips', element: <InterviewTipsPage /> },
   { path: '/resources', element: <ResourcesPage /> },
   { path: '/about', element: <AboutPage /> },
+  { path: '/inclusion-course', element: <InclusionCoursePage /> },
   { path: '/events', element: <EventsPage /> },
   { path: '/admin/events', element: <AdminEventsPage /> },
   { path: '/company/events', element: <CompanyEventsPage /> },

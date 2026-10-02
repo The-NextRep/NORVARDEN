@@ -5,6 +5,7 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import { Search, MapPin, X, Shield, ChevronRight, Building2, Clock, Tag, DollarSign, CalendarClock, Bookmark, BookmarkCheck } from 'lucide-react';
 import { Link } from 'react-router';
 import { useCurrentUser } from '@/lib/auth/use-current-user';
+import { InclusionBadge } from '@/components/InclusionBadge';
 
 const siteUrl = 'https://www.norvarden.com';
 
@@ -31,6 +32,7 @@ interface JobSummary {
   companyName: string;
   isStaffingAgency: boolean | null;
   skillbridgePartner: boolean | null;
+  inclusionCertifiedAt: string | null;
 }
 
 interface JobDetail extends JobSummary {
@@ -291,6 +293,7 @@ function JobDetail({
                     {job.companyName}
                   </span>
                   <VerifiedBadge />
+                  <InclusionBadge certifiedAt={job.inclusionCertifiedAt} size="md" />
                   {job.skillbridgePartner && (
                     <span
                       className="font-barlow-condensed uppercase"
@@ -988,6 +991,7 @@ export default function JobsPage() {
                             <Shield size={9} strokeWidth={2.5} />
                             <span>Verified</span>
                           </span>
+                          <InclusionBadge certifiedAt={job.inclusionCertifiedAt} asLink={false} />
                           {job.skillbridgePartner && (
                             <span
                               className="font-barlow-condensed uppercase"

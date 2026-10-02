@@ -75,6 +75,7 @@ export default async function handler(req: Request, res: Response) {
         companyName: verifiedCompanies.legalName,
         isStaffingAgency: verifiedCompanies.isStaffingAgency,
         skillbridgePartner: verifiedCompanies.skillbridgePartner,
+        inclusionCertifiedAt: verifiedCompanies.inclusionCertifiedAt,
       })
       .from(jobPosts)
       .innerJoin(verifiedCompanies, eq(jobPosts.companyId, verifiedCompanies.id))
