@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Community Rules — REP | IV",
-    "description": "The rules that keep REP | IV safe, honest, and useful for athletes, coaches, veterans, and employers."
+    "title": "Community Rules — NORVARDEN",
+    "description": "The rules that keep NORVARDEN safe, honest, and useful for people with disabilities, and employers."
   },
   "lastUpdated": "October 1, 2026",
   "headline": "Community",
   "headlineGold": "Rules.",
-  "intro": "REP | IV works because everyone on it is verified and accountable. These rules protect athletes, coaches, veterans, and employers alike. Violations can result in immediate removal.",
+  "intro": "NORVARDEN works because everyone on it is verified and accountable. These rules protect people with disabilities, and employers alike. Violations can result in immediate removal.",
   "sections": [
     {
       "id": "cr1",
@@ -42,7 +42,7 @@
       "body": [
         {
           "id": "cr3p1",
-          "text": "Treat every person on REP | IV with respect. Harassment, threats, hate speech, and discrimination based on race, gender, religion, national origin, disability, sexual orientation, veteran status, or any other protected characteristic are strictly prohibited."
+          "text": "Treat every person on NORVARDEN with respect. Harassment, threats, hate speech, and discrimination based on race, gender, religion, national origin, disability, sexual orientation, veteran status, or any other protected characteristic are strictly prohibited."
         },
         {
           "id": "cr3p2",
@@ -56,7 +56,7 @@
       "body": [
         {
           "id": "cr4p1",
-          "text": "Do not share another user's email address, phone number, or other personal contact information with anyone outside REP | IV, or publicly, without their explicit consent."
+          "text": "Do not share another user's email address, phone number, or other personal contact information with anyone outside NORVARDEN, or publicly, without their explicit consent."
         },
         {
           "id": "cr4p2",
@@ -70,7 +70,7 @@
       "body": [
         {
           "id": "cr5p1",
-          "text": "You can report any user, company, or job listing using the flag icon on their profile or listing. You can also email info@the-nextrep.com with details."
+          "text": "You can report any user, company, or job listing using the flag icon on their profile or listing. You can also email info@norvarden.com with details."
         },
         {
           "id": "cr5p2",
@@ -88,7 +88,7 @@
       "body": [
         {
           "id": "cr6p1",
-          "text": "Violations of these rules may result in a warning, temporary suspension, or permanent removal from REP | IV, depending on the severity and frequency of the violation. We reserve the right to remove any account at any time for conduct that undermines the safety or integrity of the platform."
+          "text": "Violations of these rules may result in a warning, temporary suspension, or permanent removal from NORVARDEN, depending on the severity and frequency of the violation. We reserve the right to remove any account at any time for conduct that undermines the safety or integrity of the platform."
         }
       ]
     },
@@ -98,7 +98,7 @@
       "body": [
         {
           "id": "cr7p1",
-          "text": "Questions about these rules? Email info@the-nextrep.com. We aim to respond within two business days."
+          "text": "Questions about these rules? Email info@norvarden.com. We aim to respond within two business days."
         }
       ]
     }

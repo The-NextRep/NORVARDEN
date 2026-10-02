@@ -1,5 +1,5 @@
 /**
- * /admin/members — every account on REP | IV (athletes, coaches, veterans,
+ * /admin/members — every account on NORVARDEN (people with disabilities,
  * employers). Search, filter, suspend / reinstate. Admins may see emails.
  */
 import { useCallback, useEffect, useState } from 'react';
@@ -113,8 +113,8 @@ function MembersInner() {
   return (
     <AdminLayout
       title="Members"
-      subtitle="Every account on REP | IV. Suspending an account signs it out everywhere and blocks sign-in until reinstated."
-      metaDescription="Admin member directory for REP | IV."
+      subtitle="Every account on NORVARDEN. Suspending an account signs it out everywhere and blocks sign-in until reinstated."
+      metaDescription="Admin member directory for NORVARDEN."
     >
       <div className="flex flex-col gap-4 mb-6">
         <SearchInput value={query} onChange={(v) => { setQuery(v); setPage(1); }} placeholder="Search by name or email" />
@@ -152,7 +152,7 @@ function MembersInner() {
             <thead>
               <tr style={{ background: t.panel }}>
                 {['Member', 'Email', 'Type', 'Joined', 'Status', ''].map((h) => (
-                  <th key={h} scope="col" className="text-left px-4 py-3 font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.26em', color: t.ice60 }}>
+                  <th key={h} scope="col" className="text-left px-4 py-3 font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.26em', color: t.ice60 }}>
                     {h}
                   </th>
                 ))}
@@ -175,7 +175,7 @@ function MembersInner() {
                     </td>
                     <td className="px-4 py-3 align-top">
                       <a href={`mailto:${m.email}`} className="font-barlow hover:underline break-all" style={{ fontSize: '13px', fontWeight: 300, color: t.ice }}>{m.email}</a>
-                      {!m.emailVerified && <div><Eyebrow style={{ fontSize: '8px' }}>Unverified email</Eyebrow></div>}
+                      {!m.emailVerified && <div><Eyebrow style={{ fontSize: '12px' }}>Unverified email</Eyebrow></div>}
                     </td>
                     <td className="px-4 py-3 align-top">
                       <div className="flex flex-wrap gap-1.5">
@@ -193,7 +193,7 @@ function MembersInner() {
                     </td>
                     <td className="px-4 py-3 align-top text-right">
                       {m.isAdmin || isSelf ? (
-                        <Eyebrow style={{ fontSize: '8px' }}>{isSelf ? 'You' : 'Protected'}</Eyebrow>
+                        <Eyebrow style={{ fontSize: '12px' }}>{isSelf ? 'You' : 'Protected'}</Eyebrow>
                       ) : m.suspended ? (
                         <AdminButton tone="gold" size="sm" onClick={() => setConfirm({ member: m, action: 'reinstate' })}>
                           <ShieldCheck size={11} /> Reinstate

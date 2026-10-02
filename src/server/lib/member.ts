@@ -21,7 +21,7 @@ export async function requireMember(res: Response): Promise<SessionUser | null> 
     .where(eq(memberProfiles.userId, user.id))
     .limit(1);
   if (profile?.memberType === 'employer') {
-    res.status(403).json({ error: 'This feature is for athletes, coaches and veterans.', code: 'members_only' });
+    res.status(403).json({ error: 'This feature is for people with disabilities.', code: 'members_only' });
     return null;
   }
   return user;

@@ -189,7 +189,7 @@ function EventForm({ initial, onCancel, onSaved, editId }: {
             <input id="ev-url" style={inputStyle} value={form.registrationUrl} maxLength={512} onChange={(e) => set('registrationUrl', e.target.value)} placeholder="https://lu.ma/…" />
           </Field>
           <Field label="Hosted by (optional)" htmlFor="ev-host">
-            <input id="ev-host" style={inputStyle} value={form.hostName} maxLength={200} onChange={(e) => set('hostName', e.target.value)} placeholder="The NextRep" />
+            <input id="ev-host" style={inputStyle} value={form.hostName} maxLength={200} onChange={(e) => set('hostName', e.target.value)} placeholder="NORVARDEN" />
           </Field>
         </div>
         <Field label="Description (optional)" htmlFor="ev-desc">
@@ -254,7 +254,7 @@ function EventsInner() {
     <AdminLayout
       title="Events"
       subtitle="Review company-submitted events, and add your own. Live events appear on the public Events page."
-      metaDescription="Manage REP | IV events."
+      metaDescription="Manage NORVARDEN events."
       actions={!editing && (
         <AdminButton tone="gold" onClick={() => setEditing({ id: null, initial: EMPTY })}>
           <Plus size={12} /> New event

@@ -1,5 +1,5 @@
 /**
- * /admin — Overview: the owner's at-a-glance view of REP | IV.
+ * /admin — Overview: the owner's at-a-glance view of NORVARDEN.
  */
 import { useCallback, useEffect, useState, type ReactNode } from 'react';
 import { Link } from 'react-router';
@@ -49,7 +49,7 @@ function Stat({ label, value, note, to, alert = false }: { label: string; value:
       </span>
       {note && <span className="font-barlow" style={{ fontSize: '12px', fontWeight: 300, color: t.ice60 }}>{note}</span>}
       {to && (
-        <span className="mt-auto pt-2 inline-flex items-center gap-1 font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.24em', color: t.gold }}>
+        <span className="mt-auto pt-2 inline-flex items-center gap-1 font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.24em', color: t.gold }}>
           Open <ArrowRight size={11} />
         </span>
       )}
@@ -96,9 +96,9 @@ function OverviewInner() {
   return (
     <AdminLayout
       title="Overview"
-      eyebrow="REP | IV · Admin"
+      eyebrow="NORVARDEN · Admin"
       subtitle="Members, verified companies, the review queue and anything that needs your attention."
-      metaDescription="Admin overview for REP | IV."
+      metaDescription="Admin overview for NORVARDEN."
       actions={
         <AdminButton tone="ghost" onClick={() => { void load(); }} disabled={loading}>
           <RefreshCw size={12} /> Refresh
@@ -144,7 +144,7 @@ function OverviewInner() {
               <h2 className="font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.32em', color: t.gold }}>
                 Recent activity
               </h2>
-              <Link to="/admin/activity" className="inline-flex items-center gap-1 font-barlow-condensed uppercase hover:opacity-80" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.24em', color: t.ice60, textDecoration: 'none' }}>
+              <Link to="/admin/activity" className="inline-flex items-center gap-1 font-barlow-condensed uppercase hover:opacity-80" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.24em', color: t.ice60, textDecoration: 'none' }}>
                 Full log <ArrowRight size={11} />
               </Link>
             </div>

@@ -1,5 +1,5 @@
 /**
- * What a company pays to host an event on REP | IV.
+ * What a company pays to host an event on NORVARDEN.
  *
  *   No plan        standard $750, featured $1,500
  *   Scout          1 standard per calendar quarter included, then $500;

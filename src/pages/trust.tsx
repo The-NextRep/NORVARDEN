@@ -16,10 +16,10 @@ export default function TrustPage() {
       <Helmet>
         <title>{trust.meta.title}</title>
         <meta name="description" content={trust.meta.description} />
-        <link rel="canonical" href="https://jobs.the-nextrep.com/trust" />
+        <link rel="canonical" href="https://www.norvarden.com/trust" />
         <meta property="og:title" content={trust.meta.title} />
         <meta property="og:description" content={trust.meta.description} />
-        <meta property="og:url" content="https://jobs.the-nextrep.com/trust" />
+        <meta property="og:url" content="https://www.norvarden.com/trust" />
         <meta property="og:type" content="website" />
       </Helmet>
       <main>
@@ -112,8 +112,8 @@ export default function TrustPage() {
                 <p className="text-sm text-muted-foreground">
                   <span>{trust.reportSection.emailLabel}</span>
                   {' '}
-                  <a href="mailto:info@the-nextrep.com" className="text-primary hover:underline">
-                    info@the-nextrep.com
+                  <a href="mailto:info@norvarden.com" className="text-primary hover:underline">
+                    info@norvarden.com
                   </a>
                 </p>
               </div>

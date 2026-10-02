@@ -7,7 +7,7 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import { FileText, GraduationCap, Bookmark, ShieldCheck, ChevronRight } from 'lucide-react';
 import { useCurrentUser } from '@/lib/auth/use-current-user';
 
-const siteUrl = 'https://jobs.the-nextrep.com';
+const siteUrl = 'https://www.norvarden.com';
 const navy    = 'hsl(var(--hero-navy))';
 const navyMid = 'hsl(var(--hero-navy-mid))';
 const gold    = 'hsl(var(--hero-gold))';
@@ -52,10 +52,10 @@ export default function ResourcesPage() {
   return (
     <>
       <Helmet>
-        <title>Career Resources — REP | IV</title>
-        <meta name="description" content="Free career tools for pro athletes, coaches and veterans: résumé builder, interview tips, saved jobs and how we verify employers." />
+        <title>Career Resources — NORVARDEN</title>
+        <meta name="description" content="Free career tools for people with disabilities: résumé builder, interview tips, saved jobs and how we verify employers." />
         <link rel="canonical" href={`${siteUrl}/resources`} />
-        <meta property="og:title" content="Career Resources — REP | IV" />
+        <meta property="og:title" content="Career Resources — NORVARDEN" />
         <meta property="og:url" content={`${siteUrl}/resources`} />
       </Helmet>
 
@@ -65,10 +65,10 @@ export default function ResourcesPage() {
             Resources
           </p>
           <h1 className="font-bodoni mb-4" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.6rem)', fontWeight: 400, lineHeight: 1.08, color: white }}>
-            Tools for your <em className="gold-shimmer" style={{ fontStyle: 'italic' }}>next rep.</em>
+            Tools for your <em className="gold-shimmer" style={{ fontStyle: 'italic' }}>next step.</em>
           </h1>
           <p className="font-barlow mb-12 max-w-xl" style={{ fontSize: '16px', fontWeight: 300, lineHeight: 1.75, color: ice60 }}>
-            Free for athletes, coaches and veterans. Get your résumé ready, prepare for interviews, and keep track of the roles you want.
+            Free for people with disabilities. Get your résumé ready, prepare for interviews, and keep track of the roles you want.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -82,14 +82,14 @@ export default function ResourcesPage() {
                 <div className="flex items-center justify-between gap-3">
                   <Icon size={22} style={{ color: gold }} aria-hidden="true" />
                   {membersOnly && !signedIn && (
-                    <span className="font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.24em', color: ice60 }}>
+                    <span className="font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.24em', color: ice60 }}>
                       Free account
                     </span>
                   )}
                 </div>
                 <h2 className="font-bodoni" style={{ fontSize: '24px', fontWeight: 400, color: white, lineHeight: 1.2 }}>{title}</h2>
                 <p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, lineHeight: 1.7, color: ice60 }}>{body}</p>
-                <span className="inline-flex items-center gap-1 mt-auto font-barlow-condensed uppercase transition-opacity group-hover:opacity-80" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>
+                <span className="inline-flex items-center gap-1 mt-auto font-barlow-condensed uppercase transition-opacity group-hover:opacity-80" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>
                   Open <ChevronRight size={12} />
                 </span>
               </Link>

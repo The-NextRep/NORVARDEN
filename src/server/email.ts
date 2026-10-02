@@ -3,9 +3,9 @@
  *
  * Env:
  *   RESEND_API_KEY  – required to send
- *   EMAIL_FROM      – e.g.  The NextRep <notifications@the-nextrep.com>
+ *   EMAIL_FROM      – e.g.  NORVARDEN <notifications@norvarden.com>
  *                     (the domain must be verified in Resend)
- *   EMAIL_REPLY_TO  – optional default Reply-To (e.g. info@the-nextrep.com)
+ *   EMAIL_REPLY_TO  – optional default Reply-To (e.g. info@norvarden.com)
  *
  * Without RESEND_API_KEY (local development) messages are printed to the
  * server log instead of sent, so sign-in codes and links stay testable.
@@ -46,7 +46,7 @@ function toArray(value: string | string[] | undefined): string[] {
 
 function resolveFrom(input: SendEmailInput): string {
   if (input.from) return input.from;
-  const configured = process.env.EMAIL_FROM || 'The NextRep <notifications@the-nextrep.com>';
+  const configured = process.env.EMAIL_FROM || 'NORVARDEN <notifications@norvarden.com>';
   if (!input.fromName) return configured;
   const addr = configured.match(/<([^>]+)>/)?.[1] ?? configured;
   const safeName = input.fromName.replace(/["<>\r\n]/g, '');

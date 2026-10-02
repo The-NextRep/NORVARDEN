@@ -89,7 +89,7 @@ export default function CheckoutSuccess() {
   return (
     <>
       <Helmet>
-        <title>Checkout — REP | IV</title>
+        <title>Checkout — NORVARDEN</title>
         <meta name="robots" content="noindex" />
       </Helmet>
       <main className="min-h-screen flex items-center justify-center px-6 py-20" style={{ background: navy }}>
@@ -112,14 +112,14 @@ export default function CheckoutSuccess() {
           {state === 'verified' && (
             <>
               <CheckCircle size={40} className="mx-auto mb-6" style={{ color: gold }} />
-              <p className="font-barlow-condensed uppercase mb-3" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}>
-                Welcome to REP | IV
+              <p className="font-barlow-condensed uppercase mb-3" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}>
+                Welcome to NORVARDEN
               </p>
               <h1 className="font-bodoni mb-4" style={{ fontSize: '2.2rem', fontWeight: 400, lineHeight: 1.1, color: white }}>
                 You&rsquo;re all set
               </h1>
               <p className="font-barlow mb-6" style={{ fontSize: '15px', fontWeight: 300, lineHeight: 1.7, color: ice60 }}>
-                Your subscription is confirmed. You can now post jobs and connect with verified athletes, coaches and veterans.
+                Your subscription is confirmed. You can now post jobs and connect with verified people with disabilities.
                 If your dashboard doesn&rsquo;t show your plan right away, give it a minute and refresh.
               </p>
               {details && (planName || details.amount_total != null) && (
@@ -153,8 +153,8 @@ export default function CheckoutSuccess() {
                 >
                   {state === 'processing' ? 'Go to your dashboard' : 'Back to pricing'}
                 </Link>
-                <a href="mailto:info@the-nextrep.com" className="font-barlow" style={{ fontSize: '13px', color: gold }}>
-                  Questions? info@the-nextrep.com
+                <a href="mailto:info@norvarden.com" className="font-barlow" style={{ fontSize: '13px', color: gold }}>
+                  Questions? info@norvarden.com
                 </a>
               </div>
             </>

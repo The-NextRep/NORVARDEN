@@ -8,7 +8,7 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import { CalendarDays, MapPin, Video, ExternalLink } from 'lucide-react';
 import { FORMAT_LABELS, dateBadge, formatEventWhen, type PublicEvent } from '@/lib/events';
 
-const siteUrl = 'https://jobs.the-nextrep.com';
+const siteUrl = 'https://www.norvarden.com';
 const navy    = 'hsl(var(--hero-navy))';
 const navyMid = 'hsl(var(--hero-navy-mid))';
 const gold    = 'hsl(var(--hero-gold))';
@@ -27,12 +27,12 @@ export function EventCard({ ev, past = false }: { ev: PublicEvent; past?: boolea
         style={{ border: `1px solid ${gold}`, background: 'hsl(var(--hero-gold) / 0.06)' }}
         aria-hidden="true"
       >
-        <span className="font-barlow-condensed" style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.2em', color: gold }}>{badge.month}</span>
+        <span className="font-barlow-condensed" style={{ fontSize: '12px', fontWeight: 600, letterSpacing: '0.2em', color: gold }}>{badge.month}</span>
         <span className="font-bodoni" style={{ fontSize: '26px', lineHeight: 1, color: white }}>{badge.day}</span>
       </div>
       <div className="min-w-0 flex-1 flex flex-col gap-2">
         {ev.tier === 'featured' && !past && (
-          <span className="font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 600, letterSpacing: '0.28em', color: gold }}>Featured</span>
+          <span className="font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.28em', color: gold }}>Featured</span>
         )}
         <h3 className="font-bodoni" style={{ fontSize: '22px', fontWeight: 400, color: white, lineHeight: 1.25 }}>{ev.title}</h3>
         <p className="font-barlow inline-flex items-center gap-2" style={{ fontSize: '14px', color: 'hsl(var(--hero-ice) / 0.85)' }}>
@@ -43,7 +43,7 @@ export function EventCard({ ev, past = false }: { ev: PublicEvent; past?: boolea
           {FORMAT_LABELS[ev.format]}{ev.location ? ` · ${ev.location}` : ''}
         </p>
         {ev.hostName && (
-          <p className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.24em', color: ice60 }}>
+          <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.24em', color: ice60 }}>
             Hosted by {ev.hostName}
           </p>
         )}
@@ -58,7 +58,7 @@ export function EventCard({ ev, past = false }: { ev: PublicEvent; past?: boolea
             target="_blank"
             rel="noopener noreferrer"
             className="gold-shimmer-bg font-barlow-condensed uppercase inline-flex items-center gap-2 self-start mt-2 transition-opacity hover:opacity-90"
-            style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '0.28em', padding: '12px 24px', borderRadius: '2px', color: navy }}
+            style={{ fontSize: '12px', fontWeight: 600, letterSpacing: '0.28em', padding: '12px 24px', borderRadius: '2px', color: navy }}
           >
             Register <ExternalLink size={11} />
           </a>
@@ -82,10 +82,10 @@ export default function EventsPage() {
   return (
     <>
       <Helmet>
-        <title>Events — REP | IV</title>
-        <meta name="description" content="Career events, hiring sessions and workshops for pro athletes, coaches and military veterans." />
+        <title>Events — NORVARDEN</title>
+        <meta name="description" content="Career events, hiring sessions and workshops for people with disabilities." />
         <link rel="canonical" href={`${siteUrl}/events`} />
-        <meta property="og:title" content="Events — REP | IV" />
+        <meta property="og:title" content="Events — NORVARDEN" />
         <meta property="og:url" content={`${siteUrl}/events`} />
       </Helmet>
 
@@ -97,7 +97,7 @@ export default function EventsPage() {
               Show up. <em className="gold-shimmer" style={{ fontStyle: 'italic' }}>Get seen.</em>
             </h1>
             <p className="font-barlow max-w-xl" style={{ fontSize: '16px', fontWeight: 300, lineHeight: 1.75, color: ice60 }}>
-              Hiring sessions, workshops and networking events for athletes, coaches and veterans, with verified companies in the room.
+              Hiring sessions, workshops and networking events for people with disabilities, with verified companies in the room.
             </p>
           </header>
 
@@ -136,13 +136,13 @@ export default function EventsPage() {
             <div>
               <p className="font-bodoni" style={{ fontSize: '22px', color: white }}>Want to host a career event?</p>
               <p className="font-barlow mt-1" style={{ fontSize: '15px', fontWeight: 300, color: ice60 }}>
-                Verified companies can list events for athletes, coaches and veterans. Standard listings from $750, included with Scout and Partner plans.
+                Verified companies can list events for people with disabilities. Standard listings from $750, included with Scout and Partner plans.
               </p>
             </div>
             <Link
               to="/company/events"
               className="font-barlow-condensed uppercase self-start md:self-auto whitespace-nowrap"
-              style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', padding: '12px 22px', borderRadius: '2px', border: `1px solid ${gold}`, color: gold }}
+              style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '12px 22px', borderRadius: '2px', border: `1px solid ${gold}`, color: gold }}
             >
               List your event
             </Link>

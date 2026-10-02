@@ -1,47 +1,47 @@
 {
   "meta": {
-    "title": "REP | IV — Built For The NextRep",
-    "description": "A free, verified job board for pro athletes, coaches, and military veterans. Real jobs from verified companies. You control your contact info."
+    "title": "NORVARDEN — Another Way Forward",
+    "description": "An accessible, verified career platform for people with disabilities. Jobs from inclusive, verified employers. Free for job seekers. You decide what you share."
   },
   "hero": {
-    "headline": "Your next chapter starts",
-    "headlineGold": "here.",
-    "subheadline": "A free, verified board for current and former pro athletes, coaches and military veterans. Find real jobs from verified companies, connect on your terms, and no one gets your number until you say yes.",
+    "headline": "Talent has",
+    "headlineGold": "no limits.",
+    "subheadline": "NORVARDEN connects people with disabilities to verified, inclusive employers. Free for job seekers, accessible from the ground up, and private by design: you decide what you share, and no one gets your contact details until you say yes.",
     "primaryCta": "Join free",
     "secondaryCta": "Browse jobs →",
     "badges": [
       {
         "id": "b1",
-        "label": "Always free"
+        "label": "Free for job seekers"
       },
       {
         "id": "b2",
-        "label": "Verified companies only"
+        "label": "Inclusive employers only"
       },
       {
         "id": "b3",
-        "label": "You control your contact info"
+        "label": "You control what you share"
       }
     ]
   },
   "stories": [
     {
       "id": "st1",
-      "heading": "Your experience counts.",
-      "body": "Discipline, leadership and performing under pressure are exactly what great companies hire for.",
-      "highlight": "We help you show it."
+      "heading": "Your skills lead.",
+      "body": "Your profile puts your experience, skills and goals first.",
+      "highlight": "Disclosure is always your choice."
     },
     {
       "id": "st2",
-      "heading": "Leadership doesn't stay in uniform.",
-      "body": "Your military experience translates. We help you put it in civilian terms, and approved SkillBridge partners post internships for service members.",
-      "highlight": "Your next mission starts here."
+      "heading": "Every employer is checked.",
+      "body": "We confirm each company’s identity and hiring contact, and every employer signs our accessible-hiring pledge",
+      "highlight": "before they can post a job."
     },
     {
       "id": "st3",
-      "heading": "Every company is checked.",
-      "body": "Our team confirms each company's work email, business and hiring contact",
-      "highlight": "before they can post a single job."
+      "heading": "Accommodations, up front.",
+      "body": "Jobs show the accommodations on offer — remote work, flexible hours, assistive technology, accessible interviews —",
+      "highlight": "so you don’t have to ask first."
     },
     {
       "id": "st4",
@@ -51,55 +51,43 @@
     },
     {
       "id": "st5",
-      "heading": "What you get.",
-      "body": "A free, verified profile · Jobs from verified companies only · SkillBridge internships for service members · Help translating your experience · Free veteran career resources · Never a fee, ever.",
-      "highlight": ""
+      "heading": "Built to be used by everyone.",
+      "body": "Screen readers, keyboard-only, voice control, zoom and high contrast all work.",
+      "highlight": "Accessibility isn’t a feature here. It’s the foundation."
     },
     {
       "id": "st6",
-      "heading": "Who can join.",
-      "body": "Current and former pro athletes · Coaches at every level, from youth to pro · Military veterans, Guard and Reserve · Service members within 12 months of separating.",
-      "highlight": "Everyone is verified before they can post or connect."
-    },
-    {
-      "id": "st7",
-      "heading": "Getting started takes minutes.",
-      "body": "Join free · Get verified · Build your profile · Browse jobs and connect.",
-      "highlight": ""
-    },
-    {
-      "id": "st8",
-      "heading": "Never pay to play.",
-      "body": "Companies can never charge you for anything.",
+      "heading": "Never pay to apply.",
+      "body": "Job seekers never pay for anything.",
       "highlight": "If anyone asks you for money, report it."
     },
     {
-      "id": "st9",
-      "heading": "Your next chapter starts here.",
-      "body": "The work ethic that got you here is what companies are looking for.",
-      "highlight": "Join free and see who's hiring."
+      "id": "st7",
+      "heading": "Another way forward.",
+      "body": "A career platform designed with the disability community, not just for it.",
+      "highlight": "Join free and see who’s hiring."
     }
   ],
   "trustStrip": [
     {
-      "id": "ts1",
-      "label": "Always free",
-      "body": "Athletes, coaches and veterans never pay — not now, not ever."
+      "id": "t1",
+      "label": "Accessible by design",
+      "body": "Built to WCAG 2.2 AA: works with screen readers, keyboard, voice control and zoom."
     },
     {
-      "id": "ts2",
-      "label": "Verified companies only",
-      "body": "Every company is reviewed by our team before they can post."
+      "id": "t2",
+      "label": "Verified employers",
+      "body": "Every company is identity-checked and signs our accessible-hiring pledge."
     },
     {
-      "id": "ts3",
-      "label": "Your contact info stays private",
-      "body": "No one sees your number or email until you accept a connection."
+      "id": "t3",
+      "label": "Private by default",
+      "body": "Disability and accommodation details are optional and never shown without your OK."
     },
     {
-      "id": "ts4",
-      "label": "Every report reviewed",
-      "body": "Flag anything suspicious. Our team investigates every report."
+      "id": "t4",
+      "label": "Free for job seekers",
+      "body": "No fees, ever. Employers pay to post jobs and connect."
     }
   ],
   "howItWorks": {
@@ -108,95 +96,95 @@
     "headlineGold": "hired.",
     "steps": [
       {
-        "id": "hw1",
+        "id": "s1",
         "number": "01",
-        "title": "Join and get verified",
-        "body": "A quick check that you are who you say you are. No SSN, no hassle."
+        "title": "Create your free profile",
+        "body": "Share your skills, experience and the work you want. Add accommodation needs only if you choose to."
       },
       {
-        "id": "hw2",
+        "id": "s2",
         "number": "02",
-        "title": "Build your profile",
-        "body": "Your sport or service, your strengths, the industries you want."
+        "title": "Find inclusive employers",
+        "body": "Browse jobs that list their accommodations up front, from companies that have signed our pledge."
       },
       {
-        "id": "hw3",
+        "id": "s3",
         "number": "03",
-        "title": "Connect when you say yes",
-        "body": "Companies request. You decide. Your contact details stay private until you're ready."
+        "title": "Connect on your terms",
+        "body": "Companies request to connect. You accept or decline, and your contact details stay private until you say yes."
       }
     ]
   },
   "whoItsFor": {
-    "eyebrow": "Who it's for",
-    "headline": "Built for people who've",
-    "headlineGold": "performed.",
+    "eyebrow": "Who it’s for",
+    "headline": "Built with the disability",
+    "headlineGold": "community.",
     "cards": [
       {
-        "id": "wf1",
-        "label": "Pro Athletes",
-        "title": "Your career doesn't end when the season does.",
-        "body": "You've competed at the highest level. The discipline, the pressure, the teamwork — companies want exactly that. Your verified profile puts your athletic career front and center."
+        "id": "c1",
+        "label": "Job seekers",
+        "title": "People with disabilities",
+        "body": "Visible or invisible, physical, sensory, cognitive, mental health or chronic illness. Self-identify only — no proof, ever."
       },
       {
-        "id": "wf2",
-        "label": "Coaches",
-        "title": "You've built teams. Now build your next chapter.",
-        "body": "Leadership, strategy, developing talent under pressure — your coaching career is a business asset. Connect with companies that understand what it takes to lead."
+        "id": "c2",
+        "label": "Students & early career",
+        "title": "Your first role",
+        "body": "Internships and entry-level roles from employers who budget for accommodations and mentorship."
       },
       {
-        "id": "wf3",
+        "id": "c3",
         "label": "Veterans",
-        "title": "Your service is your strongest credential.",
-        "body": "You've led missions, managed teams, and performed under conditions most people never face. We help you translate that into civilian language — and connect you with employers who get it."
+        "title": "Veterans with disabilities",
+        "body": "Translate your service into a civilian career with employers committed to hiring disabled veterans."
       }
     ]
   },
   "athletesBand": {
-    "eyebrow": "Athletes",
-    "headline": "Your next",
-    "headlineGold": "season.",
-    "body": "The discipline, competitiveness and coachability that got you to the pros are what companies hire for. Build a verified profile, get help translating your career into business terms, and connect with companies that value what you've done.",
+    "eyebrow": "Job seekers",
+    "headline": "Work that",
+    "headlineGold": "fits you.",
+    "body": "Filter by remote, flexible hours, assistive technology and accessible interviews. Apply to employers who have already said yes to accommodations.",
     "badges": [
       {
-        "id": "ab1",
-        "label": "Verified Athlete"
+        "id": "a1",
+        "label": "Remote & flexible roles"
       },
       {
-        "id": "ab2",
-        "label": "Current & Former Pros"
+        "id": "a2",
+        "label": "Accommodations listed"
       }
     ],
-    "cta": "Explore athlete opportunities"
+    "cta": "Explore jobs"
   },
   "coachesBand": {
-    "eyebrow": "Coaches",
-    "headline": "Lead the next",
-    "headlineGold": "team.",
-    "body": "You build culture, develop people and get results under pressure. Find coaching roles with schools, clubs and pro programs, or bring your leadership into business.",
+    "eyebrow": "Students & early career",
+    "headline": "Start",
+    "headlineGold": "strong.",
+    "body": "Internships, apprenticeships and first jobs, plus help writing your résumé and preparing for interviews — including how and when to talk about accommodations.",
     "badges": [
       {
-        "id": "cb1",
-        "label": "Verified Coach"
+        "id": "k1",
+        "label": "Internships"
       },
       {
-        "id": "cb2",
-        "label": "Every level, youth to pro"
+        "id": "k2",
+        "label": "Career resources"
       }
     ],
-    "cta": "Explore coaching opportunities"
+    "cta": "Explore resources"
   },
   "veteransBand": {
-    "eyebrow": "For veterans",
+    "eyebrow": "Veterans",
     "headline": "Your next",
     "headlineGold": "mission.",
-    "body": "SkillBridge internships from verified partner companies. Help translating your MOS into civilian terms. Free career resources built for the transition.",
-    "cta": "Explore veteran resources"
+    "body": "Employers committed to hiring veterans with disabilities, help translating your experience, and resources for your next step.",
+    "cta": "Explore veteran opportunities"
   },
   "forCompaniesBand": {
-    "eyebrow": "For companies",
-    "headline": "Hiring? Reach verified athletes, coaches and veterans.",
-    "cta": "For companies →"
+    "eyebrow": "For employers",
+    "headline": "Hiring? Reach a talent pool most companies overlook.",
+    "cta": "For employers →"
   },
   "faq": {
     "eyebrow": "Questions",
@@ -204,35 +192,35 @@
     "headlineGold": "questions.",
     "items": [
       {
-        "id": "fq1",
-        "question": "Is it really free?",
-        "answer": "Yes, always, for athletes, coaches and veterans. No plan, no subscription, no credit card. Free now, free forever."
+        "id": "q1",
+        "question": "Is NORVARDEN free?",
+        "answer": "Yes. It’s always free for job seekers. Verified employers pay to post jobs and connect with candidates."
       },
       {
-        "id": "fq2",
-        "question": "Who can see my contact info?",
-        "answer": "No one, until you accept a connection. Companies can request to connect, but your email, phone, and any other contact details are only shared after you say yes."
+        "id": "q2",
+        "question": "Do I have to disclose my disability?",
+        "answer": "No. You never have to prove or disclose a disability. Any disability or accommodation details are optional, private by default, and only shared with a company if you choose."
       },
       {
-        "id": "fq3",
-        "question": "How do you check companies?",
-        "answer": "We confirm work email domain, legal business name, and hiring contact. Every company is reviewed by our team before they can post a single job."
+        "id": "q3",
+        "question": "How are employers verified?",
+        "answer": "We confirm each company’s identity, business and hiring contact, and every employer signs our accessible-hiring pledge before posting jobs."
       },
       {
-        "id": "fq4",
-        "question": "What do veterans need to verify?",
-        "answer": "A quick check of your service — branch, rank, and dates. We never ask for your Social Security number, and any documents you upload are permanently deleted after review."
+        "id": "q4",
+        "question": "Is the site accessible?",
+        "answer": "NORVARDEN is built to WCAG 2.2 AA and tested with screen readers and keyboard-only use. If anything gets in your way, tell us and we’ll fix it."
       },
       {
-        "id": "fq5",
-        "question": "What if someone asks me for money?",
-        "answer": "Report it immediately. Companies can never charge you for anything — not to apply, not to get hired, not for training or equipment. Use the flag on their profile or email info@the-nextrep.com."
+        "id": "q5",
+        "question": "Who sees my contact details?",
+        "answer": "No one, until you accept a company’s connection request."
       }
     ]
   },
   "closingBand": {
-    "headline": "Your next chapter starts",
-    "headlineGold": "here.",
+    "headline": "Another way",
+    "headlineGold": "forward.",
     "cta": "Join free"
   }
 }

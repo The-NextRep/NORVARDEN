@@ -2,7 +2,7 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import { community_rules } from 'virtual:content';
 import { ContentListContext } from '@airo/content';
 
-const siteUrl    = 'https://jobs.the-nextrep.com';
+const siteUrl    = 'https://www.norvarden.com';
 const navy       = 'hsl(var(--hero-navy))';
 const gold       = 'hsl(var(--hero-gold))';
 const white      = 'hsl(var(--hero-white))';
@@ -40,7 +40,7 @@ export default function CommunityRulesPage() {
           {/* Last updated */}
           <p
             className="font-barlow-condensed uppercase mb-8"
-            style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: 'hsl(var(--hero-gold) / 0.60)' }}
+            style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: 'hsl(var(--hero-gold) / 0.60)' }}
           >
             Last updated: <span>{community_rules.lastUpdated}</span>
           </p>
@@ -110,11 +110,11 @@ export default function CommunityRulesPage() {
             >
               Questions? Email{' '}
               <a
-                href="mailto:info@the-nextrep.com"
+                href="mailto:info@norvarden.com"
                 className="transition-opacity hover:opacity-80"
                 style={{ color: gold, textDecoration: 'none' }}
               >
-                info@the-nextrep.com
+                info@norvarden.com
               </a>
             </p>
           </div>

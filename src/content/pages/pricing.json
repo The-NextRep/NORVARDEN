@@ -1,7 +1,7 @@
 {
   "hero": {
     "heading": "Simple, transparent pricing",
-    "subheading": "Companies choose a plan. Athletes, coaches, and veterans are always free."
+    "subheading": "Companies choose a plan. People with disabilities are always free."
   },
   "toggle": {
     "quarterly": "3 months",
@@ -127,7 +127,7 @@
   },
   "members": {
     "heading": "Athletes, coaches & veterans",
-    "body": "Joining REP | IV is always free for athletes, coaches, and military veterans. No plan required.",
+    "body": "Joining NORVARDEN is always free for people with disabilities. No plan required.",
     "cta": "Join free"
   },
   "verification": {

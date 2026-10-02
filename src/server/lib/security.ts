@@ -31,7 +31,7 @@ export function appBaseUrl(req?: Request): string {
   // links work on the Railway URL until a custom domain is configured.
   const railway = process.env.RAILWAY_PUBLIC_DOMAIN?.trim();
   if (railway) return `https://${railway}`;
-  if (process.env.NODE_ENV === 'production') return 'https://jobs.the-nextrep.com';
+  if (process.env.NODE_ENV === 'production') return 'https://www.norvarden.com';
   return req ? `${req.protocol}://${req.get('host')}` : 'http://localhost:3000';
 }
 

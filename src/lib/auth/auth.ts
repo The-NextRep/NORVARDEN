@@ -69,7 +69,7 @@ export function getAuth() {
       },
     },
 
-    // Public site URL (e.g. https://jobs.the-nextrep.com). Set BETTER_AUTH_URL
+    // Public site URL (e.g. https://www.norvarden.com). Set BETTER_AUTH_URL
     // in production so the base URL never depends on the incoming Host header.
     // Falls back to Railway's own public domain when neither is set.
     ...(process.env.BETTER_AUTH_URL || process.env.APP_BASE_URL || process.env.RAILWAY_PUBLIC_DOMAIN

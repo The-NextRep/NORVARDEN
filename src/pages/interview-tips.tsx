@@ -4,7 +4,7 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import { CheckCircle2, ChevronRight, AlertTriangle, MessageSquare } from 'lucide-react';
 import { useCurrentUser } from '@/lib/auth/use-current-user';
 
-const siteUrl = 'https://jobs.the-nextrep.com';
+const siteUrl = 'https://www.norvarden.com';
 
 const navy   = 'hsl(var(--hero-navy))';
 const gold   = 'hsl(var(--hero-gold))';
@@ -216,10 +216,10 @@ export default function InterviewTipsPage() {
   return (
     <>
       <Helmet>
-        <title>Interview Tips — REP | IV</title>
-        <meta name="description" content="Interview preparation for former pro athletes, coaches and military veterans: how to tell your story, common questions, the STAR method, and a day-of checklist." />
+        <title>Interview Tips — NORVARDEN</title>
+        <meta name="description" content="Interview preparation for former people with disabilities: how to tell your story, common questions, the STAR method, and a day-of checklist." />
         <link rel="canonical" href={`${siteUrl}/interview-tips`} />
-        <meta property="og:title" content="Interview Tips — REP | IV" />
+        <meta property="og:title" content="Interview Tips — NORVARDEN" />
         <meta property="og:url" content={`${siteUrl}/interview-tips`} />
       </Helmet>
 

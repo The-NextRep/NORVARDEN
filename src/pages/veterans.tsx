@@ -4,7 +4,7 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import { Link } from 'react-router';
 import { Shield, ChevronRight, AlertTriangle } from 'lucide-react';
 
-const siteUrl = 'https://jobs.the-nextrep.com';
+const siteUrl = 'https://www.norvarden.com';
 
 // ─── Design tokens ────────────────────────────────────────────────────────
 const navy         = 'hsl(var(--hero-navy))';
@@ -108,7 +108,7 @@ export default function VeteransPage() {
         </section>
 
         {/* ── WHAT WE OFFER ─────────────────────────────────────────────── */}
-        <section className="px-6 md:px-12 lg:px-16 py-24 max-w-7xl mx-auto" aria-label="What REP | IV offers veterans">
+        <section className="px-6 md:px-12 lg:px-16 py-24 max-w-7xl mx-auto" aria-label="What NORVARDEN offers veterans">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left: heading */}
             <div className="flex flex-col gap-6 lg:sticky lg:top-24">
@@ -123,7 +123,7 @@ export default function VeteransPage() {
                 </em>
               </h2>
               <p className="font-barlow" style={{ fontSize: '16px', fontWeight: 300, lineHeight: 1.75, color: ice60 }}>
-                REP | IV is always free for veterans. No plan, no subscription, no catch.
+                NORVARDEN is always free for veterans. No plan, no subscription, no catch.
               </p>
             </div>
 
@@ -138,7 +138,7 @@ export default function VeteransPage() {
                   >
                     <div className="flex items-center gap-3">
                       <Shield size={14} style={{ color: gold, flexShrink: 0 }} />
-                      <span className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}>
+                      <span className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}>
                         {item.title}
                       </span>
                     </div>
@@ -207,7 +207,7 @@ export default function VeteransPage() {
             >
               <div className="flex items-center gap-3">
                 <AlertTriangle size={16} style={{ color: gold, flexShrink: 0 }} />
-                <span className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}>
+                <span className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}>
                   <span>{veterans.verification.neverAskLabel}</span>
                 </span>
               </div>
@@ -225,7 +225,7 @@ export default function VeteransPage() {
                 </ul>
               </ContentListContext>
               <p className="font-barlow" style={{ fontSize: '13px', fontWeight: 300, lineHeight: 1.7, color: ice60, marginTop: '4px' }}>
-                If anyone on REP | IV asks for any of the above, report it immediately using the flag on their profile.
+                If anyone on NORVARDEN asks for any of the above, report it immediately using the flag on their profile.
               </p>
             </div>
           </div>
@@ -300,7 +300,7 @@ export default function VeteransPage() {
             >
               <span
                 className="font-barlow-condensed uppercase"
-                style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '5px 10px', border: goldBorder, borderRadius: '3px', color: gold, background: 'hsl(var(--hero-gold) / 0.08)', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '5px 10px', border: goldBorder, borderRadius: '3px', color: gold, background: 'hsl(var(--hero-gold) / 0.08)', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
               >
                 <Shield size={10} strokeWidth={2.5} style={{ color: gold, flexShrink: 0 }} />
                 <span>{veterans.badges.veteranReady.label}</span>
@@ -318,7 +318,7 @@ export default function VeteransPage() {
             >
               <span
                 className="font-barlow-condensed uppercase"
-                style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '5px 10px', border: goldBorder, borderRadius: '3px', color: gold, background: 'hsl(var(--hero-gold) / 0.08)', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+                style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '5px 10px', border: goldBorder, borderRadius: '3px', color: gold, background: 'hsl(var(--hero-gold) / 0.08)', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
               >
                 <Shield size={10} strokeWidth={2.5} style={{ color: gold, flexShrink: 0 }} />
                 <span>{veterans.badges.skillbridge.label}</span>

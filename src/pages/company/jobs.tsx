@@ -111,7 +111,7 @@ function Field({ label, required, children }: { label: string; required?: boolea
   return (
     <div>
       <label className="block font-barlow-condensed uppercase mb-2"
-        style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
+        style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
         {label}{required && <span style={{ color: gold }}> *</span>}
       </label>
       {children}
@@ -152,7 +152,7 @@ function SkillsInput({ skills, onChange }: { skills: string[]; onChange: (s: str
       <div className="flex flex-wrap gap-2 mb-2">
         {skills.map((s) => (
           <span key={s} className="inline-flex items-center gap-1 font-barlow-condensed uppercase"
-            style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.2em', padding: '4px 10px', borderRadius: '2px', background: 'hsl(var(--hero-gold) / 0.1)', border: '1px solid hsl(var(--hero-gold) / 0.3)', color: gold }}>
+            style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em', padding: '4px 10px', borderRadius: '2px', background: 'hsl(var(--hero-gold) / 0.1)', border: '1px solid hsl(var(--hero-gold) / 0.3)', color: gold }}>
             {s}
             <button type="button" onClick={() => removeSkill(s)} style={{ color: ice60, lineHeight: 1 }}>
               <X size={10} />
@@ -170,7 +170,7 @@ function SkillsInput({ skills, onChange }: { skills: string[]; onChange: (s: str
         />
         <button type="button" onClick={() => addSkill(input)}
           className="font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-          style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.2em', padding: '10px 14px', borderRadius: '2px', background: 'hsl(var(--hero-gold) / 0.12)', border: '1px solid hsl(var(--hero-gold) / 0.3)', color: gold }}>
+          style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em', padding: '10px 14px', borderRadius: '2px', background: 'hsl(var(--hero-gold) / 0.12)', border: '1px solid hsl(var(--hero-gold) / 0.3)', color: gold }}>
           Add
         </button>
       </div>
@@ -210,16 +210,16 @@ function JobCard({
       <div className="flex items-start justify-between gap-4 mb-3 flex-wrap">
         <div className="flex items-center gap-3 flex-wrap">
           <span className="font-barlow-condensed uppercase"
-            style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', padding: '3px 8px', borderRadius: '2px', background: cfg.bg, color: cfg.color, border: '1px solid ' + cfg.color + '33' }}>
+            style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', padding: '3px 8px', borderRadius: '2px', background: cfg.bg, color: cfg.color, border: '1px solid ' + cfg.color + '33' }}>
             {cfg.label}
           </span>
           <span className="font-barlow-condensed uppercase"
-            style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', color: ice60 }}>
+            style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', color: ice60 }}>
             {JOB_TYPE_LABELS[post.jobType]}
           </span>
           {post.isVeteranReady && (
             <span className="inline-flex items-center gap-1 font-barlow-condensed uppercase"
-              style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
+              style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
               <Shield size={10} /> Veteran-ready
             </span>
           )}
@@ -228,19 +228,19 @@ function JobCard({
           <div className="flex items-center gap-2">
             <button onClick={() => onEdit(post)}
               className="inline-flex items-center gap-1.5 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-              style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', padding: '6px 12px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.25)', color: ice60, background: 'transparent' }}>
+              style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', padding: '6px 12px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.25)', color: ice60, background: 'transparent' }}>
               <Pencil size={11} /> Edit
             </button>
             {post.status !== 'closed' && (
               <button onClick={() => onClose(post.id)}
                 className="inline-flex items-center gap-1.5 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-                style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', padding: '6px 12px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.25)', color: ice60, background: 'transparent' }}>
+                style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', padding: '6px 12px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.25)', color: ice60, background: 'transparent' }}>
                 <X size={11} /> Close
               </button>
             )}
             <button onClick={() => onDelete(post.id)}
               className="inline-flex items-center gap-1.5 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-              style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', padding: '6px 12px', borderRadius: '2px', border: '1px solid hsl(0 70% 45% / 0.3)', color: 'hsl(0 70% 60%)', background: 'transparent' }}>
+              style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', padding: '6px 12px', borderRadius: '2px', border: '1px solid hsl(0 70% 45% / 0.3)', color: 'hsl(0 70% 60%)', background: 'transparent' }}>
               <Trash2 size={11} /> Remove
             </button>
           </div>
@@ -278,7 +278,7 @@ function JobCard({
         <div className="flex flex-wrap gap-2 mb-3">
           {post.requiredSkills.map((s) => (
             <span key={s} className="inline-flex items-center gap-1 font-barlow-condensed uppercase"
-              style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.18em', padding: '3px 8px', borderRadius: '2px', background: 'hsl(var(--hero-gold) / 0.07)', border: '1px solid hsl(var(--hero-gold) / 0.2)', color: ice60 }}>
+              style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.18em', padding: '3px 8px', borderRadius: '2px', background: 'hsl(var(--hero-gold) / 0.07)', border: '1px solid hsl(var(--hero-gold) / 0.2)', color: ice60 }}>
               <Tag size={9} /> {s}
             </span>
           ))}
@@ -289,7 +289,7 @@ function JobCard({
         {post.description}
       </p>
 
-      <p className="font-barlow-condensed uppercase mt-3" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.2em', color: 'hsl(var(--hero-ice) / 0.62)' }}>
+      <p className="font-barlow-condensed uppercase mt-3" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.2em', color: 'hsl(var(--hero-ice) / 0.62)' }}>
         Posted {formatDate(post.postedAt)}
       </p>
     </div>
@@ -411,7 +411,7 @@ function JobFormPanel({
         <div className="flex items-center justify-between px-7 py-5 shrink-0"
           style={{ borderBottom: '1px solid hsl(var(--hero-gold) / 0.15)', background: navy }}>
           <div>
-            <p className="font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
+            <p className="font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
               {editPost ? 'Edit posting' : 'New posting'}
             </p>
             <h2 className="font-bodoni" style={{ fontSize: '22px', fontWeight: 400, color: white, lineHeight: 1.05 }}>
@@ -502,13 +502,13 @@ function JobFormPanel({
           <div className="flex gap-3 pt-2 pb-6">
             <button type="submit" disabled={saving}
               className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-80 disabled:opacity-50"
-              style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '11px 22px', borderRadius: '2px', background: gold, color: navy, border: 'none' }}>
+              style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '11px 22px', borderRadius: '2px', background: gold, color: navy, border: 'none' }}>
               {saving ? <Loader2 size={13} className="animate-spin" /> : <CheckCircle size={13} />}
               {saving ? 'Saving…' : editPost ? 'Save changes' : 'Post job'}
             </button>
             <button type="button" onClick={onClose}
               className="font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-              style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '11px 22px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.25)', color: ice60, background: 'transparent' }}>
+              style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '11px 22px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.25)', color: ice60, background: 'transparent' }}>
               Cancel
             </button>
           </div>
@@ -533,7 +533,7 @@ function TabBar({ active, counts, onChange }: { active: Tab; counts: Record<Tab,
         <button key={key} onClick={() => onChange(key)}
           className="font-barlow-condensed uppercase transition-colors"
           style={{
-            fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em',
+            fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em',
             padding: '10px 18px',
             color: active === key ? gold : ice60,
             borderBottom: active === key ? '2px solid ' + gold : '2px solid transparent',
@@ -542,7 +542,7 @@ function TabBar({ active, counts, onChange }: { active: Tab; counts: Record<Tab,
           }}>
           {label}
           {counts[key] > 0 && (
-            <span className="ml-2" style={{ fontSize: '9px', padding: '2px 6px', borderRadius: '10px', background: active === key ? 'hsl(var(--hero-gold) / 0.15)' : 'hsl(var(--hero-gold) / 0.08)', color: active === key ? gold : ice60 }}>
+            <span className="ml-2" style={{ fontSize: '11px', padding: '2px 6px', borderRadius: '10px', background: active === key ? 'hsl(var(--hero-gold) / 0.15)' : 'hsl(var(--hero-gold) / 0.08)', color: active === key ? gold : ice60 }}>
               {counts[key]}
             </span>
           )}
@@ -569,12 +569,12 @@ function ConfirmDialog({
         <div className="flex gap-3">
           <button onClick={onConfirm}
             className="font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-            style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 20px', borderRadius: '2px', background: danger === true ? 'hsl(0 70% 45%)' : gold, color: white, border: 'none' }}>
+            style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 20px', borderRadius: '2px', background: danger === true ? 'hsl(0 70% 45%)' : gold, color: white, border: 'none' }}>
             {confirmLabel}
           </button>
           <button onClick={onCancel}
             className="font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-            style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 20px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.25)', color: ice60, background: 'transparent' }}>
+            style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 20px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.25)', color: ice60, background: 'transparent' }}>
             Cancel
           </button>
         </div>
@@ -660,8 +660,8 @@ function CompanyJobsInner() {
   return (
     <main className="min-h-screen pb-24" style={{ background: navy }}>
       <Helmet>
-        <title>Job Postings — REP | IV</title>
-        <meta name="description" content="Create and manage your company's job postings on REP | IV. Reach verified athletes, coaches, and veterans." />
+        <title>Job Postings — NORVARDEN</title>
+        <meta name="description" content="Create and manage your company's job postings on NORVARDEN. Reach verified people with disabilities." />
         <meta name="robots" content="noindex" />
       </Helmet>
 
@@ -671,17 +671,17 @@ function CompanyJobsInner() {
           <div className="flex items-center gap-2 mb-3">
             <Link to="/company/dashboard"
               className="inline-flex items-center gap-1 font-barlow-condensed uppercase transition-opacity hover:opacity-70"
-              style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: ice60, textDecoration: 'none' }}>
+              style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60, textDecoration: 'none' }}>
               <ChevronLeft size={12} /> Dashboard
             </Link>
             <ChevronRight size={12} style={{ color: 'hsl(var(--hero-ice) / 0.6)' }} />
-            <span className="font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>
+            <span className="font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>
               Job postings
             </span>
           </div>
           <div className="flex items-end justify-between gap-4 flex-wrap">
             <div>
-              <p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
+              <p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
                 Employer tools
               </p>
               <h1 className="font-bodoni" style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 400, color: white, lineHeight: 1.05 }}>
@@ -700,7 +700,7 @@ function CompanyJobsInner() {
             </div>
             <button onClick={openNew}
               className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-              style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '11px 22px', borderRadius: '2px', background: gold, color: navy, border: 'none' }}>
+              style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '11px 22px', borderRadius: '2px', background: gold, color: navy, border: 'none' }}>
               <PlusCircle size={13} /> Post a job
             </button>
           </div>
@@ -717,11 +717,11 @@ function CompanyJobsInner() {
                 No job posts <em style={{ color: gold, fontStyle: 'italic' }}>yet.</em>
               </h2>
               <p className="font-barlow mb-6" style={{ fontSize: '14px', fontWeight: 300, color: ice60, maxWidth: '360px', lineHeight: 1.65 }}>
-                Create your first listing to start connecting with verified athletes, coaches, and veterans.
+                Create your first listing to start connecting with verified people with disabilities.
               </p>
               <button onClick={openNew}
                 className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-                style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '11px 22px', borderRadius: '2px', background: gold, color: navy, border: 'none' }}>
+                style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '11px 22px', borderRadius: '2px', background: gold, color: navy, border: 'none' }}>
                 <PlusCircle size={13} /> Post your first job
               </button>
             </div>

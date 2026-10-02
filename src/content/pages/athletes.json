@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Athletes — REP | IV | Verified Jobs for Pro Athletes",
+    "title": "Athletes — NORVARDEN | Verified Jobs for Pro Athletes",
     "description": "A free, verified job board for current and former pro athletes. Real jobs from verified companies. You control who can contact you."
   },
   "hero": {
@@ -10,7 +10,7 @@
     "subheadline": "The discipline, competitiveness and coachability that got you to the pros are exactly what great companies hire for."
   },
   "whatWeOffer": {
-    "eyebrow": "What REP | IV offers",
+    "eyebrow": "What NORVARDEN offers",
     "headline": "Built around",
     "headlineGold": "you.",
     "items": [
@@ -24,7 +24,7 @@
         "id": "wo2",
         "number": "02",
         "title": "Jobs from verified companies only",
-        "body": "Every company on REP | IV has had their work email, business name and hiring contact confirmed before they can post a single job. No scams, no ghost listings."
+        "body": "Every company on NORVARDEN has had their work email, business name and hiring contact confirmed before they can post a single job. No scams, no ghost listings."
       },
       {
         "id": "wo3",
@@ -44,14 +44,14 @@
     "eyebrow": "Who can join",
     "headline": "Current and former",
     "headlineGold": "pros.",
-    "body": "REP | IV is for current and former professional athletes — any sport, any league, any level of pro. Verification is quick: a link to a roster or league page, a players association ID, or a similar credential. No lengthy paperwork.",
-    "note": "Everyone on REP | IV is verified before they can connect with companies."
+    "body": "NORVARDEN is for current and former professional athletes — any sport, any league, any level of pro. Verification is quick: a link to a roster or league page, a players association ID, or a similar credential. No lengthy paperwork.",
+    "note": "Everyone on NORVARDEN is verified before they can connect with companies."
   },
   "industries": {
     "eyebrow": "Industries to explore",
     "headline": "Where athletes",
     "headlineGold": "land.",
-    "body": "Your background opens doors across a wide range of industries. Here's where athletes on REP | IV are connecting.",
+    "body": "Your background opens doors across a wide range of industries. Here's where athletes on NORVARDEN are connecting.",
     "tags": [
       {
         "id": "ind1",

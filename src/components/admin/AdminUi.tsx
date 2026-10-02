@@ -78,7 +78,7 @@ export function Pill({ tone = 'muted', children, title }: { tone?: PillTone; chi
     <span
       title={title}
       className="font-barlow-condensed uppercase inline-flex items-center whitespace-nowrap"
-      style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.2em', padding: '3px 8px', borderRadius: '2px', background: c.bg, color: c.fg }}
+      style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em', padding: '3px 8px', borderRadius: '2px', background: c.bg, color: c.fg }}
     >
       {children}
     </span>
@@ -184,7 +184,7 @@ export function FilterTabs<T extends string>({ options, value, onChange }: {
             className="font-barlow-condensed uppercase transition-colors"
             style={{
               ...eyebrowStyle,
-              fontSize: '9px',
+              fontSize: '11px',
               letterSpacing: '0.22em',
               padding: '8px 12px',
               borderRadius: '2px',

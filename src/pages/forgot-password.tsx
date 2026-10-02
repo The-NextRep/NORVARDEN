@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { ChevronRight, Mail } from 'lucide-react';
 import BrandMark from '@/components/BrandMark';
 
-const siteUrl = 'https://jobs.the-nextrep.com';
+const siteUrl = 'https://www.norvarden.com';
 
 // ─── Design tokens ────────────────────────────────────────────────────────
 const navy         = 'hsl(var(--hero-navy))';
@@ -24,7 +24,7 @@ function FieldLabel({ children, htmlFor }: { children: React.ReactNode; htmlFor?
     <label
       htmlFor={htmlFor}
       className="font-barlow-condensed uppercase block mb-2"
-      style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}
+      style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}
     >
       {children}
     </label>
@@ -92,7 +92,7 @@ export default function ForgotPasswordPage() {
   return (
     <>
       <Helmet>
-        <title>Reset Password — REP | IV</title>
+        <title>Reset Password — NORVARDEN</title>
         <meta name="description" content="Request a password reset link for your Board account." />
         <link rel="canonical" href={`${siteUrl}/forgot-password`} />
         <meta name="robots" content="noindex" />
@@ -103,7 +103,7 @@ export default function ForgotPasswordPage() {
         style={{ background: navy }}
       >
         {/* Wordmark */}
-        <Link to="/" aria-label="REP | IV home" className="mb-10 block">
+        <Link to="/" aria-label="NORVARDEN home" className="mb-10 block">
           <BrandMark size={22} />
         </Link>
 

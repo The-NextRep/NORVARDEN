@@ -12,6 +12,7 @@ vi.mock('./config/same-as.json', () => ({
 
 vi.mock('./lib/site-meta', () => ({
   siteMeta,
+  IS_DRAFT: false,
 }))
 
 vi.mock('./routes', () => ({

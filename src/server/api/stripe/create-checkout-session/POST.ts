@@ -116,7 +116,7 @@ export default async function handler(req: Request, res: Response) {
       const coupon = await ensureFoundingCoupon(stripe);
       if (!coupon) {
         res.status(503).json({
-          error: 'This code is temporarily unavailable. Please contact info@the-nextrep.com.',
+          error: 'This code is temporarily unavailable. Please contact info@norvarden.com.',
           code: 'code_misconfigured',
         });
         return;

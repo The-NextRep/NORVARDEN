@@ -15,7 +15,7 @@ export default function CheckoutCancel() {
   return (
     <>
       <Helmet>
-        <title>Checkout cancelled — REP | IV</title>
+        <title>Checkout cancelled — NORVARDEN</title>
         <meta name="robots" content="noindex" />
       </Helmet>
       <main className="min-h-screen flex items-center justify-center px-6 py-20" style={{ background: navy }}>
@@ -37,8 +37,8 @@ export default function CheckoutCancel() {
             >
               Back to pricing
             </Link>
-            <a href="mailto:info@the-nextrep.com" className="font-barlow" style={{ fontSize: '13px', color: gold }}>
-              Questions? info@the-nextrep.com
+            <a href="mailto:info@norvarden.com" className="font-barlow" style={{ fontSize: '13px', color: gold }}>
+              Questions? info@norvarden.com
             </a>
           </div>
         </div>

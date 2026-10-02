@@ -110,7 +110,7 @@ export default async function handler(req: Request, res: Response) {
   if (found.suspended) {
     return res.status(403).json({
       error: 'suspended',
-      message: 'This account has been suspended. Contact info@the-nextrep.com.',
+      message: 'This account has been suspended. Contact info@norvarden.com.',
     });
   }
 

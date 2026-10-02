@@ -26,7 +26,7 @@ export default function UpcomingEvents() {
         <h2 id="home-events" className="font-bodoni" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', fontWeight: 400, color: 'hsl(var(--hero-white))' }}>
           Upcoming <em className="gold-shimmer" style={{ fontStyle: 'italic' }}>events.</em>
         </h2>
-        <Link to="/events" className="font-barlow-condensed uppercase inline-flex items-center gap-1 shrink-0" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: 'hsl(var(--hero-gold))' }}>
+        <Link to="/events" className="font-barlow-condensed uppercase inline-flex items-center gap-1 shrink-0" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: 'hsl(var(--hero-gold))' }}>
           All events <ChevronRight size={12} />
         </Link>
       </div>

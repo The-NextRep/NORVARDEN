@@ -85,9 +85,9 @@ export default {
 			heading: ['var(--font-heading)'],
 			serif: ['var(--font-serif)'],
 			mono: ['var(--font-mono)'],
-			bodoni: ["'Bodoni Moda'", 'Georgia', 'serif'],
-			'barlow-condensed': ["'Barlow Condensed'", 'sans-serif'],
-			barlow: ["'Barlow'", 'sans-serif'],
+			bodoni: ["'Montserrat'", "'Helvetica Neue'", 'Arial', 'sans-serif'],
+			'barlow-condensed': ["'Montserrat'", 'sans-serif'],
+			barlow: ["'Atkinson Hyperlegible'", 'sans-serif'],
 		},
   		keyframes: {
   			'accordion-down': {

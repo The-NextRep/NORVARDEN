@@ -23,7 +23,7 @@ function FieldLabel({ children, htmlFor }: { children: React.ReactNode; htmlFor?
     <label
       htmlFor={htmlFor}
       className="font-barlow-condensed uppercase block mb-2"
-      style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}
+      style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}
     >
       {children}
     </label>
@@ -140,7 +140,7 @@ export default function ResetPasswordPage() {
     return (
       <>
         <Helmet>
-          <title>Reset Password — REP | IV</title>
+          <title>Reset Password — NORVARDEN</title>
           <meta name="description" content="Reset your Board account password using your emailed link." />
           <meta name="robots" content="noindex" />
         </Helmet>
@@ -148,7 +148,7 @@ export default function ResetPasswordPage() {
           className="min-h-screen flex flex-col items-center justify-center px-4 py-16"
           style={{ background: navy }}
         >
-          <Link to="/" aria-label="REP | IV home" className="mb-10 block">
+          <Link to="/" aria-label="NORVARDEN home" className="mb-10 block">
             <BrandMark size={22} />
           </Link>
 
@@ -209,7 +209,7 @@ export default function ResetPasswordPage() {
     return (
       <>
         <Helmet>
-          <title>Password Updated — REP | IV</title>
+          <title>Password Updated — NORVARDEN</title>
           <meta name="description" content="Your Board account password has been updated successfully." />
           <meta name="robots" content="noindex" />
         </Helmet>
@@ -217,7 +217,7 @@ export default function ResetPasswordPage() {
           className="min-h-screen flex flex-col items-center justify-center px-4 py-16"
           style={{ background: navy }}
         >
-          <Link to="/" aria-label="REP | IV home" className="mb-10 block">
+          <Link to="/" aria-label="NORVARDEN home" className="mb-10 block">
             <BrandMark size={22} />
           </Link>
 
@@ -255,7 +255,7 @@ export default function ResetPasswordPage() {
   return (
     <>
       <Helmet>
-        <title>Reset Password — REP | IV</title>
+        <title>Reset Password — NORVARDEN</title>
         <meta name="description" content="Choose a new password for your Board account." />
         <meta name="robots" content="noindex" />
       </Helmet>
@@ -264,7 +264,7 @@ export default function ResetPasswordPage() {
         className="min-h-screen flex flex-col items-center justify-center px-4 py-16"
         style={{ background: navy }}
       >
-        <Link to="/" aria-label="REP | IV home" className="mb-10 block">
+        <Link to="/" aria-label="NORVARDEN home" className="mb-10 block">
           <BrandMark size={22} />
         </Link>
 

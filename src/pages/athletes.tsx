@@ -4,7 +4,7 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import { Link } from 'react-router';
 import { Shield, ChevronRight, AlertTriangle } from 'lucide-react';
 
-const siteUrl = 'https://jobs.the-nextrep.com';
+const siteUrl = 'https://www.norvarden.com';
 
 // ─── Design tokens ────────────────────────────────────────────────────────
 const navy         = 'hsl(var(--hero-navy))';
@@ -115,10 +115,10 @@ export default function AthletesPage() {
           </p>
         </div>
 
-        {/* ── WHAT REP | IV OFFERS ─────────────────────────────────────── */}
+        {/* ── WHAT NORVARDEN OFFERS ─────────────────────────────────────── */}
         <section
           className="px-6 md:px-12 lg:px-16 py-24 max-w-7xl mx-auto"
-          aria-label="What REP | IV offers athletes"
+          aria-label="What NORVARDEN offers athletes"
         >
           <div className="mb-14 flex flex-col gap-4 max-w-2xl">
             <p
@@ -305,7 +305,7 @@ export default function AthletesPage() {
                   key={tag.id}
                   className="font-barlow-condensed uppercase"
                   style={{
-                    fontSize: '10px',
+                    fontSize: '12px',
                     fontWeight: 500,
                     letterSpacing: '0.30em',
                     padding: '9px 16px',

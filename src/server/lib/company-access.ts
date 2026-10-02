@@ -150,5 +150,5 @@ export const EMPLOYER_ERRORS: Record<Exclude<EmployerResolution, { ok: true }>['
   not_employer: 'Only company accounts can do this.',
   not_approved: 'Your company must be verified before you can do this.',
   email_unverified: 'Please sign out and sign in again to confirm your email address.',
-  suspended: 'Your company account has been suspended. Contact info@the-nextrep.com.',
+  suspended: 'Your company account has been suspended. Contact info@norvarden.com.',
 };

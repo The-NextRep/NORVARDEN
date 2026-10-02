@@ -5,9 +5,10 @@ import { home } from 'virtual:content';
 import { ContentListContext } from '@airo/content';
 import { Shield, ChevronRight, ChevronLeft, Pause, Play, ChevronDown } from 'lucide-react';
 import BrandMark from '@/components/BrandMark';
+import TechBackdrop from '@/components/TechBackdrop';
 import UpcomingEvents from '@/components/UpcomingEvents';
 
-const siteUrl = 'https://jobs.the-nextrep.com';
+const siteUrl = 'https://www.norvarden.com';
 
 // ─── Design tokens ────────────────────────────────────────────────────────
 const navy       = 'hsl(var(--hero-navy))';
@@ -19,17 +20,6 @@ const cardBg     = 'hsl(var(--hero-card-bg))';
 const goldBorder35 = '1px solid hsl(var(--hero-gold) / 0.35)';
 const goldGrad   = `linear-gradient(to right, transparent, ${gold} 30%, ${gold} 70%, transparent)`;
 
-// ─── Carousel photos ──────────────────────────────────────────────────────
-const PHOTOS = [
-  { slot: '/images/hero-court-night.jpg',        alt: 'Outdoor basketball court at night with the city skyline behind it' },
-  { slot: '/images/runway-sunset-tower.jpg',     alt: 'Airport runway at sunset with the control tower on the horizon' },
-  { slot: '/images/football-stadium-aerial.jpg', alt: 'Football stadium under the lights at night, seen from above' },
-  { slot: '/images/jet-takeoff.jpg',             alt: 'Fighter jet taking off from an airfield' },
-  { slot: '/images/arena-aerial-gold.jpg',       alt: 'Indoor basketball arena from above, lit in black and gold' },
-  { slot: '/images/track-sunset.jpg',            alt: 'Running track and stadium lights at sunset' },
-  { slot: '/images/city-skyline-sunset.jpg',     alt: 'City skyline silhouetted against a golden sunset' },
-];
-
 // ─── Hairline ─────────────────────────────────────────────────────────────
 function Hairline({ className = '' }: { className?: string }) {
   return <div className={className} style={{ height: '1px', background: goldGrad }} aria-hidden="true" />;
@@ -37,24 +27,15 @@ function Hairline({ className = '' }: { className?: string }) {
 
 // ─── Main page ────────────────────────────────────────────────────────────
 export default function HomePage() {
-  const [activePhoto, setActivePhoto]   = useState(0);
   const [activeStory, setActiveStory]   = useState(0);
   const [paused, setPaused]             = useState(false);
   const [faqOpen, setFaqOpen]           = useState<Record<string, boolean>>({});
   const prefersReduced                  = useRef(false);
-  const slideTimer                      = useRef<ReturnType<typeof setInterval> | null>(null);
   const storyTimer                      = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     prefersReduced.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }, []);
-
-  // Slideshow
-  useEffect(() => {
-    if (paused || prefersReduced.current) return;
-    slideTimer.current = setInterval(() => setActivePhoto(p => (p + 1) % PHOTOS.length), 7000);
-    return () => { if (slideTimer.current) clearInterval(slideTimer.current); };
-  }, [paused]);
 
   // Story auto-advance
   useEffect(() => {
@@ -67,7 +48,6 @@ export default function HomePage() {
     setPaused(p => {
       const next = !p;
       if (!next) return next;
-      if (slideTimer.current)  clearInterval(slideTimer.current);
       if (storyTimer.current)  clearInterval(storyTimer.current);
       return next;
     });
@@ -79,8 +59,8 @@ export default function HomePage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'WebSite', '@id': `${siteUrl}/#website`, url: siteUrl, name: 'REP | IV' },
-      { '@type': 'Organization', '@id': `${siteUrl}/#organization`, name: 'REP | IV', url: siteUrl, email: 'info@the-nextrep.com' },
+      { '@type': 'WebSite', '@id': `${siteUrl}/#website`, url: siteUrl, name: 'NORVARDEN' },
+      { '@type': 'Organization', '@id': `${siteUrl}/#organization`, name: 'NORVARDEN', url: siteUrl, email: 'info@norvarden.com' },
       { '@type': 'WebPage', '@id': `${siteUrl}/#webpage`, url: siteUrl, name: home.meta.title, isPartOf: { '@id': `${siteUrl}/#website` } },
     ],
   };
@@ -95,10 +75,10 @@ export default function HomePage() {
         <meta property="og:description" content={home.meta.description} />
         <meta property="og:url" content={siteUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${siteUrl}/images/og-rep-iv.jpg`} />
+        <meta property="og:image" content={`${siteUrl}/images/og-norvarden.jpg`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="REP | IV — Built For The NextRep" />
+        <meta property="og:image:alt" content="NORVARDEN — Another Way Forward" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>
       </Helmet>
@@ -108,24 +88,8 @@ export default function HomePage() {
         {/* ── HERO ──────────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden" style={{ minHeight: '100vh' }} aria-label="Hero">
 
-          {/* Crossfading background photos */}
-          {PHOTOS.map((photo, i) => (
-            <div
-              key={photo.slot}
-              className={`bg-photo${i === activePhoto ? ' active' : ''}`}
-              role={i === 0 ? 'img' : undefined}
-              aria-label={i === 0 ? photo.alt : undefined}
-              aria-hidden={i !== 0}
-              style={{ backgroundImage: `url(${photo.slot})` }}
-            />
-          ))}
+          <TechBackdrop />
 
-          {/* Overlays */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{ background: `linear-gradient(to right, hsl(var(--hero-navy-85)) 0%, hsl(var(--hero-navy-72)) 50%, hsl(var(--hero-navy-55)) 100%)` }}
-            aria-hidden="true"
-          />
           <div
             className="absolute bottom-0 left-0 right-0 pointer-events-none"
             style={{ height: '200px', background: `linear-gradient(to top, ${navy} 0%, transparent 100%)` }}
@@ -138,10 +102,7 @@ export default function HomePage() {
             {/* Left: headline + CTA */}
             <div className="flex-1 flex flex-col gap-6 max-w-xl">
               <div className="flex flex-col items-start gap-4">
-                <BrandMark size={44} />
-                <p className="font-bodoni" style={{ fontSize: '20px', fontStyle: 'italic', fontWeight: 400, color: gold, letterSpacing: '0.01em' }}>
-                  Built For The NextRep
-                </p>
+                <BrandMark size={26} tagline />
               </div>
               <Hairline className="w-24" />
               <h1
@@ -183,7 +144,7 @@ export default function HomePage() {
                     <span
                       key={badge.id}
                       className="font-barlow-condensed uppercase"
-                      style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '5px 10px', border: goldBorder35, borderRadius: '3px', color: gold, background: 'hsl(var(--hero-gold) / 0.08)' }}
+                      style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '5px 10px', border: goldBorder35, borderRadius: '3px', color: gold, background: 'hsl(var(--hero-gold) / 0.08)' }}
                     >
                       <Shield size={8} strokeWidth={2.5} style={{ display: 'inline', marginRight: '5px', verticalAlign: 'middle' }} />
                       {badge.label}
@@ -207,7 +168,7 @@ export default function HomePage() {
                     aria-label={`Story ${i + 1}`}
                     style={{
                       flex: 1, height: '2px', borderRadius: '1px', border: 'none', cursor: 'pointer',
-                      background: i === activePhoto
+                      background: i === activeStory
                         ? gold
                         : i < activeStory
                           ? 'hsl(var(--hero-gold) / 0.60)'
@@ -282,7 +243,7 @@ export default function HomePage() {
                   className="flex flex-col gap-2 p-6"
                   style={{ background: cardBg, backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}
                 >
-                  <span className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}>
+                  <span className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}>
                     {item.label}
                   </span>
                   <p className="font-barlow" style={{ fontSize: '14px', fontWeight: 300, lineHeight: 1.65, color: ice60 }}>
@@ -357,7 +318,7 @@ export default function HomePage() {
                   className="flex flex-col gap-4 p-7"
                   style={{ background: cardBg, backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: goldBorder35, borderRadius: '3px' }}
                 >
-                  <span className="font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}>
+                  <span className="font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}>
                     {card.label}
                   </span>
                   <h3 className="font-bodoni" style={{ fontSize: '20px', fontWeight: 400, lineHeight: 1.1, color: white }}>
@@ -372,13 +333,16 @@ export default function HomePage() {
           </ContentListContext>
         </section>
 
-        {/* ── ATHLETES BAND ────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden" aria-label="Athletes">
+        {/* ── JOB SEEKERS BAND ────────────────────────────────────────────── */}
+        <section className="relative overflow-hidden" aria-label="Job seekers">
           <div
-            className="bg-photo active"
-            role="img"
-            aria-label="Indoor basketball arena from above, lit in black and gold"
-            style={{ backgroundImage: 'url(/images/arena-aerial-gold.jpg)' }}
+            className="absolute inset-0"
+            aria-hidden="true"
+            style={{
+              backgroundImage: 'linear-gradient(hsl(210 30% 80% / 0.06) 1px, transparent 1px), linear-gradient(90deg, hsl(210 30% 80% / 0.06) 1px, transparent 1px), radial-gradient(ellipse 60% 80% at 85% 50%, hsl(36 40% 66% / 0.12), transparent 70%)',
+              backgroundSize: '48px 48px, 48px 48px, 100% 100%',
+              background: undefined,
+            }}
           />
           <div
             className="absolute inset-0 pointer-events-none"
@@ -406,7 +370,7 @@ export default function HomePage() {
                     <span
                       key={badge.id}
                       className="font-barlow-condensed uppercase"
-                      style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '5px 10px', border: goldBorder35, borderRadius: '3px', color: gold, background: 'hsl(var(--hero-gold) / 0.08)' }}
+                      style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '5px 10px', border: goldBorder35, borderRadius: '3px', color: gold, background: 'hsl(var(--hero-gold) / 0.08)' }}
                     >
                       <Shield size={8} strokeWidth={2.5} style={{ display: 'inline', marginRight: '5px', verticalAlign: 'middle' }} />
                       {badge.label}
@@ -415,7 +379,7 @@ export default function HomePage() {
                 </div>
               </ContentListContext>
               <Link
-                to="/athletes"
+                to="/jobs"
                 className="font-barlow-condensed uppercase inline-flex items-center gap-2 self-start transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                 style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.32em', paddingTop: '16px', paddingBottom: '16px', paddingLeft: '36px', paddingRight: '36px', borderRadius: '3px', border: goldBorder35, color: ice, outlineColor: gold }}
               >
@@ -426,13 +390,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── COACHES BAND ─────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden" aria-label="Coaches">
+        {/* ── STUDENTS BAND ─────────────────────────────────────────────── */}
+        <section className="relative overflow-hidden" aria-label="Students and early career">
           <div
-            className="bg-photo active"
-            role="img"
-            aria-label="Running track and stadium lights at sunset"
-            style={{ backgroundImage: 'url(/images/track-sunset.jpg)' }}
+            className="absolute inset-0"
+            aria-hidden="true"
+            style={{
+              backgroundImage: 'linear-gradient(hsl(210 30% 80% / 0.06) 1px, transparent 1px), linear-gradient(90deg, hsl(210 30% 80% / 0.06) 1px, transparent 1px), radial-gradient(ellipse 60% 80% at 85% 50%, hsl(36 40% 66% / 0.12), transparent 70%)',
+              backgroundSize: '48px 48px, 48px 48px, 100% 100%',
+              background: undefined,
+            }}
           />
           <div
             className="absolute inset-0 pointer-events-none"
@@ -460,7 +427,7 @@ export default function HomePage() {
                     <span
                       key={badge.id}
                       className="font-barlow-condensed uppercase"
-                      style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '5px 10px', border: goldBorder35, borderRadius: '3px', color: gold, background: 'hsl(var(--hero-gold) / 0.08)' }}
+                      style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '5px 10px', border: goldBorder35, borderRadius: '3px', color: gold, background: 'hsl(var(--hero-gold) / 0.08)' }}
                     >
                       <Shield size={8} strokeWidth={2.5} style={{ display: 'inline', marginRight: '5px', verticalAlign: 'middle' }} />
                       {badge.label}
@@ -469,7 +436,7 @@ export default function HomePage() {
                 </div>
               </ContentListContext>
               <Link
-                to="/coaches"
+                to="/resources"
                 className="font-barlow-condensed uppercase inline-flex items-center gap-2 self-start transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                 style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.32em', paddingTop: '16px', paddingBottom: '16px', paddingLeft: '36px', paddingRight: '36px', borderRadius: '3px', border: goldBorder35, color: ice, outlineColor: gold }}
               >
@@ -483,10 +450,13 @@ export default function HomePage() {
         {/* ── VETERANS BAND ─────────────────────────────────────────────── */}
         <section className="relative overflow-hidden" aria-label="Veterans">
           <div
-            className="bg-photo active"
-            role="img"
-            aria-label="Soldiers boarding helicopters at sunset"
-            style={{ backgroundImage: 'url(/images/veterans-helicopter-sunset.jpg)' }}
+            className="absolute inset-0"
+            aria-hidden="true"
+            style={{
+              backgroundImage: 'linear-gradient(hsl(210 30% 80% / 0.06) 1px, transparent 1px), linear-gradient(90deg, hsl(210 30% 80% / 0.06) 1px, transparent 1px), radial-gradient(ellipse 60% 80% at 85% 50%, hsl(36 40% 66% / 0.12), transparent 70%)',
+              backgroundSize: '48px 48px, 48px 48px, 100% 100%',
+              background: undefined,
+            }}
           />
           <div
             className="absolute inset-0 pointer-events-none"
@@ -527,7 +497,7 @@ export default function HomePage() {
           style={{ borderTop: '1px solid hsl(var(--hero-gold) / 0.20)', borderBottom: '1px solid hsl(var(--hero-gold) / 0.20)' }}
         >
           <div className="flex flex-col gap-2">
-            <p className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: 'hsl(var(--hero-gold) / 0.60)' }}>
+            <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: 'hsl(var(--hero-gold) / 0.60)' }}>
               <span>{home.forCompaniesBand.eyebrow}</span>
             </p>
             <p className="font-bodoni" style={{ fontSize: 'clamp(1.2rem, 2vw, 1.6rem)', fontWeight: 400, lineHeight: 1.2, color: white }}>
@@ -590,10 +560,13 @@ export default function HomePage() {
         {/* ── CLOSING BAND ──────────────────────────────────────────────── */}
         <section className="relative overflow-hidden" aria-label="Join free">
           <div
-            className="bg-photo active"
-            role="img"
-            aria-label="City skyline silhouetted against a golden sunset"
-            style={{ backgroundImage: 'url(/images/city-skyline-sunset.jpg)' }}
+            className="absolute inset-0"
+            aria-hidden="true"
+            style={{
+              backgroundImage: 'linear-gradient(hsl(210 30% 80% / 0.06) 1px, transparent 1px), linear-gradient(90deg, hsl(210 30% 80% / 0.06) 1px, transparent 1px), radial-gradient(ellipse 60% 80% at 85% 50%, hsl(36 40% 66% / 0.12), transparent 70%)',
+              backgroundSize: '48px 48px, 48px 48px, 100% 100%',
+              background: undefined,
+            }}
           />
           <div
             className="absolute inset-0 pointer-events-none"

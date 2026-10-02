@@ -98,11 +98,11 @@ function ThreadView({ convId, companyUserId, memberUserId, onDismiss }: {
   return (
     <div>
       <div className="flex items-center gap-3 mb-4">
-        <span className="font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
+        <span className="font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
           Company: {companyUserId.slice(0, 8)}…
         </span>
         <span style={{ color: 'hsl(var(--hero-gold) / 0.3)' }}>·</span>
-        <span className="font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
+        <span className="font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
           Member: {memberUserId.slice(0, 8)}…
         </span>
       </div>
@@ -126,13 +126,13 @@ function ThreadView({ convId, companyUserId, memberUserId, onDismiss }: {
                   border: '1px solid hsl(var(--hero-gold) / 0.2)',
                 }}
               >
-                <p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
+                <p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
                   {isCompany ? admin_messages.companyLabel : admin_messages.memberLabel}
                 </p>
                 <p className="font-barlow" style={{ fontSize: '13px', fontWeight: 300, color: white, lineHeight: 1.6, whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
                   {msg.body}
                 </p>
-                <p className="font-barlow mt-1" style={{ fontSize: '10px', fontWeight: 300, color: ice60 }}>
+                <p className="font-barlow mt-1" style={{ fontSize: '12px', fontWeight: 300, color: ice60 }}>
                   {formatTime(msg.createdAt)}
                 </p>
               </div>
@@ -146,14 +146,14 @@ function ThreadView({ convId, companyUserId, memberUserId, onDismiss }: {
           onClick={() => { void handleDismiss(); }}
           disabled={dismissing}
           className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-80 disabled:opacity-40"
-          style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 20px', borderRadius: '2px', background: 'hsl(var(--hero-gold) / 0.15)', color: gold, border: '1px solid hsl(var(--hero-gold) / 0.4)', cursor: 'pointer' }}
+          style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 20px', borderRadius: '2px', background: 'hsl(var(--hero-gold) / 0.15)', color: gold, border: '1px solid hsl(var(--hero-gold) / 0.4)', cursor: 'pointer' }}
         >
           <Check size={12} />
           {admin_messages.dismissLabel}
         </button>
       )}
       {detail?.conversation.reportStatus === 'dismissed' && (
-        <span className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
+        <span className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
           {admin_messages.dismissedLabel}
         </span>
       )}
@@ -180,8 +180,8 @@ function AdminMessagesInner() {
   return (
     <main className="min-h-screen pb-24" style={{ background: navy }}>
       <Helmet>
-        <title>Reported Conversations — Admin — REP | IV</title>
-        <meta name="description" content="Admin review queue for reported conversations on REP | IV." />
+        <title>Reported Conversations — Admin — NORVARDEN</title>
+        <meta name="description" content="Admin review queue for reported conversations on NORVARDEN." />
         <meta name="robots" content="noindex" />
       </Helmet>
 
@@ -189,7 +189,7 @@ function AdminMessagesInner() {
 
       <div className="px-6 md:px-12 lg:px-16 py-10" style={{ borderBottom: '1px solid hsl(var(--hero-gold) / 0.15)', background: navyMid }}>
         <div className="max-w-4xl mx-auto">
-          <Link to="/admin" className="inline-flex items-center gap-1.5 font-barlow-condensed uppercase mb-4 transition-opacity hover:opacity-70" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: ice60, textDecoration: 'none' }}>
+          <Link to="/admin" className="inline-flex items-center gap-1.5 font-barlow-condensed uppercase mb-4 transition-opacity hover:opacity-70" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60, textDecoration: 'none' }}>
             <ChevronLeft size={12} /> Overview
           </Link>
           <div className="flex items-center gap-3">
@@ -230,13 +230,13 @@ function AdminMessagesInner() {
                     <AlertTriangle size={16} style={{ color: gold, flexShrink: 0, marginTop: '2px' }} />
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-3 flex-wrap mb-1">
-                        <span className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.22em', color: white }}>
+                        <span className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.22em', color: white }}>
                           Conversation #{conv.id}
                         </span>
                         <span
                           className="font-barlow-condensed uppercase"
                           style={{
-                            fontSize: '9px', fontWeight: 500, letterSpacing: '0.2em',
+                            fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em',
                             padding: '2px 7px', borderRadius: '2px',
                             background: conv.reportStatus === 'dismissed' ? 'hsl(var(--hero-gold) / 0.1)' : 'hsl(var(--destructive) / 0.15)',
                             color: conv.reportStatus === 'dismissed' ? ice60 : 'hsl(var(--destructive))',
@@ -245,7 +245,7 @@ function AdminMessagesInner() {
                           {conv.reportStatus ?? 'pending'}
                         </span>
                         {conv.blockedAt && (
-                          <span className="font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.2em', padding: '2px 7px', borderRadius: '2px', background: 'hsl(var(--destructive) / 0.1)', color: 'hsl(var(--destructive))' }}>
+                          <span className="font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em', padding: '2px 7px', borderRadius: '2px', background: 'hsl(var(--destructive) / 0.1)', color: 'hsl(var(--destructive))' }}>
                             Blocked
                           </span>
                         )}

@@ -11,13 +11,13 @@ export default function Footer() {
           <div className="flex flex-col gap-2">
             <BrandMark size={16} />
             <a
-              href="https://the-nextrep.com"
+              href="https://www.norvarden.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-barlow-condensed uppercase transition-colors hover:opacity-80"
               style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.24em', color: 'hsl(var(--hero-ice) / 0.82)' }}
             >
-              Built For The NextRep
+              Another Way Forward
             </a>
           </div>
 
@@ -42,7 +42,7 @@ export default function Footer() {
               </Link>
             ))}
             <a
-              href="mailto:info@the-nextrep.com"
+              href="mailto:info@norvarden.com"
               className="font-barlow-condensed uppercase transition-colors hover:opacity-80"
               style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.24em', color: 'hsl(var(--hero-ice) / 0.82)' }}
             >
@@ -57,7 +57,7 @@ export default function Footer() {
             className="font-barlow"
             style={{ fontSize: '12px', fontWeight: 400, color: 'hsl(var(--hero-ice) / 0.65)' }}
           >
-            © 2026 The NextRep. All rights reserved.
+            © 2026 NORVARDEN. All rights reserved.
           </p>
         </div>
       </div>

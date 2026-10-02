@@ -100,7 +100,7 @@ function ReportsInner() {
     <AdminLayout
       title="Reports"
       subtitle="Reports members filed against companies. Three distinct reporters automatically pause a company's job posts."
-      metaDescription="Admin review of member reports against companies on REP | IV."
+      metaDescription="Admin review of member reports against companies on NORVARDEN."
       actions={
         <AdminLink to="/admin/messages">Reported conversations <ArrowRight size={12} /></AdminLink>
       }

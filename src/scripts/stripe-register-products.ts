@@ -1,6 +1,6 @@
 #!/usr/bin/env npx tsx
 /**
- * Registers REP | IV's plans in Stripe and prints the env vars to set.
+ * Registers NORVARDEN's plans in Stripe and prints the env vars to set.
  *
  *   npx tsx src/scripts/stripe-register-products.ts
  *
@@ -62,8 +62,8 @@ async function main() {
     }
     if (!productId) {
       const product = await stripe.products.create({
-        name: `REP | IV — ${PLAN_LABELS[plan]}`,
-        description: `${PLAN_LABELS[plan]} plan for verified companies on REP | IV by The NextRep.`,
+        name: `NORVARDEN — ${PLAN_LABELS[plan]}`,
+        description: `${PLAN_LABELS[plan]} plan for verified companies on NORVARDEN.`,
       });
       productId = product.id;
       console.error(`Created product ${product.id} (${PLAN_LABELS[plan]})`);

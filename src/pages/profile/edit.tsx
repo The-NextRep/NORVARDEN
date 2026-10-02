@@ -42,7 +42,7 @@ function FieldLabel({ children, htmlFor }: { children: React.ReactNode; htmlFor?
     <label
       htmlFor={htmlFor}
       className="block font-barlow-condensed uppercase mb-1.5"
-      style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}
+      style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}
     >
       {children}
     </label>
@@ -156,7 +156,7 @@ function ChipToggle({ label, active, onClick }: { label: string; active: boolean
       onClick={onClick}
       className="font-barlow-condensed uppercase transition-all"
       style={{
-        fontSize: '10px', fontWeight: 500, letterSpacing: '0.22em',
+        fontSize: '12px', fontWeight: 500, letterSpacing: '0.22em',
         padding: '7px 14px', borderRadius: '2px',
         border: active ? `1px solid ${gold}` : '1px solid hsl(var(--hero-gold) / 0.25)',
         background: active ? 'hsl(var(--hero-gold) / 0.12)' : 'transparent',
@@ -197,7 +197,7 @@ function TagInput({ tags, onChange, placeholder }: { tags: string[]; onChange: (
       <div className="flex flex-wrap gap-2 mb-2">
         {tags.map((tag) => (
           <span key={tag} className="inline-flex items-center gap-1.5 font-barlow-condensed uppercase"
-            style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.18em', padding: '5px 10px', borderRadius: '2px', border: `1px solid ${gold}`, background: 'hsl(var(--hero-gold) / 0.1)', color: gold }}>
+            style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.18em', padding: '5px 10px', borderRadius: '2px', border: `1px solid ${gold}`, background: 'hsl(var(--hero-gold) / 0.1)', color: gold }}>
             {tag}
             <button type="button" onClick={() => onChange(tags.filter((t) => t !== tag))} aria-label={`Remove ${tag}`} style={{ color: ice60, lineHeight: 1 }}><X size={10} /></button>
           </span>
@@ -211,7 +211,7 @@ function TagInput({ tags, onChange, placeholder }: { tags: string[]; onChange: (
           onFocus={(e) => { e.currentTarget.style.borderColor = 'hsl(var(--hero-gold) / 0.6)'; }}
           onBlur={(e) => { e.currentTarget.style.borderColor = 'hsl(var(--hero-gold) / 0.22)'; }} />
         <button type="button" onClick={addTag} className="inline-flex items-center gap-1 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-          style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.22em', padding: '8px 14px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.4)', color: gold, background: 'transparent', cursor: 'pointer' }}>
+          style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.22em', padding: '8px 14px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.4)', color: gold, background: 'transparent', cursor: 'pointer' }}>
           <Plus size={11} /> Add
         </button>
       </div>
@@ -265,7 +265,7 @@ function PhotoUpload({ currentUrl, onUpload }: { currentUrl: string | null; onUp
       <div>
         <button type="button" onClick={() => inputRef.current?.click()} disabled={uploading}
           className="font-barlow-condensed uppercase transition-opacity hover:opacity-80 disabled:opacity-40"
-          style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 20px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.4)', color: gold, background: 'transparent', cursor: 'pointer' }}>
+          style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 20px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.4)', color: gold, background: 'transparent', cursor: 'pointer' }}>
           {preview ? 'Change photo' : 'Upload photo'}
         </button>
         <p className="font-barlow mt-2" style={{ fontSize: '12px', fontWeight: 300, color: ice60 }}>Optional. JPEG, PNG or WebP, max 5 MB.</p>
@@ -311,7 +311,7 @@ function ResumeUpload({ currentFileName, onUpload }: { currentFileName: string |
     <div className="flex items-center gap-4 flex-wrap">
       <button type="button" onClick={() => inputRef.current?.click()} disabled={uploading}
         className="font-barlow-condensed uppercase transition-opacity hover:opacity-80 disabled:opacity-40 inline-flex items-center gap-2"
-        style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 20px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.4)', color: gold, background: 'transparent', cursor: 'pointer' }}>
+        style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 20px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.4)', color: gold, background: 'transparent', cursor: 'pointer' }}>
         <Upload size={12} />{fileName ? 'Replace resume' : 'Upload resume'}
       </button>
       {fileName && <span className="font-barlow" style={{ fontSize: '13px', fontWeight: 300, color: ice60 }}>{fileName}</span>}
@@ -491,8 +491,8 @@ function ProfileEditInner() {
   return (
     <main className="min-h-screen pb-24" style={{ background: navy }}>
       <Helmet>
-        <title>Edit Profile — REP | IV</title>
-        <meta name="description" content="Edit your member profile on REP | IV — update your headline, skills, experience, and job preferences." />
+        <title>Edit Profile — NORVARDEN</title>
+        <meta name="description" content="Edit your member profile on NORVARDEN — update your headline, skills, experience, and job preferences." />
         <meta name="robots" content="noindex" />
       </Helmet>
 
@@ -500,7 +500,7 @@ function ProfileEditInner() {
       <div className="px-6 md:px-12 lg:px-16 py-10" style={{ borderBottom: '1px solid hsl(var(--hero-gold) / 0.15)' }}>
         <div className="max-w-3xl mx-auto flex items-start justify-between gap-4 flex-wrap">
           <div>
-            <p className="font-barlow-condensed uppercase mb-2" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>{pathLabel} PROFILE</p>
+            <p className="font-barlow-condensed uppercase mb-2" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>{pathLabel} PROFILE</p>
             <h1 className="font-bodoni" style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 400, color: white, lineHeight: 1.05 }}>
               Edit your <em style={{ color: gold, fontStyle: 'italic' }}>profile.</em>
             </h1>
@@ -508,12 +508,12 @@ function ProfileEditInner() {
           <div className="flex items-center gap-3">
             <button type="button" onClick={() => navigate(`/profile/${user?.id ?? ''}`)}
               className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-              style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 18px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.3)', color: ice60, background: 'transparent', cursor: 'pointer' }}>
+              style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 18px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.3)', color: ice60, background: 'transparent', cursor: 'pointer' }}>
               <Eye size={12} /> Preview
             </button>
             <button type="button" onClick={() => void handleSave()} disabled={saving}
               className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-90 disabled:opacity-50"
-              style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 24px', borderRadius: '2px', background: saved ? 'hsl(var(--hero-gold) / 0.9)' : gold, color: navy, cursor: 'pointer', border: 'none' }}>
+              style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 24px', borderRadius: '2px', background: saved ? 'hsl(var(--hero-gold) / 0.9)' : gold, color: navy, cursor: 'pointer', border: 'none' }}>
               {saving ? 'Saving…' : saved ? 'Saved ✓' : 'Save profile'}
             </button>
           </div>
@@ -585,7 +585,7 @@ function ProfileEditInner() {
               <div className="p-5 rounded-sm" style={{ background: 'hsl(var(--hero-gold) / 0.05)', border: '1px solid hsl(var(--hero-gold) / 0.18)' }}>
                 <div className="flex items-center gap-2 mb-4">
                   <Shield size={14} style={{ color: gold }} />
-                  <p className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>Privacy controls</p>
+                  <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>Privacy controls</p>
                 </div>
                 <p className="font-barlow mb-5" style={{ fontSize: '13px', fontWeight: 300, color: ice60, lineHeight: 1.65 }}>By default, only your gold seal badge is shown to employers. You choose what details to share.</p>
                 <div className="space-y-4">
@@ -684,12 +684,12 @@ function ProfileEditInner() {
           <div className="flex items-center justify-between pt-6" style={{ borderTop: '1px solid hsl(var(--hero-gold) / 0.15)' }}>
             <button type="button" onClick={() => navigate(`/profile/${user?.id ?? ''}`)}
               className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-              style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60, background: 'transparent', border: 'none', cursor: 'pointer' }}>
+              style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60, background: 'transparent', border: 'none', cursor: 'pointer' }}>
               View profile <ChevronRight size={12} />
             </button>
             <button type="button" onClick={() => void handleSave()} disabled={saving}
               className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-90 disabled:opacity-50"
-              style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', padding: '12px 32px', borderRadius: '2px', background: saved ? 'hsl(var(--hero-gold) / 0.9)' : gold, color: navy, cursor: 'pointer', border: 'none' }}>
+              style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '12px 32px', borderRadius: '2px', background: saved ? 'hsl(var(--hero-gold) / 0.9)' : gold, color: navy, cursor: 'pointer', border: 'none' }}>
               {saving ? 'Saving…' : saved ? 'Saved ✓' : 'Save profile'}
             </button>
           </div>

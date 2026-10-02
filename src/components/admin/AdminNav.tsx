@@ -49,9 +49,9 @@ export default function AdminNav() {
       <div className="max-w-6xl mx-auto flex items-center gap-4">
         <span
           className="hidden lg:inline font-barlow-condensed uppercase shrink-0"
-          style={{ ...eyebrowStyle, fontSize: '9px', color: t.gold }}
+          style={{ ...eyebrowStyle, fontSize: '11px', color: t.gold }}
         >
-          REP | IV · Admin
+          NORVARDEN · Admin
         </span>
         <ul className="flex items-stretch gap-1 overflow-x-auto -mb-px" style={{ scrollbarWidth: 'none' }}>
           {ADMIN_NAV_ITEMS.map(({ to, label, icon: Icon }) => {

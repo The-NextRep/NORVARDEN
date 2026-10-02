@@ -1,4 +1,4 @@
-# REP | IV — by The NextRep
+# NORVARDEN
 
 Career board for current and former pro athletes, coaches and military
 veterans. Verified companies pay (Stripe) to post jobs and connect.
@@ -26,9 +26,9 @@ sign-in codes, reset links — are printed to the server log instead of sent.
    (`DATABASE_URL=${{MySQL.MYSQL_URL}}`, `UPLOAD_DIR=/data/uploads`, …).
 4. `railway.json` builds with `npm run build`, runs `npm run db:push` before each
    deploy, starts with `npm start`, and health-checks `/api/health`.
-5. Custom domain: add `jobs.the-nextrep.com` in Railway → add the CNAME it shows
+5. Custom domain: add `www.norvarden.com` in Railway → add the CNAME it shows
    in GoDaddy DNS.
-6. Stripe → Developers → Webhooks → endpoint `https://jobs.the-nextrep.com/api/stripe/webhook`,
+6. Stripe → Developers → Webhooks → endpoint `https://www.norvarden.com/api/stripe/webhook`,
    events: `checkout.session.completed`, `customer.subscription.created`,
    `customer.subscription.updated`, `customer.subscription.deleted`,
    `invoice.paid`, `invoice.payment_failed`. Put its signing secret in

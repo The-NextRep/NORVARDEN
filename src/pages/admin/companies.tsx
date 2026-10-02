@@ -379,7 +379,7 @@ function DeleteTestDataSection() {
             className="p-4 mb-4"
             style={{ background: 'hsl(var(--hero-gold) / 0.08)', border: '1px solid hsl(var(--hero-gold) / 0.3)', borderRadius: '3px' }}
           >
-            <p className="font-barlow-condensed uppercase mb-2" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>
+            <p className="font-barlow-condensed uppercase mb-2" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>
               Deleted
             </p>
             <ul className="font-barlow" style={{ fontSize: '13px', fontWeight: 300, color: white, lineHeight: 1.8 }}>
@@ -390,7 +390,7 @@ function DeleteTestDataSection() {
             <button
               onClick={() => setResult(null)}
               className="mt-3 font-barlow-condensed uppercase transition-opacity hover:opacity-70"
-              style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: ice60, background: 'transparent', border: 'none', cursor: 'pointer' }}
+              style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60, background: 'transparent', border: 'none', cursor: 'pointer' }}
             >
               Dismiss
             </button>
@@ -408,7 +408,7 @@ function DeleteTestDataSection() {
             onClick={() => setConfirm(true)}
             className="font-barlow-condensed uppercase transition-opacity hover:opacity-80"
             style={{
-              fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em',
+              fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em',
               padding: '10px 20px', borderRadius: '2px',
               background: 'transparent',
               border: '1px solid hsl(var(--destructive) / 0.5)',
@@ -432,7 +432,7 @@ function DeleteTestDataSection() {
                 disabled={working}
                 className="font-barlow-condensed uppercase transition-opacity hover:opacity-80 disabled:opacity-40"
                 style={{
-                  fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em',
+                  fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em',
                   padding: '10px 20px', borderRadius: '2px',
                   background: 'hsl(var(--destructive))',
                   color: white, border: 'none', cursor: 'pointer',
@@ -445,7 +445,7 @@ function DeleteTestDataSection() {
                 disabled={working}
                 className="font-barlow-condensed uppercase transition-opacity hover:opacity-80 disabled:opacity-40"
                 style={{
-                  fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em',
+                  fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em',
                   padding: '10px 20px', borderRadius: '2px',
                   background: 'transparent',
                   border: '1px solid hsl(var(--hero-gold) / 0.3)',

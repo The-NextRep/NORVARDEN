@@ -5,7 +5,7 @@ import { toSafeInternalPath } from '@/lib/auth/safe-redirect';
 import { Eye, EyeOff, ChevronRight, Shield, Mail, RotateCcw, X } from 'lucide-react';
 import BrandMark from '@/components/BrandMark';
 
-const siteUrl = 'https://jobs.the-nextrep.com';
+const siteUrl = 'https://www.norvarden.com';
 
 // ─── Design tokens ────────────────────────────────────────────────────────
 const navy         = 'hsl(var(--hero-navy))';
@@ -27,7 +27,7 @@ function FieldLabel({ children, htmlFor }: { children: React.ReactNode; htmlFor?
     <label
       htmlFor={htmlFor}
       className="font-barlow-condensed uppercase block mb-2"
-      style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}
+      style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}
     >
       {children}
     </label>
@@ -112,7 +112,7 @@ function LockoutBox({ lockedUntilMs, onExpired }: { lockedUntilMs: number; onExp
       >
         {display}
       </div>
-      <p className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.30em', color: ice60 }}>
+      <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.30em', color: ice60 }}>
         Account locked
       </p>
       <p className="font-barlow" style={{ fontSize: '14px', fontWeight: 300, lineHeight: 1.7, color: ice60, maxWidth: '300px' }}>
@@ -283,7 +283,7 @@ function ForgotPasswordModal({ onClose }: { onClose: () => void }) {
             <button
               onClick={onClose}
               className="font-barlow-condensed uppercase transition-opacity hover:opacity-70 mt-2"
-              style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}
+              style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}
             >
               Back to login
             </button>
@@ -486,8 +486,8 @@ const [searchParams] = useSearchParams();
   return (
     <>
       <Helmet>
-        <title>Log in — REP | IV</title>
-        <meta name="description" content="Sign in to REP | IV — the verified job board for athletes, coaches, and veterans." />
+        <title>Log in — NORVARDEN</title>
+        <meta name="description" content="Sign in to NORVARDEN — the verified job board for people with disabilities." />
         <link rel="canonical" href={pageUrl} />
         <meta name="robots" content="noindex" />
       </Helmet>
@@ -512,7 +512,7 @@ const [searchParams] = useSearchParams();
 
             {/* Logo */}
             <div className="mb-10">
-              <Link to="/" aria-label="REP | IV home" className="inline-flex transition-opacity hover:opacity-80">
+              <Link to="/" aria-label="NORVARDEN home" className="inline-flex transition-opacity hover:opacity-80">
                 <BrandMark size={22} />
               </Link>
             </div>
@@ -559,7 +559,7 @@ const [searchParams] = useSearchParams();
                     <Shield size={11} style={{ color: gold }} aria-hidden="true" />
                     <span
                       className="font-barlow-condensed uppercase"
-                      style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}
+                      style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}
                     >
                       Two-step verification
                     </span>
@@ -593,7 +593,7 @@ const [searchParams] = useSearchParams();
                       type="button"
                       onClick={() => { setView('credentials'); setOtpCode(''); setOtpError(''); }}
                       className="font-barlow-condensed uppercase self-start transition-opacity hover:opacity-80"
-                      style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}
+                      style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}
                     >
                       ← Sign in again to get a new code
                     </button>
@@ -616,7 +616,7 @@ const [searchParams] = useSearchParams();
                     type="button"
                     onClick={() => { setView('credentials'); setOtpCode(''); setOtpError(''); }}
                     className="font-barlow-condensed uppercase transition-opacity hover:opacity-70"
-                    style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}
+                    style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}
                   >
                     ← Back to login
                   </button>
@@ -625,7 +625,7 @@ const [searchParams] = useSearchParams();
                     onClick={handleResend}
                     disabled={resendCooldown > 0 || resendsRemaining <= 0 || resendLoading}
                     className="flex items-center gap-1.5 font-barlow-condensed uppercase transition-opacity hover:opacity-70 disabled:opacity-40"
-                    style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: resendCooldown > 0 ? ice60 : gold }}
+                    style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: resendCooldown > 0 ? ice60 : gold }}
                   >
                     <RotateCcw size={11} className={resendLoading ? 'animate-spin' : ''} />
                     {resendLoading
@@ -691,7 +691,7 @@ const [searchParams] = useSearchParams();
                         type="button"
                         onClick={() => setShowForgot(true)}
                         className="font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-                        style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: 'hsl(var(--hero-gold) / 0.65)' }}
+                        style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: 'hsl(var(--hero-gold) / 0.65)' }}
                       >
                         Forgot password?
                       </button>
@@ -765,7 +765,7 @@ const [searchParams] = useSearchParams();
                   >
                     <Shield size={13} strokeWidth={2} style={{ color: gold, marginTop: '2px', flexShrink: 0 }} aria-hidden="true" />
                     <p className="font-barlow" style={{ fontSize: '13px', fontWeight: 300, lineHeight: 1.65, color: ice60 }}>
-                      REP | IV never shares your contact details with employers without your explicit permission.
+                      NORVARDEN never shares your contact details with employers without your explicit permission.
                     </p>
                   </div>
                 </div>

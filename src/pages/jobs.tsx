@@ -6,7 +6,7 @@ import { Search, MapPin, X, Shield, ChevronRight, Building2, Clock, Tag, DollarS
 import { Link } from 'react-router';
 import { useCurrentUser } from '@/lib/auth/use-current-user';
 
-const siteUrl = 'https://jobs.the-nextrep.com';
+const siteUrl = 'https://www.norvarden.com';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
@@ -94,7 +94,7 @@ function VerifiedBadge() {
   return (
     <span
       className="inline-flex items-center gap-1 font-barlow-condensed uppercase"
-      style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', color: gold }}
+      style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', color: gold }}
       title="Verified Company"
     >
       <Shield size={9} strokeWidth={2.5} />
@@ -167,7 +167,7 @@ function ReportListing({ companyId, jobPostId }: { companyId: number; jobPostId:
       <textarea value={details} onChange={(e) => setDetails(e.target.value)} maxLength={2000} rows={3} placeholder="Details (optional)" className="font-barlow px-3 py-2 rounded-sm" style={{ background: 'hsl(var(--hero-navy-mid))', color: white, fontSize: '14px' }} />
       {msg && <p className="font-barlow" style={{ fontSize: '13px', color: 'hsl(var(--destructive))' }}>{msg}</p>}
       <div className="flex gap-4">
-        <button type="button" onClick={() => void submit()} disabled={state === 'sending'} className="font-barlow-condensed uppercase disabled:opacity-50" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 18px', borderRadius: '2px', background: gold, color: navy, border: 'none' }}>
+        <button type="button" onClick={() => void submit()} disabled={state === 'sending'} className="font-barlow-condensed uppercase disabled:opacity-50" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 18px', borderRadius: '2px', background: gold, color: navy, border: 'none' }}>
           {state === 'sending' ? 'Sending…' : 'Send report'}
         </button>
         <button type="button" onClick={() => setOpen(false)} className="font-barlow" style={{ ...small, background: 'none', border: 'none', cursor: 'pointer' }}>Cancel</button>
@@ -243,7 +243,7 @@ function JobDetail({
         >
           <span
             className="font-barlow-condensed uppercase"
-            style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}
+            style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}
           >
             Role Details
           </span>
@@ -294,7 +294,7 @@ function JobDetail({
                   {job.skillbridgePartner && (
                     <span
                       className="font-barlow-condensed uppercase"
-                      style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', color: sky }}
+                      style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', color: sky }}
                     >
                       SkillBridge Partner
                     </span>
@@ -325,7 +325,7 @@ function JobDetail({
                   <div key={label} className="flex flex-col gap-1">
                     <span
                       className="font-barlow-condensed uppercase"
-                      style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}
+                      style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}
                     >
                       {label}
                     </span>
@@ -343,7 +343,7 @@ function JobDetail({
               <div className="flex flex-col gap-3">
                 <span
                   className="font-barlow-condensed uppercase"
-                  style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}
+                  style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}
                 >
                   About this role
                 </span>
@@ -362,7 +362,7 @@ function JobDetail({
                   <div className="flex flex-col gap-3">
                     <span
                       className="font-barlow-condensed uppercase"
-                      style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}
+                      style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}
                     >
                       Required skills
                     </span>
@@ -372,7 +372,7 @@ function JobDetail({
                           key={s}
                           className="inline-flex items-center gap-1.5 font-barlow-condensed uppercase"
                           style={{
-                            fontSize: '9px', fontWeight: 500, letterSpacing: '0.2em',
+                            fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em',
                             padding: '4px 10px', borderRadius: '2px',
                             background: 'hsl(var(--hero-gold) / 0.08)',
                             border: goldBorder35, color: ice60,
@@ -394,7 +394,7 @@ function JobDetail({
               <div className="flex flex-col gap-3">
                 <span
                   className="font-barlow-condensed uppercase"
-                  style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}
+                  style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}
                 >
                   About the company
                 </span>
@@ -454,7 +454,7 @@ function JobDetail({
                   </>
                 ) : isLoggedIn ? (
                   <p className="font-barlow" style={{ fontSize: '14px', fontWeight: 300, color: 'hsl(var(--hero-ice) / 0.75)' }}>
-                    Members (athletes, coaches and veterans) can save roles and get discovered by verified companies.
+                    Members (people with disabilities) can save roles and get discovered by verified companies.
                   </p>
                 ) : (
                   <div className="flex flex-col gap-3">
@@ -470,7 +470,7 @@ function JobDetail({
                       <ChevronRight size={13} />
                     </a>
                     <p className="font-barlow" style={{ fontSize: '13px', fontWeight: 300, color: 'hsl(var(--hero-ice) / 0.75)' }}>
-                      Free for athletes, coaches and veterans. Verified companies reach out to members whose profiles fit.
+                      Free for people with disabilities. Verified companies reach out to members whose profiles fit.
                     </p>
                   </div>
                 )}
@@ -519,7 +519,7 @@ function FilterBar({ filters, onChange }: { filters: Filters; onChange: (f: Filt
 
   const toggleStyle = (active: boolean): React.CSSProperties => ({
     fontFamily: "'Barlow Condensed', sans-serif",
-    fontSize: '10px',
+    fontSize: '12px',
     fontWeight: 500,
     letterSpacing: '0.28em',
     textTransform: 'uppercase',
@@ -648,7 +648,7 @@ function FilterBar({ filters, onChange }: { filters: Filters; onChange: (f: Filt
           <button
             onClick={() => onChange({ search: '', location: '', jobType: '', industry: '', remote: false, veteranReady: false, payMin: '', payMax: '', skills: '' })}
             className="inline-flex items-center gap-1.5 font-barlow-condensed uppercase transition-colors hover:opacity-80"
-            style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.22em', color: ice60 }}
+            style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.22em', color: ice60 }}
           >
             <X size={11} />
             Clear
@@ -756,18 +756,18 @@ export default function JobsPage() {
     '@type': 'WebPage',
     '@id': `${siteUrl}/jobs#webpage`,
     url: `${siteUrl}/jobs`,
-    name: 'Open Roles — REP | IV',
+    name: 'Open Roles — NORVARDEN',
     isPartOf: { '@id': `${siteUrl}/#website` },
   };
 
   return (
     <>
       <Helmet>
-        <title>Open Roles — REP | IV</title>
-        <meta name="description" content="Browse verified job postings for athletes, coaches, and military veterans. Every company on REP | IV is checked before they can post." />
+        <title>Open Roles — NORVARDEN</title>
+        <meta name="description" content="Browse verified job postings for people with disabilities. Every company on NORVARDEN is checked before they can post." />
         <link rel="canonical" href={`${siteUrl}/jobs`} />
-        <meta property="og:title" content="Open Roles — REP | IV" />
-        <meta property="og:description" content="Browse verified job postings for athletes, coaches, and military veterans." />
+        <meta property="og:title" content="Open Roles — NORVARDEN" />
+        <meta property="og:description" content="Browse verified job postings for people with disabilities." />
         <meta property="og:url" content={`${siteUrl}/jobs`} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -982,7 +982,7 @@ export default function JobsPage() {
                           </span>
                           <span
                             className="inline-flex items-center gap-1 font-barlow-condensed uppercase"
-                            style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', color: gold }}
+                            style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', color: gold }}
                             title="Verified Company"
                           >
                             <Shield size={9} strokeWidth={2.5} />
@@ -991,7 +991,7 @@ export default function JobsPage() {
                           {job.skillbridgePartner && (
                             <span
                               className="font-barlow-condensed uppercase"
-                              style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', color: sky }}
+                              style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', color: sky }}
                             >
                               SkillBridge Partner
                             </span>
@@ -1015,7 +1015,7 @@ export default function JobsPage() {
                           )}
                           <span
                             className="font-barlow-condensed uppercase"
-                            style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.2em', color: ice60 }}
+                            style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.2em', color: ice60 }}
                           >
                             {getJobTypeLabel(job.jobType)}
                           </span>
@@ -1034,7 +1034,7 @@ export default function JobsPage() {
                                 key={s}
                                 className="inline-flex items-center gap-1 font-barlow-condensed uppercase"
                                 style={{
-                                  fontSize: '8px', fontWeight: 500, letterSpacing: '0.18em',
+                                  fontSize: '12px', fontWeight: 500, letterSpacing: '0.18em',
                                   padding: '3px 7px', borderRadius: '2px',
                                   background: 'hsl(var(--hero-gold) / 0.07)',
                                   border: goldBorder20, color: ice60,
@@ -1078,7 +1078,7 @@ export default function JobsPage() {
                           <div
                             className="inline-flex items-center gap-1.5 self-start font-barlow-condensed uppercase"
                             style={{
-                              fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em',
+                              fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em',
                               padding: '3px 8px', border: goldBorder35, borderRadius: '2px', color: gold,
                             }}
                           >

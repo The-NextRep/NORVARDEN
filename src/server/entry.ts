@@ -83,6 +83,7 @@ import auth__forgot_password__post from "./api/auth/forgot-password/POST";
 import auth__reset_password__post from "./api/auth/reset-password/POST";
 // </api-imports>
 import { seoRoutes } from "../lib/seo-routes";
+import { IS_DRAFT } from "../lib/site-meta";
 import { structuredDataFor, dynamicSitemapUrls } from "./seo-structured-data";
 import {
 	loadAdSenseRuntimeConfig,
@@ -308,7 +309,7 @@ function escapeXml(s: string): string {
 }
 
 app.get("/robots.txt", (req, res) => {
-	if (isSystemHost(req)) {
+	if (IS_DRAFT || isSystemHost(req)) {
 		res
 			.type("text/plain")
 			.set("Cache-Control", "public, max-age=60, must-revalidate").set("Vary", "Host")
@@ -523,8 +524,8 @@ if (import.meta.env.PROD) {
 				? { head: "" }
 				: await structuredDataFor(origin, req.path, req.query as Record<string, unknown>);
 			if (extra.title) {
-				// e.g. "Sales Associate at Acme — REP | IV" instead of the generic jobs title.
-				const t = escapeXml(`${extra.title} — REP | IV`);
+				// e.g. "Sales Associate at Acme — NORVARDEN" instead of the generic jobs title.
+				const t = escapeXml(`${extra.title} — NORVARDEN`);
 				pageHead = pageHead
 					.replace(/<title[^>]*>[\s\S]*?<\/title>/, `<title>${t}</title>`)
 					.replace(/(<meta[^>]*property="og:title"[^>]*content=")[^"]*(")/, `$1${t}$2`);

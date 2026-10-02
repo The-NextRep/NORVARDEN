@@ -71,7 +71,7 @@ export default function SavedJobsPage() {
   return (
     <>
       <Helmet>
-        <title>Saved Jobs — REP | IV</title>
+        <title>Saved Jobs — NORVARDEN</title>
         <meta name="robots" content="noindex" />
       </Helmet>
       <main style={{ background: navy, color: white, minHeight: '70vh' }}>
@@ -98,7 +98,7 @@ export default function SavedJobsPage() {
 
           {isEmployer && (
             <p className="font-barlow" style={{ fontSize: '16px', color: faded }}>
-              Saved jobs are for athletes, coaches and veterans. Manage your postings under{' '}
+              Saved jobs are for people with disabilities. Manage your postings under{' '}
               <Link to="/company/jobs" style={{ color: gold }}>Post a Job</Link>.
             </p>
           )}

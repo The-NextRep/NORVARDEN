@@ -70,7 +70,7 @@ export const VERIFICATION_MESSAGES: Record<Exclude<Verification, 'approved'>, st
   not_employer: 'Only company accounts can subscribe. Sign in with your company account.',
   not_approved: 'Your company must be verified before you can subscribe.',
   email_unverified: 'Please sign out and sign in again to confirm your email address, then come back to subscribe.',
-  suspended: 'Your company account has been suspended. Contact info@the-nextrep.com.',
+  suspended: 'Your company account has been suspended. Contact info@norvarden.com.',
 };
 
 export type SubscribeOutcome =

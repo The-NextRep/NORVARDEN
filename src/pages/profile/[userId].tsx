@@ -45,7 +45,7 @@ function Chip({ label, gold: isGold }: { label: string; gold?: boolean }) {
     <span
       className="font-barlow-condensed uppercase"
       style={{
-        fontSize: '10px', fontWeight: 500, letterSpacing: '0.18em',
+        fontSize: '12px', fontWeight: 500, letterSpacing: '0.18em',
         padding: '5px 12px', borderRadius: '2px',
         border: isGold ? `1px solid ${gold}` : '1px solid hsl(var(--hero-gold) / 0.3)',
         background: isGold ? 'hsl(var(--hero-gold) / 0.1)' : 'transparent',
@@ -63,7 +63,7 @@ function VerifiedBadge({ size = 16 }: { size?: number }) {
     <span
       title="Verified member"
       className="inline-flex items-center gap-1 font-barlow-condensed uppercase"
-      style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', color: gold }}
+      style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', color: gold }}
     >
       <CheckCircle size={size} style={{ color: gold }} />
       Verified
@@ -83,7 +83,7 @@ function VeteranSeal({ showBranch, branch, showYears, yearsServed }: {
     >
       <Shield size={20} style={{ color: gold, flexShrink: 0 }} />
       <div>
-        <p className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.22em', color: gold }}>
+        <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.22em', color: gold }}>
           U.S. Military Veteran
         </p>
         {(showBranch && branch) || (showYears && yearsServed) ? (
@@ -103,7 +103,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-4 mb-4">
       <h2 className="font-barlow-condensed uppercase shrink-0"
-        style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
+        style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
         {children}
       </h2>
       <div style={{ flex: 1, height: '1px', background: 'hsl(var(--hero-gold) / 0.15)' }} />
@@ -130,11 +130,11 @@ function LockedOverlay({ onRequest, requesting, requested, unavailable, canReque
           Send a connection request to unlock this member's full profile, resume, and experience summary.
         </p>
         {unavailable ? (
-          <span className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
+          <span className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
             Not available
           </span>
         ) : requested ? (
-          <span className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
+          <span className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
             Request sent — awaiting response
           </span>
         ) : !canRequest ? null : (
@@ -143,7 +143,7 @@ function LockedOverlay({ onRequest, requesting, requested, unavailable, canReque
             onClick={onRequest}
             disabled={requesting}
             className="font-barlow-condensed uppercase transition-opacity hover:opacity-90 disabled:opacity-50"
-            style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', padding: '12px 28px', borderRadius: '2px', background: gold, color: navy, border: 'none', cursor: 'pointer' }}
+            style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '12px 28px', borderRadius: '2px', background: gold, color: navy, border: 'none', cursor: 'pointer' }}
           >
             {requesting ? 'Sending…' : 'Request to connect'}
           </button>
@@ -166,7 +166,7 @@ function ContactBlock({ profile, note }: { profile: ProfileView; note: string | 
   const contact = profile.contact;
   const resumeHref = profile.canDownloadResume ? `/api/profile/${encodeURIComponent(profile.userId)}/resume` : null;
   if (!contact && !resumeHref) return null;
-  const labelStyle = { fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 } as const;
+  const labelStyle = { fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 } as const;
   const valueStyle = { fontSize: '15px', fontWeight: 300, color: white } as const;
 
   return (
@@ -199,7 +199,7 @@ function ContactBlock({ profile, note }: { profile: ProfileView; note: string | 
               <a
                 href={resumeHref}
                 className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-                style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 20px', borderRadius: '2px', border: `1px solid ${gold}`, color: gold, background: 'transparent' }}
+                style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 20px', borderRadius: '2px', border: `1px solid ${gold}`, color: gold, background: 'transparent' }}
               >
                 <Download size={12} /> {profile.resumeFileName ?? 'Download resume'}
               </a>
@@ -266,9 +266,9 @@ function FullProfileBody({ profile, contactNote = null }: { profile: ProfileView
         <section>
           <SectionHeading>Athletic background</SectionHeading>
           <div className="flex flex-wrap gap-6">
-            {profile.sport && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Sport</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.sport}</p></div>}
-            {profile.league && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>League / level</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.league}</p></div>}
-            {profile.yearsActive && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Years active</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.yearsActive}</p></div>}
+            {profile.sport && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Sport</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.sport}</p></div>}
+            {profile.league && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>League / level</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.league}</p></div>}
+            {profile.yearsActive && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Years active</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.yearsActive}</p></div>}
           </div>
         </section>
       )}
@@ -277,9 +277,9 @@ function FullProfileBody({ profile, contactNote = null }: { profile: ProfileView
         <section>
           <SectionHeading>Coaching background</SectionHeading>
           <div className="flex flex-wrap gap-6">
-            {profile.coachingLevel && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Level</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{COACHING_LEVEL_LABELS[profile.coachingLevel] ?? profile.coachingLevel}</p></div>}
-            {profile.coachingSport && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Sport</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.coachingSport}</p></div>}
-            {profile.yearsCoaching && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Years coaching</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.yearsCoaching}</p></div>}
+            {profile.coachingLevel && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Level</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{COACHING_LEVEL_LABELS[profile.coachingLevel] ?? profile.coachingLevel}</p></div>}
+            {profile.coachingSport && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Sport</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.coachingSport}</p></div>}
+            {profile.yearsCoaching && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Years coaching</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.yearsCoaching}</p></div>}
           </div>
         </section>
       )}
@@ -400,9 +400,9 @@ export default function ProfilePage() {
   if (notFound || !profile) {
     return (
       <main className="min-h-screen flex flex-col items-center justify-center px-6 text-center" style={{ background: navy }}>
-        <Helmet><title>Member not found — REP | IV</title></Helmet>
+        <Helmet><title>Member not found — NORVARDEN</title></Helmet>
         <p className="font-bodoni mb-4" style={{ fontSize: '32px', fontWeight: 400, color: white }}>Member not <em style={{ color: gold, fontStyle: 'italic' }}>found.</em></p>
-        <button type="button" onClick={() => navigate('/jobs')} className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60, background: 'transparent', border: 'none', cursor: 'pointer' }}>Browse jobs</button>
+        <button type="button" onClick={() => navigate('/jobs')} className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60, background: 'transparent', border: 'none', cursor: 'pointer' }}>Browse jobs</button>
       </main>
     );
   }
@@ -425,13 +425,13 @@ export default function ProfilePage() {
 
   const showFull = renderAccess === 'self' || renderAccess === 'admin' || renderAccess === 'connected';
 
-  const title = `${displayName} — REP | IV`;
+  const title = `${displayName} — NORVARDEN`;
 
   return (
     <main className="min-h-screen pb-24" style={{ background: navy }}>
       <Helmet>
         <title>{title}</title>
-        <meta name="description" content={`View ${displayName}'s verified member profile on REP | IV.`} />
+        <meta name="description" content={`View ${displayName}'s verified member profile on NORVARDEN.`} />
         <meta name="robots" content="noindex" />
       </Helmet>
 
@@ -443,19 +443,19 @@ export default function ProfilePage() {
         >
           <div className="flex items-center gap-3">
             <Eye size={14} style={{ color: gold }} />
-            <span className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>
+            <span className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>
               Company preview &mdash; {previewMode === 'company-connected' ? 'connected employer view' : 'unconnected employer view'}
             </span>
           </div>
           <div className="flex items-center gap-3">
             <button type="button" onClick={() => setPreviewMode(previewMode === 'company-connected' ? 'company-locked' : 'company-connected')}
               className="font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-              style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', color: ice60, background: 'transparent', border: '1px solid hsl(var(--hero-gold) / 0.3)', padding: '5px 12px', borderRadius: '2px', cursor: 'pointer' }}>
+              style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', color: ice60, background: 'transparent', border: '1px solid hsl(var(--hero-gold) / 0.3)', padding: '5px 12px', borderRadius: '2px', cursor: 'pointer' }}>
               Switch to {previewMode === 'company-connected' ? 'unconnected' : 'connected'} view
             </button>
             <button type="button" onClick={() => setPreviewMode('self')}
               className="font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-              style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', color: gold, background: 'transparent', border: `1px solid ${gold}`, padding: '5px 12px', borderRadius: '2px', cursor: 'pointer' }}>
+              style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', color: gold, background: 'transparent', border: `1px solid ${gold}`, padding: '5px 12px', borderRadius: '2px', cursor: 'pointer' }}>
               Exit preview
             </button>
           </div>
@@ -485,7 +485,7 @@ export default function ProfilePage() {
           {/* Identity */}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-3 flex-wrap mb-2">
-              <span className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>{pathLabel}</span>
+              <span className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>{pathLabel}</span>
               {profile.verificationStatus === 'verified' && <VerifiedBadge />}
             </div>
 
@@ -526,7 +526,7 @@ export default function ProfilePage() {
             <div className="flex flex-col gap-2 shrink-0">
               <button type="button" onClick={() => navigate(`/messages?conv=${conversationId}`)}
                 className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-90"
-                style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 18px', borderRadius: '2px', background: gold, color: navy, border: 'none', cursor: 'pointer' }}>
+                style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 18px', borderRadius: '2px', background: gold, color: navy, border: 'none', cursor: 'pointer' }}>
                 <MessageSquare size={12} /> Message
               </button>
             </div>
@@ -537,12 +537,12 @@ export default function ProfilePage() {
             <div className="flex flex-col gap-2 shrink-0">
               <button type="button" onClick={() => navigate('/profile/edit')}
                 className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-                style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 18px', borderRadius: '2px', border: `1px solid ${gold}`, color: gold, background: 'transparent', cursor: 'pointer' }}>
+                style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 18px', borderRadius: '2px', border: `1px solid ${gold}`, color: gold, background: 'transparent', cursor: 'pointer' }}>
                 <Pencil size={12} /> Edit profile
               </button>
               <button type="button" onClick={() => setPreviewMode('company-connected')}
                 className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-                style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 18px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.3)', color: ice60, background: 'transparent', cursor: 'pointer' }}>
+                style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 18px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.3)', color: ice60, background: 'transparent', cursor: 'pointer' }}>
                 <EyeOff size={12} /> Preview as company
               </button>
             </div>

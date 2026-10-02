@@ -1,5 +1,5 @@
 /**
- * Server-side source of truth for REP | IV's paid plans and their Stripe prices.
+ * Server-side source of truth for NORVARDEN's paid plans and their Stripe prices.
  *
  * The client only ever sends { plan, cycle }; the price ID is resolved here so a
  * caller can never pick an arbitrary Stripe price.

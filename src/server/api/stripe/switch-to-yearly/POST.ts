@@ -54,7 +54,7 @@ export default async function handler(req: Request, res: Response) {
 
     const plan = mapped?.plan ?? (isPaidPlan(access.plan) ? access.plan : null);
     if (!plan) {
-      res.status(400).json({ error: 'This plan cannot be switched online. Contact info@the-nextrep.com.' });
+      res.status(400).json({ error: 'This plan cannot be switched online. Contact info@norvarden.com.' });
       return;
     }
 

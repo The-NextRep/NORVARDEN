@@ -120,7 +120,7 @@ export default function VerifyStep2Page() {
   if (submitted) {
     return (
       <>
-        <Helmet><title>Application Submitted — REP | IV</title><meta name="robots" content="noindex" /></Helmet>
+        <Helmet><title>Application Submitted — NORVARDEN</title><meta name="robots" content="noindex" /></Helmet>
         <main>
           <section className="py-xxxl bg-background">
             <div className="container mx-auto px-4 max-w-content">
@@ -143,8 +143,8 @@ export default function VerifyStep2Page() {
   return (
     <>
       <Helmet>
-        <title>Company Details — REP | IV</title>
-        <meta name="description" content="Complete your company details and submit your verification application to REP | IV." />
+        <title>Company Details — NORVARDEN</title>
+        <meta name="description" content="Complete your company details and submit your verification application to NORVARDEN." />
         <meta name="robots" content="noindex" />
       </Helmet>
       <main>

@@ -6,7 +6,7 @@ import { refreshCurrentUser, useCurrentUser } from '@/lib/auth/use-current-user'
 import { ChevronRight, Eye, EyeOff, Check, Shield } from 'lucide-react';
 import BrandMark from '@/components/BrandMark';
 
-const siteUrl = 'https://jobs.the-nextrep.com';
+const siteUrl = 'https://www.norvarden.com';
 
 // ─── Design tokens ────────────────────────────────────────────────────────
 const navy         = 'hsl(var(--hero-navy))';
@@ -72,7 +72,7 @@ function FieldLabel({ children }: { children: React.ReactNode }) {
   return (
     <label
       className="font-barlow-condensed uppercase block mb-2"
-      style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}
+      style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}
     >
       {children}
     </label>
@@ -189,7 +189,7 @@ function StepDots({ step, total }: { step: number; total: number }) {
       ))}
       <span
         className="font-barlow-condensed uppercase ml-2"
-        style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}
+        style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}
       >
         Step {step} of {total}
       </span>
@@ -316,8 +316,8 @@ export default function SignupPage() {
   return (
     <>
       <Helmet>
-        <title>Join free — REP | IV</title>
-        <meta name="description" content="Create your free account on REP | IV. Athletes, coaches, veterans and employers — verified, private, always free for candidates." />
+        <title>Join free — NORVARDEN</title>
+        <meta name="description" content="Create your free account on NORVARDEN. Athletes, coaches, veterans and employers — verified, private, always free for candidates." />
         <link rel="canonical" href={pageUrl} />
         <meta name="robots" content="noindex" />
       </Helmet>
@@ -343,14 +343,14 @@ export default function SignupPage() {
 
             {/* Logo / back link */}
             <div className="mb-10 flex items-center justify-between">
-              <Link to="/" aria-label="REP | IV home" className="inline-flex transition-opacity hover:opacity-80">
+              <Link to="/" aria-label="NORVARDEN home" className="inline-flex transition-opacity hover:opacity-80">
                 <BrandMark size={22} />
               </Link>
               {step > 1 && step < 4 && (
                 <button
                   onClick={() => { setError(''); setStep(step === 3 && hasAccount ? 1 : step - 1); }}
                   className="font-barlow-condensed uppercase transition-opacity hover:opacity-70"
-                  style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}
+                  style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}
                 >
                   ← Back
                 </button>
@@ -616,7 +616,7 @@ export default function SignupPage() {
                   {form.memberType === 'athlete' && (
                     <>
                       <Hairline />
-                      <p className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}>
+                      <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}>
                         Athletic background
                       </p>
                       <div>
@@ -638,7 +638,7 @@ export default function SignupPage() {
                   {form.memberType === 'coach' && (
                     <>
                       <Hairline />
-                      <p className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}>
+                      <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}>
                         Coaching background
                       </p>
                       <div>
@@ -667,7 +667,7 @@ export default function SignupPage() {
                   {form.memberType === 'veteran' && (
                     <>
                       <Hairline />
-                      <p className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}>
+                      <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}>
                         Military background
                       </p>
                       <div>
@@ -717,7 +717,7 @@ export default function SignupPage() {
                   {form.memberType === 'employer' && (
                     <>
                       <Hairline />
-                      <p className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}>
+                      <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}>
                         Company details
                       </p>
                       <div>

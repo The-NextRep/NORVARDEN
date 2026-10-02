@@ -11,7 +11,7 @@ import {
   useCompanyBilling,
 } from '@/lib/stripe/billing';
 
-const siteUrl = 'https://jobs.the-nextrep.com';
+const siteUrl = 'https://www.norvarden.com';
 
 const navy     = 'hsl(var(--hero-navy))';
 const gold     = 'hsl(var(--hero-gold))';
@@ -68,17 +68,17 @@ export default function PricingPage() {
     '@type': 'WebPage',
     '@id': `${siteUrl}/pricing#webpage`,
     url: `${siteUrl}/pricing`,
-    name: 'Pricing — REP | IV',
+    name: 'Pricing — NORVARDEN',
     isPartOf: { '@id': `${siteUrl}/#website` },
   };
 
   return (
     <>
       <Helmet>
-        <title>Pricing — REP | IV</title>
-        <meta name="description" content="Scout at $1,800/quarter or $6,000/year. Partner at $5,400/quarter or $18,000/year. Athletes, coaches, and veterans always free." />
+        <title>Pricing — NORVARDEN</title>
+        <meta name="description" content="Scout at $1,800/quarter or $6,000/year. Partner at $5,400/quarter or $18,000/year. People with disabilities always free." />
         <link rel="canonical" href={`${siteUrl}/pricing`} />
-        <meta property="og:title" content="Pricing — REP | IV" />
+        <meta property="og:title" content="Pricing — NORVARDEN" />
         <meta property="og:url" content={`${siteUrl}/pricing`} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -118,7 +118,7 @@ export default function PricingPage() {
                     >
                       <span>{cycle === 'quarterly' ? pricing.toggle.quarterly : pricing.toggle.annual}</span>
                       {cycle === 'annual' && (
-                        <span className="hidden sm:inline" style={{ fontSize: '10px', letterSpacing: '0.12em', opacity: active ? 0.85 : 0.7 }}>
+                        <span className="hidden sm:inline" style={{ fontSize: '12px', letterSpacing: '0.12em', opacity: active ? 0.85 : 0.7 }}>
                           · <span>{pricing.toggle.annualSavings}</span>
                         </span>
                       )}
@@ -150,7 +150,7 @@ export default function PricingPage() {
                     {isPartner && (
                       <span
                         className="gold-shimmer-bg font-barlow-condensed uppercase absolute left-1/2 -translate-x-1/2"
-                        style={{ top: '-12px', fontSize: '10px', fontWeight: 600, letterSpacing: '0.28em', padding: '5px 14px', borderRadius: '2px', color: navy, whiteSpace: 'nowrap' }}
+                        style={{ top: '-12px', fontSize: '12px', fontWeight: 600, letterSpacing: '0.28em', padding: '5px 14px', borderRadius: '2px', color: navy, whiteSpace: 'nowrap' }}
                       >
                         Most popular
                       </span>
@@ -195,7 +195,7 @@ export default function PricingPage() {
                     </ul>
 
                     {isFounding ? (
-                      <a href="mailto:info@the-nextrep.com" className="font-barlow-condensed uppercase inline-flex items-center justify-center gap-2 w-full transition-colors hover:opacity-90" style={outlineButton}>
+                      <a href="mailto:info@norvarden.com" className="font-barlow-condensed uppercase inline-flex items-center justify-center gap-2 w-full transition-colors hover:opacity-90" style={outlineButton}>
                         <Mail size={14} aria-hidden="true" />
                         <span>{plan.cta}</span>
                       </a>

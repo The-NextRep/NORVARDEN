@@ -34,7 +34,7 @@ const STATUS_LABELS: Record<string, string> = {
   paused: 'Paused',
 };
 
-const labelStyle = { fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 } as const;
+const labelStyle = { fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 } as const;
 const bodyStyle = { fontSize: '14px', fontWeight: 300, lineHeight: 1.6, color: ice60 } as const;
 const goldButton = {
   fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '14px 22px',
@@ -129,7 +129,7 @@ function AccountContent() {
     <main className="min-h-screen pb-24" style={{ background: navy }}>
       <div className="max-w-3xl mx-auto px-6 pt-16">
         <p className="font-barlow-condensed uppercase mb-3" style={{ ...labelStyle, color: gold }}>
-          {status?.company?.legalName ?? 'REP | IV'}
+          {status?.company?.legalName ?? 'NORVARDEN'}
         </p>
         <h1 className="font-bodoni mb-10" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', fontWeight: 400, lineHeight: 1.05, color: white }}>
           <span>{company_account.heading}</span>
@@ -202,7 +202,7 @@ function AccountContent() {
               <p className="font-bodoni mb-5" style={{ fontSize: '2.2rem', fontWeight: 400, lineHeight: 1, color: white }}>
                 {PLAN_NAMES[plan ?? ''] ?? plan ?? '—'}
               </p>
-              <Row label="Billing" value={cycle ? (cycle === 'annual' ? '12 months' : '3 months') : isStripe ? '—' : 'Arranged with The NextRep'} />
+              <Row label="Billing" value={cycle ? (cycle === 'annual' ? '12 months' : '3 months') : isStripe ? '—' : 'Arranged with NORVARDEN'} />
               {plan && cycle && PLAN_PRICES[plan] && <Row label="Price" value={PLAN_PRICES[plan][cycle]} />}
               <Row label="Status" value={<span style={{ color: access.status === 'past_due' ? gold : white }}>{STATUS_LABELS[access.status ?? ''] ?? access.status ?? '—'}</span>} />
               {dateLabel && (
@@ -282,8 +282,8 @@ export default function CompanyAccountPage() {
   return (
     <>
       <Helmet>
-        <title>Account — REP | IV</title>
-        <meta name="description" content="Manage your company subscription, billing cycle, and plan on REP | IV." />
+        <title>Account — NORVARDEN</title>
+        <meta name="description" content="Manage your company subscription, billing cycle, and plan on NORVARDEN." />
         <meta name="robots" content="noindex" />
       </Helmet>
       <AuthGuard>

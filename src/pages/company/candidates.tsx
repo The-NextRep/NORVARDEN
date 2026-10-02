@@ -1,6 +1,6 @@
 /**
  * /company/candidates — Employer candidate search.
- * Lists athletes, coaches and veterans (restricted view: no contact details).
+ * Lists people with disabilities (restricted view: no contact details).
  * Clicking a card opens /profile/:userId, where the company can request to connect.
  */
 import { useCallback, useEffect, useState, type FormEvent } from 'react';
@@ -44,7 +44,7 @@ const CONNECTION_LABELS: Record<Connection, string | null> = {
   unavailable: 'Not available',
 };
 
-const labelStyle = { fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em' } as const;
+const labelStyle = { fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em' } as const;
 
 function CandidateCard({ c }: { c: Candidate }) {
   const name = [c.firstName, c.lastName].filter(Boolean).join(' ') || 'Member';
@@ -142,7 +142,7 @@ function CandidatesInner() {
   return (
     <main className="min-h-screen pt-28 pb-24 px-6 md:px-12 lg:px-16" style={{ background: navy }}>
       <Helmet>
-        <title>Candidates — REP | IV</title>
+        <title>Candidates — NORVARDEN</title>
         <meta name="robots" content="noindex" />
       </Helmet>
       <div className="max-w-4xl mx-auto">
@@ -151,7 +151,7 @@ function CandidatesInner() {
           Browse <em style={{ color: gold, fontStyle: 'italic' }}>candidates.</em>
         </h1>
         <p className="font-barlow mb-8 max-w-xl" style={{ fontSize: '15px', fontWeight: 300, color: ice60, lineHeight: 1.7 }}>
-          Athletes, coaches and veterans on REP | IV. Open a profile and request to connect — contact details
+          People with disabilities on NORVARDEN. Open a profile and request to connect — contact details
           and résumés are shared only after the member accepts.
         </p>
 

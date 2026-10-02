@@ -125,14 +125,14 @@ function ConvItem({ conv, active, onClick }: { conv: ConversationSummary; active
           {isUnread && (
             <span
               className="shrink-0 flex items-center justify-center font-barlow-condensed"
-              style={{ minWidth: '18px', height: '18px', borderRadius: '9px', background: gold, color: navy, fontSize: '10px', fontWeight: 600, padding: '0 5px' }}
+              style={{ minWidth: '18px', height: '18px', borderRadius: '9px', background: gold, color: navy, fontSize: '12px', fontWeight: 600, padding: '0 5px' }}
             >
               {conv.unreadCount}
             </span>
           )}
         </div>
         {conv.blockedAt && (
-          <span className="font-barlow-condensed uppercase" style={{ fontSize: '9px', letterSpacing: '0.2em', color: 'hsl(var(--destructive))' }}>Blocked</span>
+          <span className="font-barlow-condensed uppercase" style={{ fontSize: '11px', letterSpacing: '0.2em', color: 'hsl(var(--destructive))' }}>Blocked</span>
         )}
       </div>
     </button>
@@ -466,14 +466,14 @@ function ThreadPanel({
                 onClick={() => { void handleReport(); }}
                 disabled={!reportReason.trim() || actionBusy}
                 className="font-barlow-condensed uppercase transition-opacity hover:opacity-80 disabled:opacity-40"
-                style={{ padding: '10px 20px', borderRadius: '2px', background: gold, color: navy, fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', border: 'none', cursor: 'pointer' }}
+                style={{ padding: '10px 20px', borderRadius: '2px', background: gold, color: navy, fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', border: 'none', cursor: 'pointer' }}
               >
                 Submit report
               </button>
               <button
                 onClick={() => { setShowReport(false); setReportReason(''); }}
                 className="font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-                style={{ padding: '10px 20px', borderRadius: '2px', background: 'transparent', color: ice60, fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', border: '1px solid hsl(var(--hero-gold) / 0.3)', cursor: 'pointer' }}
+                style={{ padding: '10px 20px', borderRadius: '2px', background: 'transparent', color: ice60, fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', border: '1px solid hsl(var(--hero-gold) / 0.3)', cursor: 'pointer' }}
               >
                 Cancel
               </button>
@@ -493,14 +493,14 @@ function ThreadPanel({
                 onClick={() => { void handleBlock(); }}
                 disabled={actionBusy}
                 className="font-barlow-condensed uppercase transition-opacity hover:opacity-80 disabled:opacity-40"
-                style={{ padding: '10px 20px', borderRadius: '2px', background: 'hsl(var(--destructive))', color: white, fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', border: 'none', cursor: 'pointer' }}
+                style={{ padding: '10px 20px', borderRadius: '2px', background: 'hsl(var(--destructive))', color: white, fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', border: 'none', cursor: 'pointer' }}
               >
                 Block company
               </button>
               <button
                 onClick={() => setShowBlockConfirm(false)}
                 className="font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-                style={{ padding: '10px 20px', borderRadius: '2px', background: 'transparent', color: ice60, fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', border: '1px solid hsl(var(--hero-gold) / 0.3)', cursor: 'pointer' }}
+                style={{ padding: '10px 20px', borderRadius: '2px', background: 'transparent', color: ice60, fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', border: '1px solid hsl(var(--hero-gold) / 0.3)', cursor: 'pointer' }}
               >
                 Cancel
               </button>
@@ -566,8 +566,8 @@ function MessagesInner() {
   return (
     <main className="flex flex-col" style={{ background: navy, height: 'calc(100vh - 64px)', marginTop: '64px' }}>
       <Helmet>
-        <title>{content.pageTitle} — REP | IV</title>
-        <meta name="description" content="Private messages between verified companies and members on REP | IV." />
+        <title>{content.pageTitle} — NORVARDEN</title>
+        <meta name="description" content="Private messages between verified companies and members on NORVARDEN." />
         <meta name="robots" content="noindex" />
       </Helmet>
 

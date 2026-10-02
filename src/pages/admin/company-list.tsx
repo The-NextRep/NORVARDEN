@@ -238,7 +238,7 @@ function CompanyListInner() {
     <AdminLayout
       title="Companies"
       subtitle="Verified companies, their plan and access, and suspension controls. New applications live in the verification queue."
-      metaDescription="Admin list of verified companies on REP | IV."
+      metaDescription="Admin list of verified companies on NORVARDEN."
     >
       <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">
         <SearchInput value={query} onChange={(v) => { setQuery(v); setPage(1); }} placeholder="Search by company name or domain" />
@@ -324,7 +324,7 @@ function CompanyListInner() {
         title={confirm?.action === 'suspend' ? `Suspend ${confirm.company.legalName}?` : `Reinstate ${confirm?.company.legalName ?? ''}?`}
         description={confirm?.action === 'suspend' ? (
           <>
-            Their job posts disappear from REP | IV immediately, and they can no longer message members or send connection requests.
+            Their job posts disappear from NORVARDEN immediately, and they can no longer message members or send connection requests.
             Their subscription is <strong style={{ color: t.white }}>not</strong> cancelled in Stripe. You can reinstate them at any time.
           </>
         ) : (

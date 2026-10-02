@@ -3,9 +3,9 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 
-const markdown = `# <span data-field="businessName" data-type="text" data-editable="true">REP | IV</span> Privacy Notice
+const markdown = `# <span data-field="businessName" data-type="text" data-editable="true">NORVARDEN</span> Privacy Notice
 
-At <span data-field="businessName" data-type="text" data-editable="true">REP | IV</span> ("**we**," or "**us**"), we value the privacy of individuals who use our websites and related services (collectively, our "**Services**"). This Privacy Notice explains how we collect, use, and share the personal information of users of our Services ("**users**," "**you**," or "**your**"). By using our Services, you agree to the collection, use, disclosure, and processing of your information as described by this Privacy Notice.
+At <span data-field="businessName" data-type="text" data-editable="true">NORVARDEN</span> ("**we**," or "**us**"), we value the privacy of individuals who use our websites and related services (collectively, our "**Services**"). This Privacy Notice explains how we collect, use, and share the personal information of users of our Services ("**users**," "**you**," or "**your**"). By using our Services, you agree to the collection, use, disclosure, and processing of your information as described by this Privacy Notice.
 
 Personal information is information that identifies or could be used to identify a specific person. Personal information does not include deidentified information (anonymized or pseudonymized) or aggregated information derived from personal information.
 
@@ -99,7 +99,7 @@ We work with our Service Providers and other analytics and/or advertising partne
 - **Microsoft** - We may use Microsoft's services to place ads that we think may interest our users and potential users.
   For more information, see Microsoft's [Advertising Policies](https://help.ads.microsoft.com/apex/index/3/en/52023).
 
-Please note that our Service Providers and advertising and analytics partners may change from time to time. If you would like a current list of the specific parties we are working with to provide analytics and/or advertising services, contact us at <span data-field="email" data-type="email" data-editable="true">info@the-nextrep.com</span>. For details about your choices regarding how these partners use your information, see the Your Choices section below.
+Please note that our Service Providers and advertising and analytics partners may change from time to time. If you would like a current list of the specific parties we are working with to provide analytics and/or advertising services, contact us at <span data-field="email" data-type="email" data-editable="true">info@norvarden.com</span>. For details about your choices regarding how these partners use your information, see the Your Choices section below.
 
 ### As Required by Law and Similar Disclosures
 
@@ -131,7 +131,7 @@ Most web browsers allow you to manage cookies through the browser settings. To f
 
 You can learn more about Google's privacy practices and your options for how they use your information on Google's [website](https://policies.google.com/technologies/partner-sites). You can also install the [Google Analytics Opt-out Browser Add-on](https://tools.google.com/dlpage/gaoptout). Meta, the parent company of Facebook, provides information about how it uses the information it collects through our Services in its [Data Policy](https://www.facebook.com/policy.php). You can also learn specifically about Facebook's advertising practices on its [website](https://www.facebook.com/about/basics/advertising).
 
-Some of our advertising partners may be members of the [Network Advertising Initiative](https://optout.networkadvertising.org/) or the [Digital Advertising Alliance](https://optout.aboutads.info/). You can visit those organizations' websites to learn about how you may opt out of receiving web-based personalized ads from their member companies. You can also access any settings offered by your mobile operating system to limit ad tracking. To inquire about your choices regarding our business partners generally, contact us at <span data-field="email" data-type="email" data-editable="true">info@the-nextrep.com</span>.
+Some of our advertising partners may be members of the [Network Advertising Initiative](https://optout.networkadvertising.org/) or the [Digital Advertising Alliance](https://optout.aboutads.info/). You can visit those organizations' websites to learn about how you may opt out of receiving web-based personalized ads from their member companies. You can also access any settings offered by your mobile operating system to limit ad tracking. To inquire about your choices regarding our business partners generally, contact us at <span data-field="email" data-type="email" data-editable="true">info@norvarden.com</span>.
 
 ## Third-Party Content
 
@@ -144,10 +144,10 @@ We make reasonable efforts to protect your information by using administrative, 
 ## Children's Privacy
 
 <span data-section="children" data-section-when="true" data-hidden="true" style="display:none">
-We comply with the Children's Online Privacy Protection Act (COPPA), in addition to other US privacy laws, with respect to any Personal Information we collect or use from children under the age of 13. If you have questions about how we handle children's data, you can contact us at <span data-field="email" data-type="email" data-editable="true">info@the-nextrep.com</span>.
+We comply with the Children's Online Privacy Protection Act (COPPA), in addition to other US privacy laws, with respect to any Personal Information we collect or use from children under the age of 13. If you have questions about how we handle children's data, you can contact us at <span data-field="email" data-type="email" data-editable="true">info@norvarden.com</span>.
 </span>
 <span data-section="children" data-section-when="false">
-We do not knowingly collect, maintain, or use information from children under 13 years of age, and no part of our Services are directed toward children. If you learn that a child has provided us with information in violation of this Privacy Notice, then you may alert us at <span data-field="email" data-type="email" data-editable="true">info@the-nextrep.com</span>.
+We do not knowingly collect, maintain, or use information from children under 13 years of age, and no part of our Services are directed toward children. If you learn that a child has provided us with information in violation of this Privacy Notice, then you may alert us at <span data-field="email" data-type="email" data-editable="true">info@norvarden.com</span>.
 </span>
 
 ## International Visitors
@@ -160,7 +160,7 @@ We will post any adjustments to the Privacy Notice on this page, and the revised
 
 ## Contact Us
 
-All feedback, comments, requests for technical support, and other communications relating to the Sites and our data collection and processing activities should be directed to: <span data-field="email" data-type="email" data-editable="true">info@the-nextrep.com</span>.
+All feedback, comments, requests for technical support, and other communications relating to the Sites and our data collection and processing activities should be directed to: <span data-field="email" data-type="email" data-editable="true">info@norvarden.com</span>.
 
 Last updated: September 30, 2026
 `;
@@ -179,12 +179,12 @@ const components = {
   span: (props: React.HTMLAttributes<HTMLSpanElement>) => <span {...props} />,
 };
 
-const PAGE_TITLE = 'Privacy Notice — REP | IV';
-const META_DESCRIPTION = 'How REP | IV collects, uses and protects your information, and how your contact details are shared only after you accept a company’s request.';
+const PAGE_TITLE = 'Privacy Notice — NORVARDEN';
+const META_DESCRIPTION = 'How NORVARDEN collects, uses and protects your information, and how your contact details are shared only after you accept a company’s request.';
 const ROUTE_PATH = '/privacy';
 
 export default function PrivacyPage() {
-  const canonicalHref = `https://jobs.the-nextrep.com${ROUTE_PATH}`;
+  const canonicalHref = `https://www.norvarden.com${ROUTE_PATH}`;
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
       <Helmet>

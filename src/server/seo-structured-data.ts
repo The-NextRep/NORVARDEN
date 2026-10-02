@@ -62,7 +62,7 @@ async function jobPosting(base: string, jobId: number): Promise<{ head: string; 
     employmentType: EMPLOYMENT_TYPE[job.jobType] ?? 'OTHER',
     hiringOrganization: { '@type': 'Organization', name: row.companyName, sameAs: row.website },
     url: `${base}/jobs?job=${job.id}`,
-    identifier: { '@type': 'PropertyValue', name: 'REP | IV', value: String(job.id) },
+    identifier: { '@type': 'PropertyValue', name: 'NORVARDEN', value: String(job.id) },
     directApply: false,
   };
   if (job.applicationDeadline) data['validThrough'] = new Date(job.applicationDeadline).toISOString();
@@ -101,7 +101,7 @@ async function jobListLd(base: string): Promise<string> {
   return ld({
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Open roles on REP | IV',
+    name: 'Open roles on NORVARDEN',
     itemListElement: rows.map((r, i) => ({ '@type': 'ListItem', position: i + 1, url: `${base}/jobs?job=${r.id}`, name: r.title })),
   });
 }
@@ -129,8 +129,8 @@ async function eventsLd(base: string): Promise<string> {
         ? 'https://schema.org/OnlineEventAttendanceMode'
         : ev.format === 'hybrid' ? 'https://schema.org/MixedEventAttendanceMode' : 'https://schema.org/OfflineEventAttendanceMode',
       location: ev.format === 'virtual' ? virtual : ev.format === 'hybrid' ? [place, virtual] : place,
-      description: ev.description ?? `${ev.title} on REP | IV.`,
-      organizer: { '@type': 'Organization', name: ev.hostName || 'REP | IV by The NextRep', url: base },
+      description: ev.description ?? `${ev.title} on NORVARDEN.`,
+      organizer: { '@type': 'Organization', name: ev.hostName || 'NORVARDEN', url: base },
       url: `${base}/events`,
     };
     if (ev.registrationUrl) {

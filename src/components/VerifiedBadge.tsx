@@ -12,7 +12,7 @@ export function VerifiedBadge({ className = '' }: VerifiedBadgeProps) {
         <TooltipTrigger asChild>
           <span
             className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary cursor-default select-none ${className}`}
-            aria-label="Verified company — reviewed by the REP | IV team"
+            aria-label="Verified company — reviewed by the NORVARDEN team"
           >
             <Shield size={11} className="shrink-0" />
             <span>Verified company</span>
@@ -20,7 +20,7 @@ export function VerifiedBadge({ className = '' }: VerifiedBadgeProps) {
           </span>
         </TooltipTrigger>
         <TooltipContent side="top" className="max-w-xs text-xs leading-relaxed">
-          Reviewed by the REP | IV team. Work email, business and hiring contact confirmed.
+          Reviewed by the NORVARDEN team. Work email, business and hiring contact confirmed.
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

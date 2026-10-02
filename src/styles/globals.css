@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Barlow+Condensed:wght@500;700&family=Barlow:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -51,8 +51,8 @@
     --sidebar-ring: 0 0% 25%;
 
     /* Typography */
-    --font-sans: "Barlow", -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-heading: "Bodoni Moda", Georgia, serif;
+    --font-sans: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: "Montserrat", "Helvetica Neue", Arial, sans-serif;
     --font-serif: ui-serif, Georgia, "Times New Roman", serif;
     --font-mono: ui-monospace, "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
 
@@ -234,38 +234,43 @@
 
 /* ── Hero brand variables ── */
 :root {
-  --hero-navy: 218 69% 9%;
-  --hero-navy-mid: 218 55% 14%;
-  --hero-navy-80: 218 69% 9% / 0.80;
-  --hero-navy-72: 218 69% 9% / 0.72;
-  --hero-navy-55: 218 69% 9% / 0.55;
-  --hero-navy-30: 218 69% 9% / 0.30;
-  --hero-navy-85: 218 69% 9% / 0.85;
-  --hero-gold: 40 60% 66%;
-  --hero-gold-dark: 36 64% 31%;
-  --hero-gold-mid: 37 52% 45%;
-  --hero-gold-light: 42 100% 83%;
-  --hero-gold-pale: 40 100% 89%;
-  --hero-sky: 214 100% 73%;
-  --hero-ice: 214 60% 93%;
-  --hero-ice-60: 214 60% 93% / 0.60;
-  --hero-ice-50: 214 60% 93% / 0.50;
-  --hero-white: 220 60% 98%;
+  --hero-navy: 216 45% 10%;
+  --hero-navy-mid: 215 42% 15%;
+  --hero-navy-80: 216 45% 10% / 0.80;
+  --hero-navy-72: 216 45% 10% / 0.72;
+  --hero-navy-55: 216 45% 10% / 0.55;
+  --hero-navy-30: 216 45% 10% / 0.30;
+  --hero-navy-85: 216 45% 10% / 0.85;
+  --hero-gold: 36 40% 66%;
+  --hero-gold-dark: 34 32% 40%;
+  --hero-gold-mid: 35 34% 55%;
+  --hero-gold-light: 38 55% 82%;
+  --hero-gold-pale: 40 50% 90%;
+  --hero-sky: 205 90% 70%;
+  --hero-ice: 210 20% 92%;
+  --hero-ice-60: 210 20% 92% / 0.72;
+  --hero-ice-50: 210 20% 92% / 0.62;
+  --hero-white: 40 20% 96%;
   --hero-sky-border: 214 100% 73% / 0.35;
   --hero-sky-border-40: 214 100% 73% / 0.40;
-  --hero-card-bg: 218 69% 9% / 0.72;
+  --hero-card-bg: 216 45% 10% / 0.78;
   --hero-overlay-10: 0 0% 100% / 0.10;
   --hero-overlay-20: 0 0% 100% / 0.20;
   --hero-shadow: 0 0% 0% / 0.50;
   --hero-border-top: 0 0% 100% / 0.10;
-  --hero-panel-bg: 218 69% 6%;
-  --hero-backdrop-dark: 218 69% 9% / 0.75;
+  --hero-panel-bg: 216 45% 7%;
+  --hero-backdrop-dark: 216 45% 10% / 0.75;
 }
 
 /* ── Font utilities ── */
-.font-bodoni          { font-family: 'Bodoni Moda', Georgia, serif; }
-.font-barlow-condensed { font-family: 'Barlow Condensed', sans-serif; }
-.font-barlow          { font-family: 'Barlow', sans-serif; }
+.font-bodoni          { font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-weight: 600 !important; letter-spacing: -0.015em; }
+.font-barlow-condensed { font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; }
+.font-barlow          { font-family: 'Atkinson Hyperlegible', 'Helvetica Neue', Arial, sans-serif; }
+/* Headline accent words: upright, not italic, for a cleaner tech look. */
+.font-bodoni em, em.font-bodoni { font-style: normal !important; }
+
+/* Visible keyboard focus everywhere (WCAG 2.4.7 / 2.4.11). */
+:focus-visible { outline: 3px solid hsl(var(--hero-gold)); outline-offset: 3px; }
 
 /* ── Metallic gold shimmer ── */
 @keyframes gold-shimmer {

@@ -1,8 +1,8 @@
 {
   "hero": {
-    "eyebrow": "For Companies",
-    "headline": "Hire people who've performed under",
-    "headlineGold": "pressure.",
+    "eyebrow": "For Employers",
+    "headline": "Hire the talent most companies",
+    "headlineGold": "overlook.",
     "cta": "Reserve a founding spot"
   },
   "howItWorks": {
@@ -26,7 +26,7 @@
         "id": "hw3",
         "number": "03",
         "title": "Post and connect",
-        "body": "Reach a focused pool of verified athletes, coaches, and veterans. Every member has been manually reviewed."
+        "body": "Reach a focused pool of verified people with disabilities. Every member has been manually reviewed."
       }
     ]
   },
@@ -34,7 +34,7 @@
     "eyebrow": "Who you'll meet",
     "headline": "People who know how to",
     "headlineGold": "win.",
-    "body": "Every member on REP | IV has been manually verified. Athletes who competed at the collegiate or professional level. Coaches with documented records. Veterans with honorable service. No self-reported credentials — our team confirms every one.",
+    "body": "Every member on NORVARDEN has been manually verified. Athletes who competed at the collegiate or professional level. Coaches with documented records. Veterans with honorable service. No self-reported credentials — our team confirms every one.",
     "profiles": [
       {
         "id": "p1",
@@ -56,7 +56,7 @@
   "veteranHiring": {
     "eyebrow": "Veteran hiring",
     "headline": "SkillBridge and beyond.",
-    "body": "REP | IV is a SkillBridge-friendly platform. Companies approved as SkillBridge partners can post internship opportunities for transitioning service members. We flag your company profile so veterans know you're ready to hire them.",
+    "body": "NORVARDEN is a SkillBridge-friendly platform. Companies approved as SkillBridge partners can post internship opportunities for transitioning service members. We flag your company profile so veterans know you're ready to hire them.",
     "points": [
       {
         "id": "v1",
@@ -142,7 +142,7 @@
     "eyebrow": "Ready to hire",
     "headline": "Your next win starts",
     "headlineGold": "here.",
-    "body": "Join the companies already hiring verified athletes, coaches, and veterans.",
+    "body": "Join the companies already hiring verified people with disabilities.",
     "primaryCta": "Reserve a founding spot",
     "secondaryCta": "Browse open roles"
   }

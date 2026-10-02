@@ -81,7 +81,7 @@ function StatCard({
         {badge && typeof value === 'number' && value > 0 && (
           <span
             className="font-barlow-condensed uppercase"
-            style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', padding: '3px 8px', borderRadius: '2px', background: gold, color: navy }}
+            style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', padding: '3px 8px', borderRadius: '2px', background: gold, color: navy }}
           >
             {value} pending
           </span>
@@ -91,7 +91,7 @@ function StatCard({
         {value}
       </p>
       <div className="flex items-center justify-between">
-        <p className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
+        <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
           {label}
         </p>
         <ChevronRight size={14} style={{ color: ice60 }} className="group-hover:translate-x-1 transition-transform" />
@@ -148,7 +148,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-4 mb-5">
       <h2 className="font-barlow-condensed uppercase shrink-0"
-        style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
+        style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
         {children}
       </h2>
       <div style={{ flex: 1, height: '1px', background: 'hsl(var(--hero-gold) / 0.15)' }} />
@@ -181,7 +181,7 @@ function CompanyCard({ summary }: { summary: CompanyDashboardSummary }) {
               Your company application is under review. You'll be able to post jobs once approved.
             </p>
             <Link to="/verify-company" className="inline-flex items-center gap-2 mt-4 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-              style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '9px 16px', borderRadius: '2px', border: `1px solid ${gold}`, color: gold, background: 'transparent', textDecoration: 'none' }}>
+              style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '9px 16px', borderRadius: '2px', border: `1px solid ${gold}`, color: gold, background: 'transparent', textDecoration: 'none' }}>
               Check application status
             </Link>
           </div>
@@ -220,18 +220,18 @@ function CompanyCard({ summary }: { summary: CompanyDashboardSummary }) {
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-3 flex-wrap mb-1">
             {orgLabel && (
-              <span className="font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>{orgLabel}</span>
+              <span className="font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>{orgLabel}</span>
             )}
-            <span className="inline-flex items-center gap-1 font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
+            <span className="inline-flex items-center gap-1 font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
               <CheckCircle size={12} style={{ color: gold }} /> Verified
             </span>
             {company.skillbridgePartner && (
-              <span className="inline-flex items-center gap-1 font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
+              <span className="inline-flex items-center gap-1 font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
                 <Shield size={12} style={{ color: gold }} /> SkillBridge
               </span>
             )}
             {company.missionDiscountUnlocked && (
-              <span className="inline-flex items-center gap-1 font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
+              <span className="inline-flex items-center gap-1 font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
                 Mission discount
               </span>
             )}
@@ -259,14 +259,14 @@ function CompanyCard({ summary }: { summary: CompanyDashboardSummary }) {
           <Link
             to="/company/jobs"
             className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-            style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '9px 16px', borderRadius: '2px', background: gold, color: navy, border: 'none', textDecoration: 'none' }}
+            style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '9px 16px', borderRadius: '2px', background: gold, color: navy, border: 'none', textDecoration: 'none' }}
           >
             <PlusCircle size={12} /> Post a job
           </Link>
           <Link
             to="/company/account"
             className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-            style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '9px 16px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.3)', color: ice60, background: 'transparent', textDecoration: 'none' }}
+            style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '9px 16px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.3)', color: ice60, background: 'transparent', textDecoration: 'none' }}
           >
             Company settings
           </Link>
@@ -288,7 +288,7 @@ function CompanyCard({ summary }: { summary: CompanyDashboardSummary }) {
           style={{ background: 'hsl(0 70% 45% / 0.08)', border: '1px solid hsl(0 70% 45% / 0.4)' }}>
           <AlertTriangle size={14} style={{ color: 'hsl(0 70% 60%)', flexShrink: 0 }} />
           <p className="font-barlow" style={{ fontSize: '13px', fontWeight: 300, color: ice60, lineHeight: 1.5 }}>
-            This account has been blocked. Contact REP | IV support for more information.
+            This account has been blocked. Contact NORVARDEN support for more information.
           </p>
         </div>
       )}
@@ -336,8 +336,8 @@ function CompanyDashboardInner() {
   return (
     <main className="min-h-screen pb-24" style={{ background: navy }}>
       <Helmet>
-        <title>Company Dashboard — REP | IV</title>
-        <meta name="description" content="Manage your company profile, job postings, candidate connections, and billing on REP | IV." />
+        <title>Company Dashboard — NORVARDEN</title>
+        <meta name="description" content="Manage your company profile, job postings, candidate connections, and billing on NORVARDEN." />
         <meta name="robots" content="noindex" />
       </Helmet>
 
@@ -347,7 +347,7 @@ function CompanyDashboardInner() {
         style={{ borderBottom: '1px solid hsl(var(--hero-gold) / 0.15)', background: navyMid }}
       >
         <div className="max-w-5xl mx-auto">
-          <p className="font-barlow-condensed uppercase mb-2" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
+          <p className="font-barlow-condensed uppercase mb-2" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
             Employer Dashboard
           </p>
           <h1 className="font-bodoni" style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 400, color: white, lineHeight: 1.05 }}>

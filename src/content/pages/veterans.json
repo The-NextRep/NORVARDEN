@@ -1,23 +1,23 @@
 {
   "meta": {
-    "title": "Veterans — REP | IV",
+    "title": "Veterans — NORVARDEN",
     "description": "Free, verified profiles for military veterans. SkillBridge internships, civilian translation help, and career resources — all from verified employers only."
   },
   "hero": {
     "eyebrow": "Veterans",
     "headline": "Your next",
     "headlineGold": "mission.",
-    "subheadline": "REP | IV is free for every veteran. Verified employers only. No fees, no scams, no noise."
+    "subheadline": "NORVARDEN is free for every veteran. Verified employers only. No fees, no scams, no noise."
   },
   "whatWeOffer": {
-    "eyebrow": "What REP | IV offers veterans",
+    "eyebrow": "What NORVARDEN offers veterans",
     "headline": "Built for the",
     "headlineGold": "transition.",
     "items": [
       {
         "id": "wo1",
         "title": "A free, verified profile",
-        "body": "Your profile is manually reviewed by our team. Military service, rank, MOS, and transition timeline are all confirmed before you appear on REP | IV — so employers know exactly who they're talking to."
+        "body": "Your profile is manually reviewed by our team. Military service, rank, MOS, and transition timeline are all confirmed before you appear on NORVARDEN — so employers know exactly who they're talking to."
       },
       {
         "id": "wo2",
@@ -80,7 +80,7 @@
     "eyebrow": "Veteran career resources",
     "headline": "Tools for the",
     "headlineGold": "mission ahead.",
-    "body": "Every verified veteran on REP | IV gets access to these resources at no cost.",
+    "body": "Every verified veteran on NORVARDEN gets access to these resources at no cost.",
     "items": [
       {
         "id": "r1",
@@ -121,7 +121,7 @@
     "eyebrow": "Join free",
     "headline": "Your service",
     "headlineGold": "earned this.",
-    "body": "REP | IV is always free for veterans. Create your profile, get verified, and connect with employers who understand what you bring.",
+    "body": "NORVARDEN is always free for veterans. Create your profile, get verified, and connect with employers who understand what you bring.",
     "primaryCta": "Join free",
     "secondaryCta": "Browse open roles"
   }

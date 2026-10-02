@@ -1,7 +1,7 @@
 /**
  * /company/events — "My events" for verified companies.
  * Submit an event (pay by card if a fee applies), then track and edit it until
- * the REP | IV team reviews it. Companies without a plan can use this page.
+ * the NORVARDEN team reviews it. Companies without a plan can use this page.
  */
 import { useCallback, useEffect, useState, type FormEvent, type ReactNode } from 'react';
 import { Helmet } from '@dr.pogodin/react-helmet';
@@ -18,7 +18,7 @@ const white   = 'hsl(var(--hero-white))';
 const ice60   = 'hsl(var(--hero-ice-60))';
 const danger  = 'hsl(var(--destructive))';
 const border  = '1px solid hsl(var(--hero-gold) / 0.16)';
-const eyebrow = { fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em' } as const;
+const eyebrow = { fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em' } as const;
 
 type Tier = 'standard' | 'featured';
 type Status = 'pending_payment' | 'pending_review' | 'approved' | 'rejected';
@@ -311,7 +311,7 @@ function CompanyEventsInner() {
   return (
     <main className="min-h-screen px-6 md:px-12 lg:px-16 pt-32 pb-24" style={{ background: navy }}>
       <Helmet>
-        <title>My events — REP | IV</title>
+        <title>My events — NORVARDEN</title>
         <meta name="robots" content="noindex" />
       </Helmet>
       <div className="max-w-4xl mx-auto flex flex-col gap-10">
@@ -322,7 +322,7 @@ function CompanyEventsInner() {
               My <em className="gold-shimmer" style={{ fontStyle: 'italic' }}>events.</em>
             </h1>
             <p className="font-barlow mt-3 max-w-xl" style={{ fontSize: '15px', fontWeight: 300, color: ice60, lineHeight: 1.7 }}>
-              Host hiring events, info sessions and workshops for athletes, coaches and veterans.
+              Host hiring events, info sessions and workshops for people with disabilities.
             </p>
           </div>
           {data && !editing && (
@@ -384,8 +384,8 @@ function CompanyEventsInner() {
                     <article key={ev.id} className="p-5 rounded-sm flex flex-col md:flex-row md:items-center gap-4" style={{ background: navyMid, border }}>
                       <div className="min-w-0 flex-1 flex flex-col gap-1.5">
                         <div className="flex flex-wrap items-center gap-3">
-                          <span className="font-barlow-condensed uppercase" style={{ ...eyebrow, fontSize: '9px', color: st.color }}>{st.label}</span>
-                          {ev.tier === 'featured' && <span className="font-barlow-condensed uppercase inline-flex items-center gap-1" style={{ ...eyebrow, fontSize: '9px', color: gold }}><Star size={10} /> Featured</span>}
+                          <span className="font-barlow-condensed uppercase" style={{ ...eyebrow, fontSize: '11px', color: st.color }}>{st.label}</span>
+                          {ev.tier === 'featured' && <span className="font-barlow-condensed uppercase inline-flex items-center gap-1" style={{ ...eyebrow, fontSize: '11px', color: gold }}><Star size={10} /> Featured</span>}
                           {ev.paymentStatus === 'paid' && <span className="font-barlow" style={{ fontSize: '12px', color: ice60 }}>Paid {money(ev.amountCents ?? 0)}</span>}
                           {ev.paymentStatus === 'refunded' && <span className="font-barlow" style={{ fontSize: '12px', color: ice60 }}>Refunded {money(ev.amountCents ?? 0)}</span>}
                         </div>
@@ -401,24 +401,24 @@ function CompanyEventsInner() {
                         {ev.status === 'pending_payment' && (
                           <button type="button" onClick={() => void payNow(ev)} disabled={busyId === ev.id}
                             className="gold-shimmer-bg font-barlow-condensed uppercase inline-flex items-center gap-2 disabled:opacity-50"
-                            style={{ ...eyebrow, fontSize: '9px', fontWeight: 600, padding: '10px 16px', borderRadius: '2px', color: navy }}>
+                            style={{ ...eyebrow, fontSize: '11px', fontWeight: 600, padding: '10px 16px', borderRadius: '2px', color: navy }}>
                             <CreditCard size={11} /> Pay now · {money(ev.amountCents ?? 0)}
                           </button>
                         )}
                         {ev.status === 'approved' && (
-                          <Link to="/events" className="font-barlow-condensed uppercase inline-flex items-center" style={{ ...eyebrow, fontSize: '9px', padding: '10px 16px', borderRadius: '2px', border, color: gold }}>
+                          <Link to="/events" className="font-barlow-condensed uppercase inline-flex items-center" style={{ ...eyebrow, fontSize: '11px', padding: '10px 16px', borderRadius: '2px', border, color: gold }}>
                             View live
                           </Link>
                         )}
                         {canEdit && (
                           <button type="button" onClick={() => edit(ev)} className="font-barlow-condensed uppercase inline-flex items-center gap-2"
-                            style={{ ...eyebrow, fontSize: '9px', padding: '10px 16px', borderRadius: '2px', border, color: ice60, background: 'transparent' }}>
+                            style={{ ...eyebrow, fontSize: '11px', padding: '10px 16px', borderRadius: '2px', border, color: ice60, background: 'transparent' }}>
                             <Pencil size={11} /> Edit
                           </button>
                         )}
                         {ev.status === 'pending_payment' && (
                           <button type="button" onClick={() => void withdraw(ev)} className="font-barlow-condensed uppercase inline-flex items-center gap-2"
-                            style={{ ...eyebrow, fontSize: '9px', padding: '10px 16px', borderRadius: '2px', border: `1px solid ${danger}`, color: danger, background: 'transparent' }}>
+                            style={{ ...eyebrow, fontSize: '11px', padding: '10px 16px', borderRadius: '2px', border: `1px solid ${danger}`, color: danger, background: 'transparent' }}>
                             <Trash2 size={11} /> {busyId === ev.id ? 'Click to confirm' : 'Delete'}
                           </button>
                         )}

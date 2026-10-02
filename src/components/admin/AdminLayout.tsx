@@ -19,7 +19,7 @@ export default function AdminLayout({ title, eyebrow = 'Admin', subtitle, metaDe
   return (
     <main className="min-h-screen pb-24" style={{ background: t.navy }}>
       <Helmet>
-        <title>{`${title} — Admin — REP | IV`}</title>
+        <title>{`${title} — Admin — NORVARDEN`}</title>
         <meta name="description" content={metaDescription} />
         <meta name="robots" content="noindex" />
       </Helmet>

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "How we verify companies — REP | IV",
-    "description": "Every company on REP | IV is reviewed by our team before it can post a job. Here's exactly what we check."
+    "title": "How we verify companies — NORVARDEN",
+    "description": "Every company on NORVARDEN is reviewed by our team before it can post a job. Here's exactly what we check."
   },
   "hero": {
     "label": "Trust & safety",
@@ -36,7 +36,7 @@
   ],
   "neverSection": {
     "heading": "What you should never be asked for",
-    "intro": "Legitimate employers on REP | IV will never ask you for any of the following. If you see it, report it immediately.",
+    "intro": "Legitimate employers on NORVARDEN will never ask you for any of the following. If you see it, report it immediately.",
     "items": [
       {
         "id": "n1",
@@ -61,7 +61,7 @@
     "body": "Trust your instincts. If a job post, message, or company seems suspicious, report it. Our team reviews every report.",
     "reportCta": "Report this company",
     "emailLabel": "Or email us directly:",
-    "email": "info@the-nextrep.com"
+    "email": "info@norvarden.com"
   },
   "disclaimer": "Verification lowers risk but can't remove it. Always do your own research before accepting an offer."
 }

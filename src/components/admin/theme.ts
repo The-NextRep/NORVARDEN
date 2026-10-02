@@ -25,7 +25,7 @@ export const adminTheme = {
 } as const;
 
 export const eyebrowStyle = {
-  fontSize: '10px',
+  fontSize: '12px',
   fontWeight: 500,
   letterSpacing: '0.28em',
 } as const;

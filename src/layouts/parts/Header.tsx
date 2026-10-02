@@ -13,12 +13,11 @@ import BrandMark from '@/components/BrandMark';
 
 const NAV_ITEMS = [
   { href: '/jobs',          label: 'Jobs' },
-  { href: '/athletes',      label: 'Athletes' },
-  { href: '/coaches',       label: 'Coaches' },
   { href: '/veterans',      label: 'Veterans' },
   { href: '/resources',     label: 'Resources' },
   { href: '/events',        label: 'Events' },
-  { href: '/for-companies', label: 'For Companies' },
+  { href: '/for-companies', label: 'Employers' },
+  { href: '/about',         label: 'About' },
 ];
 
 // ── Tokens ──────────────────────────────────────────────────────────────────
@@ -283,7 +282,7 @@ export default function Header() {
                   to="/signup"
                   className="font-barlow-condensed uppercase inline-flex items-center justify-center transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                   style={{
-                    fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em',
+                    fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em',
                     padding: '9px 20px', borderRadius: '2px',
                     color: gold, border: '1px solid hsl(var(--hero-gold) / 0.70)',
                     background: 'transparent', outlineColor: gold,
@@ -313,7 +312,7 @@ export default function Header() {
                   {unreadCount > 0 && (
                     <span
                       className="absolute -top-1.5 -right-2 flex items-center justify-center font-barlow-condensed"
-                      style={{ minWidth: '16px', height: '16px', borderRadius: '8px', background: gold, color: navy, fontSize: '9px', fontWeight: 700, padding: '0 4px', lineHeight: 1 }}
+                      style={{ minWidth: '16px', height: '16px', borderRadius: '8px', background: gold, color: navy, fontSize: '11px', fontWeight: 700, padding: '0 4px', lineHeight: 1 }}
                       aria-hidden="true"
                     >
                       {unreadCount > 99 ? '99+' : unreadCount}
@@ -521,7 +520,7 @@ function MobileMenu({
               to="/signup"
               className="font-barlow-condensed uppercase text-center inline-flex items-center justify-center transition-colors mt-1"
               style={{
-                fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em',
+                fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em',
                 padding: '14px 0', borderRadius: '2px',
                 color: gold, border: '1px solid hsl(var(--hero-gold) / 0.70)',
                 background: 'transparent',

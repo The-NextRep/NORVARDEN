@@ -365,14 +365,14 @@ export default function ResumeBuilderPage() {
     <>
     <style dangerouslySetInnerHTML={{ __html: PRINT_CSS }} />
     <Helmet>
-      <title>Résumé Builder — REP | IV</title>
+      <title>Résumé Builder — NORVARDEN</title>
       <meta name="robots" content="noindex" />
     </Helmet>
     </>
   );
 
   if (!user && !isPending) return (<>{head}{gate(<>Please <Link to="/login?next=/resume-builder" style={{ color: gold }}>sign in</Link> or <Link to="/signup" style={{ color: gold }}>join free</Link> to build your résumé.</>)}</>);
-  if (isEmployer) return (<>{head}{gate('The résumé builder is for athletes, coaches and veterans.')}</>);
+  if (isEmployer) return (<>{head}{gate('The résumé builder is for people with disabilities.')}</>);
   if (loadError) return (<>{head}{gate(loadError)}</>);
   if (!r) return (<>{head}<main style={{ background: navy, minHeight: '70vh' }} className="flex items-center justify-center"><div className="w-7 h-7 rounded-full border-2 animate-spin" style={{ borderColor: `${gold} transparent transparent transparent` }} /></main></>);
 

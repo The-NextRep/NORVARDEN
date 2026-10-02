@@ -13,7 +13,7 @@ import {
   useCompanyBilling,
 } from '@/lib/stripe/billing';
 
-const siteUrl = 'https://jobs.the-nextrep.com';
+const siteUrl = 'https://www.norvarden.com';
 
 type BillingCycle = 'quarterly' | 'annual';
 
@@ -78,18 +78,18 @@ export default function ForCompaniesPage() {
     '@type': 'WebPage',
     '@id': `${siteUrl}/for-companies#webpage`,
     url: `${siteUrl}/for-companies`,
-    name: 'For Companies — REP | IV',
+    name: 'For Companies — NORVARDEN',
     isPartOf: { '@id': `${siteUrl}/#website` },
   };
 
   return (
     <>
       <Helmet>
-        <title>For Companies — REP | IV</title>
-        <meta name="description" content="Hire verified athletes, coaches, and veterans. Every company is reviewed before it can post. Scout from $1,800/quarter or $6,000/year." />
+        <title>For Companies — NORVARDEN</title>
+        <meta name="description" content="Hire verified people with disabilities. Every company is reviewed before it can post. Scout from $1,800/quarter or $6,000/year." />
         <link rel="canonical" href={`${siteUrl}/for-companies`} />
-        <meta property="og:title" content="For Companies — REP | IV" />
-        <meta property="og:description" content="Hire verified athletes, coaches, and veterans. Every company is reviewed before it can post." />
+        <meta property="og:title" content="For Companies — NORVARDEN" />
+        <meta property="og:description" content="Hire verified people with disabilities. Every company is reviewed before it can post." />
         <meta property="og:url" content={`${siteUrl}/for-companies`} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -218,7 +218,7 @@ export default function ForCompaniesPage() {
                   >
                     <div className="flex items-center gap-3">
                       <Shield size={14} style={{ color: gold, flexShrink: 0 }} />
-                      <span className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}>
+                      <span className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}>
                         {profile.label}
                       </span>
                     </div>
@@ -268,7 +268,7 @@ export default function ForCompaniesPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-barlow-condensed uppercase inline-flex items-center gap-2 transition-colors hover:opacity-80 self-start"
-                  style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}
+                  style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}
                 >
                   <span>{for_companies.veteranHiring.cta}</span>
                   <ChevronRight size={11} />
@@ -337,7 +337,7 @@ export default function ForCompaniesPage() {
                 {billing === 'annual' && (
                   <span
                     className="font-barlow-condensed uppercase"
-                    style={{ fontSize: '8px', fontWeight: 500, letterSpacing: '0.2em', color: gold, padding: '2px 6px', border: goldBorder35, borderRadius: '2px' }}
+                    style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.2em', color: gold, padding: '2px 6px', border: goldBorder35, borderRadius: '2px' }}
                   >
                     <span>{pricing.toggle.annualSavings}</span>
                   </span>
@@ -369,14 +369,14 @@ export default function ForCompaniesPage() {
                     {isPartner && (
                       <div
                         className="absolute -top-3 left-1/2 -translate-x-1/2 font-barlow-condensed uppercase whitespace-nowrap"
-                        style={{ fontSize: '8px', fontWeight: 500, letterSpacing: '0.28em', padding: '3px 10px', background: navy, border: goldBorder, borderRadius: '2px', color: gold }}
+                        style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '3px 10px', background: navy, border: goldBorder, borderRadius: '2px', color: gold }}
                       >
                         Most popular
                       </div>
                     )}
 
                     <div className="flex flex-col gap-1">
-                      <span className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}>
+                      <span className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}>
                         <span>{plan.name}</span>
                       </span>
                       <p className="font-barlow" style={{ fontSize: '14px', fontWeight: 300, color: ice60 }}>
@@ -415,7 +415,7 @@ export default function ForCompaniesPage() {
                     <div className="mt-auto pt-2">
                       {isFounding ? (
                         <a
-                          href="mailto:info@the-nextrep.com"
+                          href="mailto:info@norvarden.com"
                           className="gold-shimmer-bg font-barlow-condensed uppercase inline-flex items-center justify-center gap-2 w-full transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                           style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.32em', paddingTop: '17px', paddingBottom: '17px', borderRadius: '3px', color: navy, outlineColor: gold }}
                         >
@@ -450,7 +450,7 @@ export default function ForCompaniesPage() {
           {/* Coupon + discount note */}
           <div className="mt-10 flex flex-col items-center gap-4">
             <div className="inline-flex items-center gap-3 px-5 py-3" style={{ border: goldBorder20, borderRadius: '3px', background: cardBg }}>
-              <label htmlFor="fc-coupon" className="font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
+              <label htmlFor="fc-coupon" className="font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
                 <span>{pricing.discounts.couponLabel}</span>
               </label>
               <input
@@ -492,7 +492,7 @@ export default function ForCompaniesPage() {
                   <span className="font-bodoni" style={{ fontSize: 'clamp(2rem, 3vw, 2.8rem)', fontWeight: 400, lineHeight: 1, color: gold }}>
                     {item.stat}
                   </span>
-                  <span className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
+                  <span className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
                     {item.label}
                   </span>
                 </div>

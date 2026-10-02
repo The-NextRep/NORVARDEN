@@ -42,7 +42,7 @@ function ActivityInner() {
     <AdminLayout
       title="Activity"
       subtitle="Every approval, rejection, suspension and access change made by an admin."
-      metaDescription="Admin activity log for REP | IV."
+      metaDescription="Admin activity log for NORVARDEN."
     >
       <ErrorNote message={error} />
       {loading && !data ? <Spinner /> : !data || data.entries.length === 0 ? (

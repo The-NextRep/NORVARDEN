@@ -62,7 +62,7 @@ async function createCheckout(
         currency: 'usd',
         unit_amount: ev.amountCents,
         product_data: {
-          name: `REP | IV ${ev.tier === 'featured' ? 'featured' : 'standard'} event listing`,
+          name: `NORVARDEN ${ev.tier === 'featured' ? 'featured' : 'standard'} event listing`,
           description: ev.title.slice(0, 200),
         },
       },
@@ -135,7 +135,7 @@ export async function submitCompanyEvent(req: Request, res: Response) {
   const needsPayment = price.amountCents > 0;
 
   if (needsPayment && !getStripeOrNull()) {
-    res.status(503).json({ error: 'Payments are not available right now. Please contact info@the-nextrep.com.' });
+    res.status(503).json({ error: 'Payments are not available right now. Please contact info@norvarden.com.' });
     return;
   }
 
@@ -182,7 +182,7 @@ export async function updateCompanyEvent(req: Request, res: Response) {
   const ev = await ownEvent(ctx.company.id, id);
   if (!ev) { res.status(404).json({ error: 'Event not found.' }); return; }
   if (ev.status !== 'pending_payment' && ev.status !== 'pending_review') {
-    res.status(409).json({ error: 'This event has already been reviewed. Email info@the-nextrep.com to change it.' });
+    res.status(409).json({ error: 'This event has already been reviewed. Email info@norvarden.com to change it.' });
     return;
   }
   const parsed = parseEventBody((req.body ?? {}) as Record<string, unknown>);
@@ -245,11 +245,11 @@ export async function deleteCompanyEvent(req: Request, res: Response) {
   const ev = await ownEvent(ctx.company.id, id);
   if (!ev) { res.status(404).json({ error: 'Event not found.' }); return; }
   if (ev.paymentStatus === 'paid') {
-    res.status(409).json({ error: 'This event is paid. Email info@the-nextrep.com to cancel it and arrange a refund.' });
+    res.status(409).json({ error: 'This event is paid. Email info@norvarden.com to cancel it and arrange a refund.' });
     return;
   }
   if (ev.status === 'approved') {
-    res.status(409).json({ error: 'This event is live. Email info@the-nextrep.com to take it down.' });
+    res.status(409).json({ error: 'This event is live. Email info@norvarden.com to take it down.' });
     return;
   }
   await db.delete(events).where(eq(events.id, id));

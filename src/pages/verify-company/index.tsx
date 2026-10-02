@@ -63,8 +63,8 @@ export default function VerifyStep1Page() {
   return (
     <>
       <Helmet>
-        <title>Verify Your Company — REP | IV</title>
-        <meta name="description" content="Verify your work email to start your company application on REP | IV." />
+        <title>Verify Your Company — NORVARDEN</title>
+        <meta name="description" content="Verify your work email to start your company application on NORVARDEN." />
         <meta name="robots" content="noindex" />
       </Helmet>
       <main>

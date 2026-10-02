@@ -1,5 +1,5 @@
 /**
- * /dashboard — Member dashboard for athletes, coaches, and veterans.
+ * /dashboard — Member dashboard for people with disabilities.
  * Employers are redirected to /company/dashboard.
  * Unauthenticated users are redirected to /login.
  */
@@ -79,7 +79,7 @@ function StatCard({
         {badge && typeof value === 'number' && value > 0 && (
           <span
             className="font-barlow-condensed uppercase"
-            style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', padding: '3px 8px', borderRadius: '2px', background: gold, color: navy }}
+            style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', padding: '3px 8px', borderRadius: '2px', background: gold, color: navy }}
           >
             {value} new
           </span>
@@ -92,7 +92,7 @@ function StatCard({
         {value}
       </p>
       <div className="flex items-center justify-between">
-        <p className="font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
+        <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
           {label}
         </p>
         <ChevronRight size={14} style={{ color: ice60, transition: 'transform 0.15s', transform: 'translateX(0)' }} className="group-hover:translate-x-1" />
@@ -149,7 +149,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-4 mb-5">
       <h2 className="font-barlow-condensed uppercase shrink-0"
-        style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
+        style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
         {children}
       </h2>
       <div style={{ flex: 1, height: '1px', background: 'hsl(var(--hero-gold) / 0.15)' }} />
@@ -205,14 +205,14 @@ function ProfileCard({
         {/* Identity */}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-3 flex-wrap mb-1">
-            <span className="font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>{pathLabel}</span>
+            <span className="font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>{pathLabel}</span>
             {isVerified && (
-              <span className="inline-flex items-center gap-1 font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
+              <span className="inline-flex items-center gap-1 font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
                 <CheckCircle size={12} style={{ color: gold }} /> Verified
               </span>
             )}
             {memberType === 'veteran' && (
-              <span className="inline-flex items-center gap-1 font-barlow-condensed uppercase" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
+              <span className="inline-flex items-center gap-1 font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
                 <Shield size={12} style={{ color: gold }} /> Veteran
               </span>
             )}
@@ -242,14 +242,14 @@ function ProfileCard({
           <Link
             to="/profile/edit"
             className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-            style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '9px 16px', borderRadius: '2px', border: `1px solid ${gold}`, color: gold, background: 'transparent', textDecoration: 'none' }}
+            style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '9px 16px', borderRadius: '2px', border: `1px solid ${gold}`, color: gold, background: 'transparent', textDecoration: 'none' }}
           >
             Edit profile
           </Link>
           <Link
             to={`/profile/${userId}`}
             className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-80"
-            style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', padding: '9px 16px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.3)', color: ice60, background: 'transparent', textDecoration: 'none' }}
+            style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', padding: '9px 16px', borderRadius: '2px', border: '1px solid hsl(var(--hero-gold) / 0.3)', color: ice60, background: 'transparent', textDecoration: 'none' }}
           >
             View profile
           </Link>
@@ -370,8 +370,8 @@ function DashboardInner() {
   return (
     <main className="min-h-screen pb-24" style={{ background: navy }}>
       <Helmet>
-        <title>Dashboard — REP | IV</title>
-        <meta name="description" content="Your member dashboard on REP | IV — view your profile, saved jobs, connection requests, and quick links to browse verified opportunities." />
+        <title>Dashboard — NORVARDEN</title>
+        <meta name="description" content="Your member dashboard on NORVARDEN — view your profile, saved jobs, connection requests, and quick links to browse verified opportunities." />
         <meta name="robots" content="noindex" />
       </Helmet>
 
@@ -381,7 +381,7 @@ function DashboardInner() {
         style={{ borderBottom: '1px solid hsl(var(--hero-gold) / 0.15)', background: navyMid }}
       >
         <div className="max-w-5xl mx-auto">
-          <p className="font-barlow-condensed uppercase mb-2" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
+          <p className="font-barlow-condensed uppercase mb-2" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
             {pathLabel} Dashboard
           </p>
           <h1 className="font-bodoni" style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 400, color: white, lineHeight: 1.05 }}>
@@ -426,13 +426,13 @@ function DashboardInner() {
           {/* Connection Requests */}
           <section id="connection-requests">
             <div className="flex items-center gap-3 mb-5">
-              <h2 className="font-barlow-condensed uppercase shrink-0" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
+              <h2 className="font-barlow-condensed uppercase shrink-0" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
                 {dashboard.connectionRequests.sectionLabel}
               </h2>
               {!connLoading && connRequests.length > 0 && (
                 <span
                   className="font-barlow-condensed uppercase"
-                  style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.22em', padding: '2px 7px', borderRadius: '2px', background: gold, color: navy }}
+                  style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', padding: '2px 7px', borderRadius: '2px', background: gold, color: navy }}
                 >
                   {connRequests.length}
                 </span>
@@ -497,7 +497,7 @@ function DashboardInner() {
                               {req.companyName ?? 'Verified Company'}
                             </span>
                             {req.skillbridgePartner && (
-                              <span className="font-barlow-condensed uppercase" style={{ fontSize: '8px', fontWeight: 500, letterSpacing: '0.22em', color: 'hsl(var(--hero-sky, 200 80% 65%))', padding: '2px 6px', border: '1px solid hsl(var(--hero-sky, 200 80% 65%) / 0.4)', borderRadius: '2px' }}>
+                              <span className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.22em', color: 'hsl(var(--hero-sky, 200 80% 65%))', padding: '2px 6px', border: '1px solid hsl(var(--hero-sky, 200 80% 65%) / 0.4)', borderRadius: '2px' }}>
                                 {dashboard.connectionRequests.skillbridgeLabel}
                               </span>
                             )}
@@ -505,7 +505,7 @@ function DashboardInner() {
 
                           {req.note && (
                             <div className="mt-2 mb-3">
-                              <span className="font-barlow-condensed uppercase block mb-1" style={{ fontSize: '9px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>
+                              <span className="font-barlow-condensed uppercase block mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>
                                 {dashboard.connectionRequests.noteLabel}
                               </span>
                               <p className="font-barlow" style={{ fontSize: '14px', fontWeight: 300, color: ice60, lineHeight: 1.65, fontStyle: 'italic' }}>
@@ -522,7 +522,7 @@ function DashboardInner() {
                         {/* Actions */}
                         <div className="shrink-0 flex items-center gap-2 self-center">
                           {isAccepted ? (
-                            <span className="inline-flex items-center gap-1.5 font-barlow-condensed uppercase" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>
+                            <span className="inline-flex items-center gap-1.5 font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>
                               <Check size={13} />
                               {dashboard.connectionRequests.acceptedLabel}
                             </span>
@@ -533,7 +533,7 @@ function DashboardInner() {
                                 disabled={isBusy}
                                 className="inline-flex items-center gap-1.5 font-barlow-condensed uppercase transition-opacity hover:opacity-80 disabled:opacity-40"
                                 style={{
-                                  fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em',
+                                  fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em',
                                   padding: '10px 18px', borderRadius: '2px',
                                   background: gold, color: navy, border: 'none', cursor: isBusy ? 'default' : 'pointer',
                                 }}
@@ -547,7 +547,7 @@ function DashboardInner() {
                                 disabled={isBusy}
                                 className="inline-flex items-center gap-1.5 font-barlow-condensed uppercase transition-opacity hover:opacity-80 disabled:opacity-40"
                                 style={{
-                                  fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em',
+                                  fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em',
                                   padding: '10px 18px', borderRadius: '2px',
                                   background: 'transparent', color: ice60,
                                   border: '1px solid hsl(var(--hero-gold) / 0.25)',

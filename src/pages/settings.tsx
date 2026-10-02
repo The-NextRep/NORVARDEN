@@ -22,7 +22,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-4 mb-4">
       <h2 className="font-barlow-condensed uppercase shrink-0"
-        style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
+        style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
         {children}
       </h2>
       <div style={{ flex: 1, height: '1px', background: 'hsl(var(--hero-gold) / 0.15)' }} />
@@ -111,8 +111,8 @@ function SettingsInner() {
   return (
     <main className="min-h-screen pb-24" style={{ background: navy }}>
       <Helmet>
-        <title>Settings — REP | IV</title>
-        <meta name="description" content="Manage your account email, message notifications, and password on REP | IV." />
+        <title>Settings — NORVARDEN</title>
+        <meta name="description" content="Manage your account email, message notifications, and password on NORVARDEN." />
         <meta name="robots" content="noindex" />
       </Helmet>
 
@@ -125,11 +125,11 @@ function SettingsInner() {
           <Link
             to={dashboardHref}
             className="inline-flex items-center gap-1 font-barlow-condensed uppercase mb-4 transition-opacity hover:opacity-80"
-            style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60, textDecoration: 'none' }}
+            style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60, textDecoration: 'none' }}
           >
             <ChevronLeft size={12} /> Dashboard
           </Link>
-          <p className="font-barlow-condensed uppercase mb-2" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
+          <p className="font-barlow-condensed uppercase mb-2" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: ice60 }}>
             Account
           </p>
           <h1 className="font-bodoni" style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 400, color: white, lineHeight: 1.05 }}>
@@ -146,7 +146,7 @@ function SettingsInner() {
           <section>
             <SectionHeading>Account</SectionHeading>
             <div style={cardStyle}>
-              <label htmlFor="account-email" className="block font-barlow-condensed uppercase mb-1.5" style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
+              <label htmlFor="account-email" className="block font-barlow-condensed uppercase mb-1.5" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>
                 Email address
               </label>
               <div className="flex items-center gap-3">
@@ -213,7 +213,7 @@ function SettingsInner() {
                   Email me about featured events
                 </p>
                 <p className="font-barlow" style={descStyle}>
-                  Occasional announcements of hiring events and workshops on REP | IV.
+                  Occasional announcements of hiring events and workshops on NORVARDEN.
                 </p>
               </div>
               <button
@@ -264,7 +264,7 @@ function SettingsInner() {
                   onClick={() => void sendPasswordLink()}
                   disabled={pwState === 'sending' || !email}
                   className="inline-flex items-center gap-2 font-barlow-condensed uppercase transition-opacity hover:opacity-90 disabled:opacity-50 shrink-0"
-                  style={{ fontSize: '10px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 20px', borderRadius: '2px', border: `1px solid ${gold}`, color: gold, background: 'transparent', cursor: 'pointer' }}
+                  style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', padding: '10px 20px', borderRadius: '2px', border: `1px solid ${gold}`, color: gold, background: 'transparent', cursor: 'pointer' }}
                 >
                   <KeyRound size={12} /> {pwState === 'sending' ? 'Sending…' : 'Change password'}
                 </button>
