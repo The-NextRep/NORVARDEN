@@ -66,7 +66,8 @@ export default function Website({
     switch (layout.background) {
       case 'muted': return 'bg-muted';
       case 'gradient': return 'bg-gradient-to-b from-background to-muted/20';
-      default: return 'bg-background';
+      // Site-wide dark theme: sections without their own background sit on navy.
+      default: return 'bg-[hsl(var(--hero-navy))]';
     }
   };
 

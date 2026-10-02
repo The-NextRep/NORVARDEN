@@ -1,11 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router';
 import { Helmet } from '@dr.pogodin/react-helmet';
 import { home } from 'virtual:content';
 import { ContentListContext } from '@airo/content';
-import { Shield, ChevronRight, ChevronLeft, Pause, Play, ChevronDown } from 'lucide-react';
+import { Shield, ChevronRight, ChevronDown } from 'lucide-react';
 import BrandMark from '@/components/BrandMark';
 import TechBackdrop from '@/components/TechBackdrop';
+import HeroMarquee from '@/components/HeroMarquee';
 import UpcomingEvents from '@/components/UpcomingEvents';
 
 const siteUrl = 'https://www.norvarden.com';
@@ -27,34 +28,8 @@ function Hairline({ className = '' }: { className?: string }) {
 
 // ─── Main page ────────────────────────────────────────────────────────────
 export default function HomePage() {
-  const [activeStory, setActiveStory]   = useState(0);
   const [paused, setPaused]             = useState(false);
   const [faqOpen, setFaqOpen]           = useState<Record<string, boolean>>({});
-  const prefersReduced                  = useRef(false);
-  const storyTimer                      = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  useEffect(() => {
-    prefersReduced.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  }, []);
-
-  // Story auto-advance
-  useEffect(() => {
-    if (paused || prefersReduced.current) return;
-    storyTimer.current = setInterval(() => setActiveStory(s => (s + 1) % home.stories.length), 5000);
-    return () => { if (storyTimer.current) clearInterval(storyTimer.current); };
-  }, [paused]);
-
-  function togglePause() {
-    setPaused(p => {
-      const next = !p;
-      if (!next) return next;
-      if (storyTimer.current)  clearInterval(storyTimer.current);
-      return next;
-    });
-  }
-
-  function prevStory() { setActiveStory(s => (s - 1 + home.stories.length) % home.stories.length); }
-  function nextStory() { setActiveStory(s => (s + 1) % home.stories.length); }
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -86,7 +61,7 @@ export default function HomePage() {
       <main style={{ background: navy }}>
 
         {/* ── HERO ──────────────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden" style={{ minHeight: '100vh' }} aria-label="Hero">
+        <section className="relative overflow-hidden flex flex-col" style={{ minHeight: '100vh' }} aria-label="Hero">
 
           <TechBackdrop />
 
@@ -97,7 +72,7 @@ export default function HomePage() {
           />
 
           {/* Content grid */}
-          <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12 px-6 md:px-12 lg:px-16 pt-32 pb-20 max-w-7xl mx-auto min-h-screen">
+          <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center gap-12 px-6 md:px-12 lg:px-16 pt-28 pb-10 max-w-7xl mx-auto w-full">
 
             {/* Left: headline + CTA */}
             <div className="flex-1 flex flex-col gap-6 max-w-xl">
@@ -153,81 +128,10 @@ export default function HomePage() {
                 </div>
               </ContentListContext>
             </div>
+          </div>
 
-            {/* Right: story card */}
-            <div
-              className="w-full lg:w-80 xl:w-96 flex flex-col gap-0 shrink-0"
-              style={{ border: goldBorder35, borderRadius: '3px', background: cardBg, backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}
-            >
-              {/* Progress dashes */}
-              <div className="flex gap-1 px-5 pt-5">
-                {home.stories.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActiveStory(i)}
-                    aria-label={`Story ${i + 1}`}
-                    style={{
-                      flex: 1, height: '2px', borderRadius: '1px', border: 'none', cursor: 'pointer',
-                      background: i === activeStory
-                        ? gold
-                        : i < activeStory
-                          ? 'hsl(var(--hero-gold) / 0.60)'
-                          : 'hsl(var(--hero-gold) / 0.20)',
-                      transition: 'background 0.3s',
-                    }}
-                  />
-                ))}
-              </div>
-
-              {/* Story body */}
-              <div className="px-6 py-6 flex flex-col gap-3" style={{ minHeight: '180px' }}>
-                <h2 className="font-bodoni" style={{ fontSize: '20px', fontWeight: 400, lineHeight: 1.1, color: white }}>
-                  {home.stories[activeStory].heading}
-                </h2>
-                <p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, lineHeight: 1.75, color: ice60 }}>
-                  {home.stories[activeStory].body}
-                  {home.stories[activeStory].highlight ? (
-                    <>
-                      {' '}
-                      <em className="gold-shimmer" style={{ fontStyle: 'italic' }}>
-                        {home.stories[activeStory].highlight}
-                      </em>
-                    </>
-                  ) : null}
-                </p>
-              </div>
-
-              {/* Controls */}
-              <div className="flex items-center justify-between px-5 pb-5 pt-2" style={{ borderTop: '1px solid hsl(var(--hero-gold) / 0.15)' }}>
-                <div className="flex gap-2">
-                  <button
-                    onClick={prevStory}
-                    aria-label="Previous story"
-                    className="flex items-center justify-center transition-opacity hover:opacity-70"
-                    style={{ width: '28px', height: '28px', borderRadius: '50%', border: goldBorder35, background: 'transparent', color: gold, cursor: 'pointer' }}
-                  >
-                    <ChevronLeft size={13} />
-                  </button>
-                  <button
-                    onClick={nextStory}
-                    aria-label="Next story"
-                    className="flex items-center justify-center transition-opacity hover:opacity-70"
-                    style={{ width: '28px', height: '28px', borderRadius: '50%', border: goldBorder35, background: 'transparent', color: gold, cursor: 'pointer' }}
-                  >
-                    <ChevronRight size={13} />
-                  </button>
-                </div>
-                <button
-                  onClick={togglePause}
-                  aria-label={paused ? 'Resume slideshow' : 'Pause slideshow'}
-                  className="flex items-center justify-center transition-opacity hover:opacity-70"
-                  style={{ width: '28px', height: '28px', borderRadius: '50%', border: goldBorder35, background: 'transparent', color: gold, cursor: 'pointer' }}
-                >
-                  {paused ? <Play size={11} /> : <Pause size={11} />}
-                </button>
-              </div>
-            </div>
-
+          <div className="relative z-10 pb-6">
+            <HeroMarquee paused={paused} onTogglePause={() => setPaused((p) => !p)} />
           </div>
         </section>
 
