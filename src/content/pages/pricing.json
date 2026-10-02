@@ -1,0 +1,138 @@
+{
+  "hero": {
+    "heading": "Simple, transparent pricing",
+    "subheading": "Companies choose a plan. Athletes, coaches, and veterans are always free."
+  },
+  "toggle": {
+    "quarterly": "3 months",
+    "annual": "12 months",
+    "annualSavings": "Save about 2 months"
+  },
+  "plans": [
+    {
+      "id": "scout",
+      "name": "Scout",
+      "tagline": "Start connecting with verified talent",
+      "quarterlyPrice": "$1,800",
+      "quarterlyBilling": "every 3 months",
+      "annualPrice": "$6,000",
+      "annualBilling": "per year",
+      "features": [
+        {
+          "id": "s1",
+          "text": "Up to 5 active job posts"
+        },
+        {
+          "id": "s2",
+          "text": "Search verified member profiles"
+        },
+        {
+          "id": "s3",
+          "text": "Send connection requests"
+        },
+        {
+          "id": "s6",
+          "text": "1 event listing per quarter"
+        },
+        {
+          "id": "s4",
+          "text": "Company profile page"
+        },
+        {
+          "id": "s5",
+          "text": "Auto-renews at same billing length"
+        }
+      ],
+      "cta": "Get started"
+    },
+    {
+      "id": "partner",
+      "name": "Partner",
+      "tagline": "For companies serious about this talent pool",
+      "quarterlyPrice": "$5,400",
+      "quarterlyBilling": "every 3 months",
+      "annualPrice": "$18,000",
+      "annualBilling": "per year",
+      "features": [
+        {
+          "id": "p1",
+          "text": "Everything in Scout"
+        },
+        {
+          "id": "p6",
+          "text": "Up to 20 active job posts"
+        },
+        {
+          "id": "p7",
+          "text": "Unlimited event listings + 1 featured per quarter"
+        },
+        {
+          "id": "p2",
+          "text": "Priority job placement"
+        },
+        {
+          "id": "p3",
+          "text": "Enhanced company profile"
+        },
+        {
+          "id": "p4",
+          "text": "Dedicated support"
+        },
+        {
+          "id": "p5",
+          "text": "Auto-renews at same billing length"
+        }
+      ],
+      "cta": "Get started",
+      "highlighted": true
+    },
+    {
+      "id": "founding",
+      "name": "Founding",
+      "tagline": "For organizations building a lasting partnership",
+      "quarterlyPrice": "",
+      "quarterlyBilling": "",
+      "annualPrice": "",
+      "annualBilling": "",
+      "features": [
+        {
+          "id": "f1",
+          "text": "Everything in Partner"
+        },
+        {
+          "id": "f5",
+          "text": "Unlimited job posts"
+        },
+        {
+          "id": "f2",
+          "text": "Founding member recognition"
+        },
+        {
+          "id": "f3",
+          "text": "Custom partnership terms"
+        },
+        {
+          "id": "f4",
+          "text": "Annual billing only"
+        }
+      ],
+      "cta": "Contact us"
+    }
+  ],
+  "discounts": {
+    "heading": "Discounts available",
+    "body": "Schools, nonprofits, and military-affiliated organizations receive 30% off any plan once verified — it's applied automatically at checkout. The first 10 companies can use code FOUNDING10 for 50% off their first year. One discount applies per subscription.",
+    "couponLabel": "Coupon code:",
+    "couponCode": "FOUNDING10"
+  },
+  "members": {
+    "heading": "Athletes, coaches & veterans",
+    "body": "Joining REP | IV is always free for athletes, coaches, and military veterans. No plan required.",
+    "cta": "Join free"
+  },
+  "verification": {
+    "heading": "Verification required",
+    "body": "Only verified companies can subscribe. If you haven't completed verification yet, we'll walk you through it first.",
+    "cta": "Complete verification"
+  }
+}

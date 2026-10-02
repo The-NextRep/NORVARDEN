@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "How we verify companies — REP | IV",
+    "description": "Every company on REP | IV is reviewed by our team before it can post a job. Here's exactly what we check."
+  },
+  "hero": {
+    "label": "Trust & safety",
+    "headline": "How we verify companies",
+    "subheadline": "Every company is reviewed by our team before it can post a job. Here's exactly what we check."
+  },
+  "checks": [
+    {
+      "id": "ch1",
+      "icon": "mail",
+      "title": "Work email confirmed",
+      "body": "We require a work email address that matches the company's own domain — no Gmail, Yahoo, or other free providers. This is the first filter. If the email domain doesn't match the company's website, we flag it for closer review before anything else moves forward."
+    },
+    {
+      "id": "ch2",
+      "icon": "building",
+      "title": "Business checked",
+      "body": "We look up the company in state business registration records, the IRS Tax Exempt Organization database for nonprofits, the NCES school database for schools and districts, or the SAM.gov federal contractor registry. Clubs and academies must provide a link to their governing body or league listing. We're checking that the organization is real and legally registered."
+    },
+    {
+      "id": "ch3",
+      "icon": "user-check",
+      "title": "Hiring contact confirmed",
+      "body": "We confirm that the person submitting the application actually works at the organization. We cross-reference their name and title against the company's website, LinkedIn page, and other public sources. If we can't confirm them, we ask for more information before approving."
+    },
+    {
+      "id": "ch4",
+      "icon": "shield",
+      "title": "Watched after approval",
+      "body": "Verification doesn't stop at approval. Every job post is scanned for phrases commonly used in scam listings — requests for payment, gift cards, wire transfers, or personal financial details. Members can report any company directly from its profile or a job post. Three reports from different members automatically pause the company's posts until our team reviews."
+    }
+  ],
+  "neverSection": {
+    "heading": "What you should never be asked for",
+    "intro": "Legitimate employers on REP | IV will never ask you for any of the following. If you see it, report it immediately.",
+    "items": [
+      {
+        "id": "n1",
+        "text": "Money for training, equipment, uniforms, or background checks"
+      },
+      {
+        "id": "n2",
+        "text": "Gift cards, wire transfers, cryptocurrency, or Venmo payments"
+      },
+      {
+        "id": "n3",
+        "text": "Your Social Security number or bank account details before a written offer"
+      },
+      {
+        "id": "n4",
+        "text": "Moving the conversation to WhatsApp, Telegram, Signal, or personal email"
+      }
+    ]
+  },
+  "reportSection": {
+    "heading": "If something feels off",
+    "body": "Trust your instincts. If a job post, message, or company seems suspicious, report it. Our team reviews every report.",
+    "reportCta": "Report this company",
+    "emailLabel": "Or email us directly:",
+    "email": "info@the-nextrep.com"
+  },
+  "disclaimer": "Verification lowers risk but can't remove it. Always do your own research before accepting an offer."
+}

@@ -1,0 +1,14 @@
+{
+  "connectionRequests": {
+    "sectionLabel": "Connection Requests",
+    "emptyHeading": "No pending requests",
+    "emptyBody": "When a verified company wants to connect, their request will appear here.",
+    "acceptLabel": "Accept",
+    "declineLabel": "Decline",
+    "acceptedLabel": "Connected",
+    "noteLabel": "Their note",
+    "skillbridgeLabel": "SkillBridge Partner",
+    "removeLabel": "Remove connection",
+    "removeConfirm": "Remove this connection? The company will no longer be able to see your full profile."
+  }
+}

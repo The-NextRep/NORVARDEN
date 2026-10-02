@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Coaches — REP | IV | Verified Coaching Jobs & Leadership Roles",
+    "description": "A free, verified job board for coaches at every level. Coaching roles with schools, colleges, clubs and pro programs — plus leadership roles in business. You control who can contact you."
+  },
+  "hero": {
+    "eyebrow": "Coaches",
+    "headline": "Lead the next",
+    "headlineGold": "team.",
+    "subheadline": "You build culture, develop people and get results under pressure. REP | IV connects you with coaching roles and leadership opportunities from verified employers."
+  },
+  "whatWeOffer": {
+    "eyebrow": "What REP | IV offers",
+    "headline": "Built around",
+    "headlineGold": "you.",
+    "items": [
+      {
+        "id": "wo1",
+        "number": "01",
+        "title": "A free, verified profile",
+        "body": "Your coaching career, your credentials, your philosophy — presented to verified employers who have already been reviewed by our team. No subscription, no fee, ever."
+      },
+      {
+        "id": "wo2",
+        "number": "02",
+        "title": "Coaching jobs at every level",
+        "body": "Roles with schools, colleges, clubs and pro programs. From youth development to professional staff positions — every posting comes from a verified employer."
+      },
+      {
+        "id": "wo3",
+        "number": "03",
+        "title": "Leadership roles in business",
+        "body": "The skills that make a great coach — developing people, building culture, performing under pressure — are exactly what companies hire for. We help you make that case."
+      },
+      {
+        "id": "wo4",
+        "number": "04",
+        "title": "You control who can contact you",
+        "body": "Employers send a connection request. Your phone number and email are never shared until you say yes. Every conversation starts on your terms."
+      }
+    ]
+  },
+  "whoCanJoin": {
+    "eyebrow": "Who can join",
+    "headline": "Every level,",
+    "headlineGold": "welcome.",
+    "body": "REP | IV is for coaches at every level — youth, high school, college, club and professional. Verification is straightforward: a link to a staff page, a program website, or a reference from a verified member already on REP | IV.",
+    "note": "Everyone on REP | IV is verified before they can connect with employers."
+  },
+  "roles": {
+    "eyebrow": "Roles to explore",
+    "headline": "Where coaches",
+    "headlineGold": "lead.",
+    "body": "From on-field roles to front-office and business leadership, here are the kinds of positions coaches find on REP | IV.",
+    "tags": [
+      {
+        "id": "r1",
+        "label": "Head coach"
+      },
+      {
+        "id": "r2",
+        "label": "Assistant coach"
+      },
+      {
+        "id": "r3",
+        "label": "Strength and conditioning"
+      },
+      {
+        "id": "r4",
+        "label": "Player development"
+      },
+      {
+        "id": "r5",
+        "label": "Athletic director"
+      },
+      {
+        "id": "r6",
+        "label": "Training and camps"
+      },
+      {
+        "id": "r7",
+        "label": "Team operations"
+      },
+      {
+        "id": "r8",
+        "label": "Leadership roles in business"
+      }
+    ]
+  },
+  "neverPay": {
+    "eyebrow": "Our commitment",
+    "headline": "Never pay",
+    "headlineGold": "to play.",
+    "body": "Employers can never charge you for anything — not to apply, not to get hired, not for certifications, clinics or access. If anyone asks you for money, report it immediately.",
+    "reportCta": "Report a concern",
+    "reportHref": "/trust"
+  },
+  "cta": {
+    "primaryLabel": "Join free",
+    "secondaryLabel": "Browse jobs →",
+    "secondaryHref": "/jobs"
+  }
+}

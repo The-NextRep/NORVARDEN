@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "title": "Athletes — REP | IV | Verified Jobs for Pro Athletes",
+    "description": "A free, verified job board for current and former pro athletes. Real jobs from verified companies. You control who can contact you."
+  },
+  "hero": {
+    "eyebrow": "Athletes",
+    "headline": "Your next",
+    "headlineGold": "season.",
+    "subheadline": "The discipline, competitiveness and coachability that got you to the pros are exactly what great companies hire for."
+  },
+  "whatWeOffer": {
+    "eyebrow": "What REP | IV offers",
+    "headline": "Built around",
+    "headlineGold": "you.",
+    "items": [
+      {
+        "id": "wo1",
+        "number": "01",
+        "title": "A free, verified profile",
+        "body": "Your athletic career, your credentials, your story — presented to companies that have already been reviewed by our team. No subscription, no fee, ever."
+      },
+      {
+        "id": "wo2",
+        "number": "02",
+        "title": "Jobs from verified companies only",
+        "body": "Every company on REP | IV has had their work email, business name and hiring contact confirmed before they can post a single job. No scams, no ghost listings."
+      },
+      {
+        "id": "wo3",
+        "number": "03",
+        "title": "Help translating your career",
+        "body": "Competed at the highest level? We help you put your athletic experience — leadership, pressure performance, team dynamics — into the language companies understand."
+      },
+      {
+        "id": "wo4",
+        "number": "04",
+        "title": "You control who can contact you",
+        "body": "Companies send a connection request. Your phone number and email are never shared until you say yes. You stay in control of every conversation."
+      }
+    ]
+  },
+  "whoCanJoin": {
+    "eyebrow": "Who can join",
+    "headline": "Current and former",
+    "headlineGold": "pros.",
+    "body": "REP | IV is for current and former professional athletes — any sport, any league, any level of pro. Verification is quick: a link to a roster or league page, a players association ID, or a similar credential. No lengthy paperwork.",
+    "note": "Everyone on REP | IV is verified before they can connect with companies."
+  },
+  "industries": {
+    "eyebrow": "Industries to explore",
+    "headline": "Where athletes",
+    "headlineGold": "land.",
+    "body": "Your background opens doors across a wide range of industries. Here's where athletes on REP | IV are connecting.",
+    "tags": [
+      {
+        "id": "ind1",
+        "label": "Sales"
+      },
+      {
+        "id": "ind2",
+        "label": "Operations"
+      },
+      {
+        "id": "ind3",
+        "label": "Finance"
+      },
+      {
+        "id": "ind4",
+        "label": "Media"
+      },
+      {
+        "id": "ind5",
+        "label": "Sports business"
+      },
+      {
+        "id": "ind6",
+        "label": "Consumer brands"
+      },
+      {
+        "id": "ind7",
+        "label": "Technology"
+      },
+      {
+        "id": "ind8",
+        "label": "Real estate"
+      },
+      {
+        "id": "ind9",
+        "label": "Defense and government"
+      },
+      {
+        "id": "ind10",
+        "label": "Entrepreneurship"
+      }
+    ]
+  },
+  "neverPay": {
+    "eyebrow": "Our commitment",
+    "headline": "Never pay",
+    "headlineGold": "to play.",
+    "body": "Companies can never charge you for anything — not to apply, not to get hired, not for training, equipment or access. If anyone asks you for money, report it immediately.",
+    "reportCta": "Report a concern",
+    "reportHref": "/trust"
+  },
+  "cta": {
+    "primaryLabel": "Join free",
+    "secondaryLabel": "Browse jobs →",
+    "secondaryHref": "/jobs"
+  }
+}

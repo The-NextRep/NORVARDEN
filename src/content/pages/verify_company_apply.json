@@ -1,0 +1,52 @@
+{
+  "step1": {
+    "heading": "Verify your company",
+    "subheading": "Start with your work email. We'll send a 6-digit code to confirm it.",
+    "emailLabel": "Work email",
+    "emailPlaceholder": "you@yourcompany.com",
+    "sendCodeCta": "Send code",
+    "codeLabel": "6-digit code",
+    "codePlaceholder": "123456",
+    "confirmCta": "Confirm email",
+    "resendCta": "Resend code",
+    "freeEmailError": "Please use your work email.",
+    "successMessage": "Email confirmed. Continue to company details."
+  },
+  "step2": {
+    "heading": "Company details",
+    "subheading": "Tell us about your organization.",
+    "orgTypes": [
+      {
+        "id": "company",
+        "label": "Company"
+      },
+      {
+        "id": "staffing_agency",
+        "label": "Staffing or recruiting agency"
+      },
+      {
+        "id": "high_school",
+        "label": "High school or school district"
+      },
+      {
+        "id": "college_university",
+        "label": "College or university"
+      },
+      {
+        "id": "club_academy",
+        "label": "Club or academy"
+      },
+      {
+        "id": "nonprofit",
+        "label": "Nonprofit"
+      },
+      {
+        "id": "military_affiliated",
+        "label": "Military-affiliated organization"
+      }
+    ],
+    "authCheckbox": "I confirm I'm authorized to hire for this organization, and that we will never charge athletes, coaches or veterans any fee.",
+    "submitCta": "Submit for review",
+    "underReviewMessage": "Under review. We'll email you within 1 business day."
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "title": "Community Rules — REP | IV",
+    "description": "The rules that keep REP | IV safe, honest, and useful for athletes, coaches, veterans, and employers."
+  },
+  "lastUpdated": "October 1, 2026",
+  "headline": "Community",
+  "headlineGold": "Rules.",
+  "intro": "REP | IV works because everyone on it is verified and accountable. These rules protect athletes, coaches, veterans, and employers alike. Violations can result in immediate removal.",
+  "sections": [
+    {
+      "id": "cr1",
+      "heading": "Be truthful",
+      "body": [
+        {
+          "id": "cr1p1",
+          "text": "Your profile must accurately represent who you are. This includes your name, sport or military background, experience, credentials, and any other information you display. Misrepresenting yourself — including inflating stats, fabricating titles, or impersonating another person — is grounds for immediate removal."
+        },
+        {
+          "id": "cr1p2",
+          "text": "Job listings must accurately describe the role, compensation, location, and company. Bait-and-switch listings, misleading titles, and fabricated companies are prohibited."
+        }
+      ]
+    },
+    {
+      "id": "cr2",
+      "heading": "No fees to candidates — ever",
+      "body": [
+        {
+          "id": "cr2p1",
+          "text": "Companies may never charge candidates any fee as a condition of applying for or accepting a job. This includes application fees, training fees, equipment fees, background check fees paid by the candidate, or any other cost."
+        },
+        {
+          "id": "cr2p2",
+          "text": "This rule has no exceptions. If you are a company and you charge candidates, your account will be removed. If you are a candidate and a company asks you to pay anything, report it immediately."
+        }
+      ]
+    },
+    {
+      "id": "cr3",
+      "heading": "No harassment or discrimination",
+      "body": [
+        {
+          "id": "cr3p1",
+          "text": "Treat every person on REP | IV with respect. Harassment, threats, hate speech, and discrimination based on race, gender, religion, national origin, disability, sexual orientation, veteran status, or any other protected characteristic are strictly prohibited."
+        },
+        {
+          "id": "cr3p2",
+          "text": "This applies to messages, profile content, job listings, and any other communication on the platform."
+        }
+      ]
+    },
+    {
+      "id": "cr4",
+      "heading": "No sharing contact details before a connection is accepted",
+      "body": [
+        {
+          "id": "cr4p1",
+          "text": "Do not share another user's email address, phone number, or other personal contact information with anyone outside REP | IV, or publicly, without their explicit consent."
+        },
+        {
+          "id": "cr4p2",
+          "text": "Contact details are only exchanged after both parties accept a connection request. Attempting to extract or share contact information before a connection is accepted — including asking for it in a message — is a violation of these rules."
+        }
+      ]
+    },
+    {
+      "id": "cr5",
+      "heading": "How reports are handled",
+      "body": [
+        {
+          "id": "cr5p1",
+          "text": "You can report any user, company, or job listing using the flag icon on their profile or listing. You can also email info@the-nextrep.com with details."
+        },
+        {
+          "id": "cr5p2",
+          "text": "All reports are reviewed by our team. We investigate every report and take action where warranted — including warnings, temporary suspension, or permanent removal. Three substantiated reports against a company automatically pauses their listings pending review."
+        },
+        {
+          "id": "cr5p3",
+          "text": "We do not share the identity of the person who filed a report. We will notify you of the outcome where we are able to, subject to privacy constraints."
+        }
+      ]
+    },
+    {
+      "id": "cr6",
+      "heading": "Consequences for violations",
+      "body": [
+        {
+          "id": "cr6p1",
+          "text": "Violations of these rules may result in a warning, temporary suspension, or permanent removal from REP | IV, depending on the severity and frequency of the violation. We reserve the right to remove any account at any time for conduct that undermines the safety or integrity of the platform."
+        }
+      ]
+    },
+    {
+      "id": "cr7",
+      "heading": "Questions",
+      "body": [
+        {
+          "id": "cr7p1",
+          "text": "Questions about these rules? Email info@the-nextrep.com. We aim to respond within two business days."
+        }
+      ]
+    }
+  ]
+}

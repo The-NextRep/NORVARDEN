@@ -1,0 +1,21 @@
+{
+  "heading": "Company review queue",
+  "filters": [
+    "All",
+    "Pending review",
+    "Needs info",
+    "Approved",
+    "Rejected"
+  ],
+  "emptyMessage": "No applications in this queue.",
+  "domainMatch": "Domain match",
+  "domainMismatch": "Domain mismatch — manual review required",
+  "approveLabel": "Approve",
+  "rejectLabel": "Reject",
+  "askInfoLabel": "Ask for more info",
+  "missionDiscountLabel": "Unlock 30% mission discount",
+  "skillbridgeLabel": "Confirm SkillBridge partner",
+  "rejectReasonPlaceholder": "Reason for rejection (sent to company)",
+  "askInfoPlaceholder": "What additional information do you need?",
+  "adminNotePlaceholder": "Internal admin note (not sent to company)"
+}

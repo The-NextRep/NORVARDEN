@@ -1,0 +1,25 @@
+{
+  "heading": "Company account",
+  "noPlan": {
+    "title": "No active plan",
+    "body": "Your job posts are hidden and search access is paused. Subscribe to restore access.",
+    "cta": "View plans"
+  },
+  "currentPlan": {
+    "label": "Current plan",
+    "renewsOn": "Renews on",
+    "cancelsOn": "Cancels on",
+    "expired": {
+      "message": "Your plan has expired. Job posts are hidden and search access is paused. Your account and history are preserved.",
+      "cta": "Resubscribe"
+    }
+  },
+  "switchToYearly": {
+    "label": "Save with annual billing",
+    "heading": "Switch to 12-month billing",
+    "body": "Unused time on your current 3-month plan is credited toward the annual price. Save about 2 months of cost.",
+    "cta": "Switch to yearly",
+    "switching": "Switching…",
+    "successMessage": "Switched to annual billing successfully."
+  }
+}

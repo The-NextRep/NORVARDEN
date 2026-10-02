@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "title": "REP | IV — Built For The NextRep",
+    "description": "A free, verified job board for pro athletes, coaches, and military veterans. Real jobs from verified companies. You control your contact info."
+  },
+  "hero": {
+    "headline": "Your next chapter starts",
+    "headlineGold": "here.",
+    "subheadline": "A free, verified board for current and former pro athletes, coaches and military veterans. Find real jobs from verified companies, connect on your terms, and no one gets your number until you say yes.",
+    "primaryCta": "Join free",
+    "secondaryCta": "Browse jobs →",
+    "badges": [
+      {
+        "id": "b1",
+        "label": "Always free"
+      },
+      {
+        "id": "b2",
+        "label": "Verified companies only"
+      },
+      {
+        "id": "b3",
+        "label": "You control your contact info"
+      }
+    ]
+  },
+  "stories": [
+    {
+      "id": "st1",
+      "heading": "Your experience counts.",
+      "body": "Discipline, leadership and performing under pressure are exactly what great companies hire for.",
+      "highlight": "We help you show it."
+    },
+    {
+      "id": "st2",
+      "heading": "Leadership doesn't stay in uniform.",
+      "body": "Your military experience translates. We help you put it in civilian terms, and approved SkillBridge partners post internships for service members.",
+      "highlight": "Your next mission starts here."
+    },
+    {
+      "id": "st3",
+      "heading": "Every company is checked.",
+      "body": "Our team confirms each company's work email, business and hiring contact",
+      "highlight": "before they can post a single job."
+    },
+    {
+      "id": "st4",
+      "heading": "You decide who reaches you.",
+      "body": "Companies send a request. Your contact details are shared",
+      "highlight": "only when you say yes."
+    },
+    {
+      "id": "st5",
+      "heading": "What you get.",
+      "body": "A free, verified profile · Jobs from verified companies only · SkillBridge internships for service members · Help translating your experience · Free veteran career resources · Never a fee, ever.",
+      "highlight": ""
+    },
+    {
+      "id": "st6",
+      "heading": "Who can join.",
+      "body": "Current and former pro athletes · Coaches at every level, from youth to pro · Military veterans, Guard and Reserve · Service members within 12 months of separating.",
+      "highlight": "Everyone is verified before they can post or connect."
+    },
+    {
+      "id": "st7",
+      "heading": "Getting started takes minutes.",
+      "body": "Join free · Get verified · Build your profile · Browse jobs and connect.",
+      "highlight": ""
+    },
+    {
+      "id": "st8",
+      "heading": "Never pay to play.",
+      "body": "Companies can never charge you for anything.",
+      "highlight": "If anyone asks you for money, report it."
+    },
+    {
+      "id": "st9",
+      "heading": "Your next chapter starts here.",
+      "body": "The work ethic that got you here is what companies are looking for.",
+      "highlight": "Join free and see who's hiring."
+    }
+  ],
+  "trustStrip": [
+    {
+      "id": "ts1",
+      "label": "Always free",
+      "body": "Athletes, coaches and veterans never pay — not now, not ever."
+    },
+    {
+      "id": "ts2",
+      "label": "Verified companies only",
+      "body": "Every company is reviewed by our team before they can post."
+    },
+    {
+      "id": "ts3",
+      "label": "Your contact info stays private",
+      "body": "No one sees your number or email until you accept a connection."
+    },
+    {
+      "id": "ts4",
+      "label": "Every report reviewed",
+      "body": "Flag anything suspicious. Our team investigates every report."
+    }
+  ],
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "headline": "From profile to",
+    "headlineGold": "hired.",
+    "steps": [
+      {
+        "id": "hw1",
+        "number": "01",
+        "title": "Join and get verified",
+        "body": "A quick check that you are who you say you are. No SSN, no hassle."
+      },
+      {
+        "id": "hw2",
+        "number": "02",
+        "title": "Build your profile",
+        "body": "Your sport or service, your strengths, the industries you want."
+      },
+      {
+        "id": "hw3",
+        "number": "03",
+        "title": "Connect when you say yes",
+        "body": "Companies request. You decide. Your contact details stay private until you're ready."
+      }
+    ]
+  },
+  "whoItsFor": {
+    "eyebrow": "Who it's for",
+    "headline": "Built for people who've",
+    "headlineGold": "performed.",
+    "cards": [
+      {
+        "id": "wf1",
+        "label": "Pro Athletes",
+        "title": "Your career doesn't end when the season does.",
+        "body": "You've competed at the highest level. The discipline, the pressure, the teamwork — companies want exactly that. Your verified profile puts your athletic career front and center."
+      },
+      {
+        "id": "wf2",
+        "label": "Coaches",
+        "title": "You've built teams. Now build your next chapter.",
+        "body": "Leadership, strategy, developing talent under pressure — your coaching career is a business asset. Connect with companies that understand what it takes to lead."
+      },
+      {
+        "id": "wf3",
+        "label": "Veterans",
+        "title": "Your service is your strongest credential.",
+        "body": "You've led missions, managed teams, and performed under conditions most people never face. We help you translate that into civilian language — and connect you with employers who get it."
+      }
+    ]
+  },
+  "athletesBand": {
+    "eyebrow": "Athletes",
+    "headline": "Your next",
+    "headlineGold": "season.",
+    "body": "The discipline, competitiveness and coachability that got you to the pros are what companies hire for. Build a verified profile, get help translating your career into business terms, and connect with companies that value what you've done.",
+    "badges": [
+      {
+        "id": "ab1",
+        "label": "Verified Athlete"
+      },
+      {
+        "id": "ab2",
+        "label": "Current & Former Pros"
+      }
+    ],
+    "cta": "Explore athlete opportunities"
+  },
+  "coachesBand": {
+    "eyebrow": "Coaches",
+    "headline": "Lead the next",
+    "headlineGold": "team.",
+    "body": "You build culture, develop people and get results under pressure. Find coaching roles with schools, clubs and pro programs, or bring your leadership into business.",
+    "badges": [
+      {
+        "id": "cb1",
+        "label": "Verified Coach"
+      },
+      {
+        "id": "cb2",
+        "label": "Every level, youth to pro"
+      }
+    ],
+    "cta": "Explore coaching opportunities"
+  },
+  "veteransBand": {
+    "eyebrow": "For veterans",
+    "headline": "Your next",
+    "headlineGold": "mission.",
+    "body": "SkillBridge internships from verified partner companies. Help translating your MOS into civilian terms. Free career resources built for the transition.",
+    "cta": "Explore veteran resources"
+  },
+  "forCompaniesBand": {
+    "eyebrow": "For companies",
+    "headline": "Hiring? Reach verified athletes, coaches and veterans.",
+    "cta": "For companies →"
+  },
+  "faq": {
+    "eyebrow": "Questions",
+    "headline": "Common",
+    "headlineGold": "questions.",
+    "items": [
+      {
+        "id": "fq1",
+        "question": "Is it really free?",
+        "answer": "Yes, always, for athletes, coaches and veterans. No plan, no subscription, no credit card. Free now, free forever."
+      },
+      {
+        "id": "fq2",
+        "question": "Who can see my contact info?",
+        "answer": "No one, until you accept a connection. Companies can request to connect, but your email, phone, and any other contact details are only shared after you say yes."
+      },
+      {
+        "id": "fq3",
+        "question": "How do you check companies?",
+        "answer": "We confirm work email domain, legal business name, and hiring contact. Every company is reviewed by our team before they can post a single job."
+      },
+      {
+        "id": "fq4",
+        "question": "What do veterans need to verify?",
+        "answer": "A quick check of your service — branch, rank, and dates. We never ask for your Social Security number, and any documents you upload are permanently deleted after review."
+      },
+      {
+        "id": "fq5",
+        "question": "What if someone asks me for money?",
+        "answer": "Report it immediately. Companies can never charge you for anything — not to apply, not to get hired, not for training or equipment. Use the flag on their profile or email info@the-nextrep.com."
+      }
+    ]
+  },
+  "closingBand": {
+    "headline": "Your next chapter starts",
+    "headlineGold": "here.",
+    "cta": "Join free"
+  }
+}

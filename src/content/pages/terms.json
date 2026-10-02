@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "title": "Terms of Use — REP | IV",
+    "description": "Terms of use for REP | IV: a verified job board for athletes, coaches, and veterans."
+  },
+  "lastUpdated": "October 1, 2026",
+  "headline": "Terms of",
+  "headlineGold": "Use.",
+  "intro": "By using REP | IV, you agree to these terms. Please read them carefully. If you have questions, email us at info@the-nextrep.com.",
+  "sections": [
+    {
+      "id": "s1",
+      "heading": "Who can use REP | IV",
+      "body": [
+        {
+          "id": "s1p1",
+          "text": "REP | IV is open to athletes, coaches, veterans, and employers. Athletes, coaches, and veterans always have free access — no plan, no subscription, no credit card required, ever."
+        },
+        {
+          "id": "s1p2",
+          "text": "Companies must complete our verification process before posting jobs. Verification requires a valid business email domain, legal business name, and supporting documentation. We reserve the right to decline or revoke company access at any time."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "heading": "No fees to candidates — ever",
+      "body": [
+        {
+          "id": "s2p1",
+          "text": "Companies on REP | IV are strictly prohibited from charging candidates any fee of any kind — including application fees, background check fees, training fees, equipment fees, or any other cost as a condition of applying for or accepting a job."
+        },
+        {
+          "id": "s2p2",
+          "text": "If a company asks you to pay anything, do not pay it. Report it immediately using the flag on their profile or by emailing info@the-nextrep.com. We will investigate and remove the company if the report is substantiated."
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "heading": "Verification and no guarantees",
+      "body": [
+        {
+          "id": "s3p1",
+          "text": "REP | IV reviews every company before it can post. Our review confirms business identity and contact information. It does not constitute an endorsement of any company, job listing, offer, or employer."
+        },
+        {
+          "id": "s3p2",
+          "text": "We do not guarantee the accuracy of any job listing, the legitimacy of any offer, or the outcome of any application or hiring process. You use REP | IV at your own discretion. Always conduct your own due diligence before accepting any offer."
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "heading": "Contact details and connections",
+      "body": [
+        {
+          "id": "s4p1",
+          "text": "Contact details — including email addresses, phone numbers, and any other personal contact information — are only shared between two parties after both sides have accepted a connection request."
+        },
+        {
+          "id": "s4p2",
+          "text": "You may not share, publish, or distribute another user's contact details outside of REP | IV without their explicit consent. Doing so is grounds for immediate account removal."
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "heading": "Company plans and billing",
+      "body": [
+        {
+          "id": "s5p1",
+          "text": "Company plans (Scout and Partner) are billed either quarterly (every 3 months) or annually (every 12 months), depending on the billing cycle you selected at checkout. Plans renew automatically at the end of each billing period until you cancel."
+        },
+        {
+          "id": "s5p2",
+          "text": "Cancellations: You can cancel at any time from your company account page (Manage billing) or by emailing info@the-nextrep.com. Cancelling stops the next renewal; your access continues until the end of the billing period you have already paid for."
+        },
+        {
+          "id": "s5p3",
+          "text": "Refunds: Payments are non-refundable, and we do not provide refunds or credits for partial billing periods or unused time. If you switch plans, Stripe prorates the difference automatically. If you believe you were charged in error, contact info@the-nextrep.com within 30 days of the charge and we will review it."
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "heading": "How to report a scam",
+      "body": [
+        {
+          "id": "s6p1",
+          "text": "If you believe a company or user on REP | IV is acting fraudulently — including asking for fees, misrepresenting a job, impersonating a legitimate employer, or any other deceptive behavior — report it immediately."
+        },
+        {
+          "id": "s6p2",
+          "text": "You can report by: (1) using the flag icon on any job listing or company profile, or (2) emailing info@the-nextrep.com with as much detail as possible, including the company name, the job listing, and what happened."
+        },
+        {
+          "id": "s6p3",
+          "text": "We take all reports seriously. Three substantiated reports against a company automatically pauses their listings pending review. We will notify you of the outcome where we are able to."
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "heading": "Your account",
+      "body": [
+        {
+          "id": "s7p1",
+          "text": "You are responsible for keeping your account credentials secure. Do not share your password. If you believe your account has been compromised, contact us at info@the-nextrep.com immediately."
+        },
+        {
+          "id": "s7p2",
+          "text": "You may delete your account at any time by contacting info@the-nextrep.com. Deletion removes your profile and personal data from our systems, subject to any legal retention obligations."
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "heading": "Changes to these terms",
+      "body": [
+        {
+          "id": "s8p1",
+          "text": "We may update these terms from time to time. We will notify active users of material changes by email. Continued use of REP | IV after changes take effect constitutes acceptance of the updated terms."
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "heading": "Contact",
+      "body": [
+        {
+          "id": "s9p1",
+          "text": "Questions about these terms? Email us at info@the-nextrep.com. We aim to respond within two business days."
+        }
+      ]
+    }
+  ]
+}

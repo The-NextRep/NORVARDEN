@@ -1,0 +1,10 @@
+{
+  "pageTitle": "Reported Conversations",
+  "pageSubtitle": "Only conversations that members or companies have reported appear here.",
+  "emptyHeading": "No reported conversations",
+  "emptyBody": "All clear.",
+  "dismissLabel": "Dismiss report",
+  "dismissedLabel": "Report dismissed",
+  "companyLabel": "Company",
+  "memberLabel": "Member"
+}

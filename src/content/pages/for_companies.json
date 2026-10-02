@@ -1,0 +1,149 @@
+{
+  "hero": {
+    "eyebrow": "For Companies",
+    "headline": "Hire people who've performed under",
+    "headlineGold": "pressure.",
+    "cta": "Reserve a founding spot"
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "headline": "From verified to",
+    "headlineGold": "hired.",
+    "steps": [
+      {
+        "id": "hw1",
+        "number": "01",
+        "title": "Apply to post",
+        "body": "Submit your work email and company details. No free email accounts — your domain must match your business."
+      },
+      {
+        "id": "hw2",
+        "number": "02",
+        "title": "Get approved",
+        "body": "Our team verifies your business registration, hiring contact, and company legitimacy within one business day."
+      },
+      {
+        "id": "hw3",
+        "number": "03",
+        "title": "Post and connect",
+        "body": "Reach a focused pool of verified athletes, coaches, and veterans. Every member has been manually reviewed."
+      }
+    ]
+  },
+  "whoYoullMeet": {
+    "eyebrow": "Who you'll meet",
+    "headline": "People who know how to",
+    "headlineGold": "win.",
+    "body": "Every member on REP | IV has been manually verified. Athletes who competed at the collegiate or professional level. Coaches with documented records. Veterans with honorable service. No self-reported credentials — our team confirms every one.",
+    "profiles": [
+      {
+        "id": "p1",
+        "label": "Athletes",
+        "body": "Collegiate and professional competitors across all major sports. Disciplined, coachable, and used to performing under pressure."
+      },
+      {
+        "id": "p2",
+        "label": "Coaches",
+        "body": "Documented coaching careers at the high school, collegiate, and professional level. Leaders who develop talent and drive results."
+      },
+      {
+        "id": "p3",
+        "label": "Veterans",
+        "body": "Military service members and veterans with honorable discharge. Mission-focused, team-oriented, and trained to execute."
+      }
+    ]
+  },
+  "veteranHiring": {
+    "eyebrow": "Veteran hiring",
+    "headline": "SkillBridge and beyond.",
+    "body": "REP | IV is a SkillBridge-friendly platform. Companies approved as SkillBridge partners can post internship opportunities for transitioning service members. We flag your company profile so veterans know you're ready to hire them.",
+    "points": [
+      {
+        "id": "v1",
+        "text": "Post SkillBridge internship opportunities"
+      },
+      {
+        "id": "v2",
+        "text": "Your profile is flagged as a SkillBridge partner"
+      },
+      {
+        "id": "v3",
+        "text": "Reach transitioning service members actively seeking civilian roles"
+      },
+      {
+        "id": "v4",
+        "text": "30% mission discount for military-affiliated organizations"
+      }
+    ],
+    "cta": "Learn about SkillBridge"
+  },
+  "trustStrip": {
+    "items": [
+      {
+        "id": "ts1",
+        "stat": "100%",
+        "label": "Verified companies"
+      },
+      {
+        "id": "ts2",
+        "stat": "100%",
+        "label": "Verified members"
+      },
+      {
+        "id": "ts3",
+        "stat": "0",
+        "label": "Staffing agency fees"
+      },
+      {
+        "id": "ts4",
+        "stat": "1 day",
+        "label": "Avg. verification time"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Common questions",
+    "headline": "What companies ask",
+    "headlineGold": "us.",
+    "items": [
+      {
+        "id": "fq1",
+        "question": "How does company verification work?",
+        "answer": "We confirm your work email domain matches your company website, look up your business registration or nonprofit status, and verify that the hiring contact is a real employee. Most verifications complete within one business day."
+      },
+      {
+        "id": "fq2",
+        "question": "Can we post SkillBridge opportunities?",
+        "answer": "Yes. If your organization is an approved SkillBridge partner, we flag your profile so transitioning service members know you're ready to hire. Contact us to add the SkillBridge designation to your account."
+      },
+      {
+        "id": "fq3",
+        "question": "What's the difference between Scout and Partner?",
+        "answer": "Scout gives you full access to post jobs, search profiles, and send connection requests. Partner adds priority job placement, an enhanced company profile, and dedicated support — for companies that want to move faster."
+      },
+      {
+        "id": "fq4",
+        "question": "Do you offer discounts for nonprofits or schools?",
+        "answer": "Yes. Schools, nonprofits, and military-affiliated organizations receive 30% off any plan. We confirm eligibility during verification and the discount is applied automatically at checkout."
+      },
+      {
+        "id": "fq5",
+        "question": "What happens if we don't pass verification?",
+        "answer": "We'll tell you exactly what's missing and give you a chance to provide additional documentation. We don't reject companies without explanation."
+      },
+      {
+        "id": "fq6",
+        "question": "Can we cancel or switch plans?",
+        "answer": "Yes. You can cancel at any time — your access continues through the end of your billing period. Switching plans is prorated."
+      }
+    ]
+  },
+  "closingBand": {
+    "eyebrow": "Ready to hire",
+    "headline": "Your next win starts",
+    "headlineGold": "here.",
+    "body": "Join the companies already hiring verified athletes, coaches, and veterans.",
+    "primaryCta": "Reserve a founding spot",
+    "secondaryCta": "Browse open roles"
+  }
+}

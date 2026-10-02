@@ -1,0 +1,15 @@
+{
+  "safetyNotice": "The NextRep will never ask you for money. Report any request for payment or personal financial information.",
+  "emptyHeading": "No conversations yet",
+  "emptyBody": "When a company connects with you and you accept, you can start messaging here.",
+  "readOnlyNotice": "This conversation is read-only because the connection has been removed.",
+  "blockedNotice": "You have blocked this company. No new messages can be sent.",
+  "reportLabel": "Report",
+  "blockLabel": "Block company",
+  "blockConfirm": "Block this company? This will end your connection and freeze this conversation. They will not be notified of the reason.",
+  "reportConfirm": "Report this conversation? An admin will review it. The company will not be notified.",
+  "reportReasonPlaceholder": "Briefly describe the issue (e.g. asked for payment, inappropriate content)",
+  "sendPlaceholder": "Write a message…",
+  "sendLabel": "Send",
+  "pageTitle": "Messages"
+}

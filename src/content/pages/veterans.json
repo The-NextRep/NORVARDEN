@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "title": "Veterans — REP | IV",
+    "description": "Free, verified profiles for military veterans. SkillBridge internships, civilian translation help, and career resources — all from verified employers only."
+  },
+  "hero": {
+    "eyebrow": "Veterans",
+    "headline": "Your next",
+    "headlineGold": "mission.",
+    "subheadline": "REP | IV is free for every veteran. Verified employers only. No fees, no scams, no noise."
+  },
+  "whatWeOffer": {
+    "eyebrow": "What REP | IV offers veterans",
+    "headline": "Built for the",
+    "headlineGold": "transition.",
+    "items": [
+      {
+        "id": "wo1",
+        "title": "A free, verified profile",
+        "body": "Your profile is manually reviewed by our team. Military service, rank, MOS, and transition timeline are all confirmed before you appear on REP | IV — so employers know exactly who they're talking to."
+      },
+      {
+        "id": "wo2",
+        "title": "SkillBridge internships",
+        "body": "We surface SkillBridge-approved opportunities from verified partner companies. If you're within 180 days of separation, you can start building civilian experience before you're out."
+      },
+      {
+        "id": "wo3",
+        "title": "Civilian translation help",
+        "body": "Military experience doesn't always map cleanly to a job description. We help you frame your MOS, leadership roles, and operational experience in language civilian hiring managers understand."
+      }
+    ]
+  },
+  "verification": {
+    "eyebrow": "How veteran verification works",
+    "headline": "Verified with",
+    "headlineGold": "respect.",
+    "body": "We confirm your service without asking for anything sensitive. We will never ask for your Social Security number. Any documents you upload for verification — DD-214, orders, or service records — are deleted from our systems immediately after review.",
+    "steps": [
+      {
+        "id": "vs1",
+        "number": "01",
+        "title": "Submit your profile",
+        "body": "Add your branch, rank, MOS or rate, years of service, and transition timeline. No SSN required at any step."
+      },
+      {
+        "id": "vs2",
+        "number": "02",
+        "title": "Upload a verification document",
+        "body": "A DD-214 (Member 4 copy), separation orders, or equivalent. We accept redacted copies — only branch, dates, and character of discharge need to be visible."
+      },
+      {
+        "id": "vs3",
+        "number": "03",
+        "title": "Document deleted after review",
+        "body": "Once our team confirms your service, your uploaded document is permanently deleted. We keep only the verified status and the service details you chose to display on your profile."
+      }
+    ],
+    "neverAsk": [
+      {
+        "id": "na1",
+        "text": "Your Social Security number"
+      },
+      {
+        "id": "na2",
+        "text": "Bank account or routing numbers"
+      },
+      {
+        "id": "na3",
+        "text": "Payment of any kind to apply or get verified"
+      },
+      {
+        "id": "na4",
+        "text": "Full, unredacted service records"
+      }
+    ],
+    "neverAskLabel": "We will never ask for"
+  },
+  "resources": {
+    "eyebrow": "Veteran career resources",
+    "headline": "Tools for the",
+    "headlineGold": "mission ahead.",
+    "body": "Every verified veteran on REP | IV gets access to these resources at no cost.",
+    "items": [
+      {
+        "id": "r1",
+        "title": "MOS translator",
+        "body": "Enter your MOS, rate, or AFSC and get a plain-language summary of equivalent civilian roles and skills."
+      },
+      {
+        "id": "r2",
+        "title": "SkillBridge directory",
+        "body": "Browse SkillBridge-approved internships from verified partner companies, filtered by location, industry, and branch."
+      },
+      {
+        "id": "r3",
+        "title": "Resume review",
+        "body": "Submit your resume for a free review by our team. We flag military jargon and suggest civilian-friendly language."
+      },
+      {
+        "id": "r4",
+        "title": "Transition timeline guide",
+        "body": "A step-by-step guide to the 180-day window before separation — what to do, when to do it, and who to contact."
+      }
+    ]
+  },
+  "badges": {
+    "eyebrow": "What to look for",
+    "headline": "Two badges that",
+    "headlineGold": "matter.",
+    "veteranReady": {
+      "label": "Veteran-ready",
+      "body": "Companies with this badge have confirmed they actively recruit veterans and understand military experience. They've been reviewed by our team."
+    },
+    "skillbridge": {
+      "label": "SkillBridge Partner",
+      "body": "Companies with this badge are approved SkillBridge partners. They can host transitioning service members in internship roles before separation."
+    }
+  },
+  "cta": {
+    "eyebrow": "Join free",
+    "headline": "Your service",
+    "headlineGold": "earned this.",
+    "body": "REP | IV is always free for veterans. Create your profile, get verified, and connect with employers who understand what you bring.",
+    "primaryCta": "Join free",
+    "secondaryCta": "Browse open roles"
+  }
+}

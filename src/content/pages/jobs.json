@@ -1,0 +1,45 @@
+{
+  "jobTypeLabels": [
+    {
+      "key": "full_time",
+      "label": "Full-time",
+      "id": "RYdO722ARt1UGieG_fKQj"
+    },
+    {
+      "key": "part_time",
+      "label": "Part-time",
+      "id": "HjS5LBpBFuqn5m7Z_XvV0"
+    },
+    {
+      "key": "contract",
+      "label": "Contract",
+      "id": "ZRpGFOn4-y_QSDU1op0-n"
+    },
+    {
+      "key": "internship",
+      "label": "Internship",
+      "id": "OMUyq1wEEVmM0dIRaR351"
+    },
+    {
+      "key": "skillbridge",
+      "label": "SkillBridge",
+      "id": "YhUMg1d7PCmriAZPLjKa_"
+    }
+  ],
+  "industries": [
+    "Sales",
+    "Operations",
+    "Leadership",
+    "Coaching",
+    "Technology",
+    "Finance",
+    "Marketing",
+    "Security",
+    "Logistics",
+    "Healthcare",
+    "Education",
+    "Government",
+    "Defense",
+    "Other"
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "Privacy Policy — REP | IV",
+    "description": "How REP | IV collects, uses, and protects your personal information."
+  },
+  "lastUpdated": "October 1, 2026",
+  "headline": "Privacy",
+  "headlineGold": "Policy.",
+  "intro": "Your privacy matters to us. This policy explains what we collect, how we use it, and your rights. Questions? Email info@the-nextrep.com.",
+  "sections": [
+    {
+      "id": "p1",
+      "heading": "What we collect",
+      "body": [
+        {
+          "id": "p1p1",
+          "text": "When you create an account, we collect your name, email address, and the information you add to your profile — such as sport, position, years of experience, military branch, rank, and transition timeline."
+        },
+        {
+          "id": "p1p2",
+          "text": "For companies, we collect business name, work email domain, website, LinkedIn URL, physical address, and the documentation you submit for verification."
+        },
+        {
+          "id": "p1p3",
+          "text": "We also collect standard usage data: pages visited, features used, device type, browser, and IP address. This helps us improve the product and detect abuse."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "heading": "Verification documents",
+      "body": [
+        {
+          "id": "p2p1",
+          "text": "Company verification documents (such as business registration or LinkedIn screenshots) are reviewed only by REP | IV's admin team. They are not shared with other users or third parties."
+        },
+        {
+          "id": "p2p2",
+          "text": "Veteran verification documents — including DD-214s, separation orders, or equivalent — are reviewed only by REP | IV's admin team and are permanently deleted from our systems immediately after your service is confirmed. We retain only your verified status and the service details you chose to display on your profile."
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "heading": "How we use your information",
+      "body": [
+        {
+          "id": "p3p1",
+          "text": "We use your information to operate REP | IV: to display your profile to relevant employers or candidates, to send connection requests and messages, to process company subscriptions, and to send you notifications you have opted into."
+        },
+        {
+          "id": "p3p2",
+          "text": "We may use aggregated, anonymized data to understand how the platform is used and to improve it. This data cannot be used to identify you."
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "heading": "We never sell your data",
+      "body": [
+        {
+          "id": "p4p1",
+          "text": "We do not sell, rent, or trade your personal information to any third party, ever. We do not use your data for advertising on other platforms."
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "heading": "Third-party services",
+      "body": [
+        {
+          "id": "p5p1",
+          "text": "We use Stripe to process company subscription payments. Stripe handles payment information directly — we do not store your credit card number. Stripe's privacy policy applies to payment data."
+        },
+        {
+          "id": "p5p2",
+          "text": "We may use third-party services for email delivery, error monitoring, and analytics. These services receive only the data necessary to perform their function and are contractually prohibited from using it for other purposes."
+        }
+      ]
+    },
+    {
+      "id": "p6",
+      "heading": "Contact details and connections",
+      "body": [
+        {
+          "id": "p6p1",
+          "text": "Your email address and other contact details are never shown to other users until both parties have accepted a connection request. Before a connection is accepted, only your public profile information is visible."
+        }
+      ]
+    },
+    {
+      "id": "p7",
+      "heading": "Data retention",
+      "body": [
+        {
+          "id": "p7p1",
+          "text": "We retain your account data for as long as your account is active. If you delete your account, we remove your personal data from our systems within 30 days, except where we are required by law to retain certain records."
+        }
+      ]
+    },
+    {
+      "id": "p8",
+      "heading": "Your rights and how to request deletion",
+      "body": [
+        {
+          "id": "p8p1",
+          "text": "You have the right to access, correct, or delete your personal data at any time. To request a copy of your data, a correction, or full deletion of your account and associated data, email info@the-nextrep.com with the subject line 'Data Request'."
+        },
+        {
+          "id": "p8p2",
+          "text": "We will respond to all data requests within 30 days. Deletion requests are processed within 30 days of confirmation."
+        }
+      ]
+    },
+    {
+      "id": "p9",
+      "heading": "Changes to this policy",
+      "body": [
+        {
+          "id": "p9p1",
+          "text": "We may update this policy from time to time. We will notify active users of material changes by email. The 'Last updated' date at the top of this page reflects the most recent revision."
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "heading": "Contact",
+      "body": [
+        {
+          "id": "p10p1",
+          "text": "Privacy questions? Email info@the-nextrep.com. We aim to respond within two business days."
+        }
+      ]
+    }
+  ]
+}
