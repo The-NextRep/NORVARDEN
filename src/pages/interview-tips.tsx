@@ -1,8 +1,7 @@
-import { useEffect, useState, type KeyboardEvent } from 'react';
+import { useState, type KeyboardEvent } from 'react';
 import { Link } from 'react-router';
 import { Helmet } from '@dr.pogodin/react-helmet';
 import { CheckCircle2, ChevronRight, AlertTriangle, MessageSquare } from 'lucide-react';
-import { useCurrentUser } from '@/lib/auth/use-current-user';
 
 const siteUrl = 'https://www.norvarden.com';
 
@@ -13,7 +12,7 @@ const faded  = 'hsl(var(--hero-ice) / 0.8)';
 const panel  = 'hsl(var(--hero-panel-bg))';
 const line   = '1px solid hsl(var(--hero-gold) / 0.28)';
 
-type Track = 'athlete' | 'coach' | 'veteran';
+type Track = 'story' | 'disclosure' | 'accommodations';
 
 interface QA { q: string; a: string }
 interface TrackContent {
@@ -24,73 +23,69 @@ interface TrackContent {
 }
 
 const TRACKS: Record<Track, TrackContent> = {
-  athlete: {
-    label: 'Athletes',
+  story: {
+    label: 'Your story',
     story: [
-      'Lead with the work, not the highlights. Interviewers care less about the championship than what it took: the 5 a.m. film sessions, the recovery plan, the way you adjusted after a bad game.',
-      'Pick two or three transferable strengths and back each with one specific moment: performing under pressure, taking hard coaching, working inside a large organization toward one goal.',
-      'Explain your transition in one confident sentence: "I spent eight years competing at the highest level; now I want to bring that same preparation to [their field]." Then stop talking about leaving the sport.',
-      'Show you’ve done the homework on their business. Knowing their product, customers and competitors shows you prepare for this the way you prepared for an opponent.',
+      'Lead with your skills and results. The interview is about what you can do for the team, so open with two or three strengths that match the job description, each backed by one specific example.',
+      'Living with a disability often builds real workplace strengths: problem-solving, planning ahead, adaptability and persistence. If you choose to, you can name these as skills without explaining your diagnosis.',
+      'Have a short, confident answer ready for gaps in your work history: "I took time to focus on my health, and I’m ready to get back to work. During that time I also [course, volunteering, project]." Then move on.',
+      'Know the company. Research their products, customers and recent news, and look for signs of inclusion such as an accessibility statement, employee resource groups or accommodation language in the job post.',
     ],
     questions: [
-      { q: 'You’ve only ever played sports. Why should we hire you?', a: 'Don’t apologize. Name the skills they need (discipline, coachability, performing on deadline), give one example of each, then connect it to a specific part of the role.' },
-      { q: 'How do you handle failure?', a: 'Use a real loss or setback. Describe what you reviewed afterward, what you changed, and the result the next time. Show the process, not just the attitude.' },
-      { q: 'Tell me about working with a difficult teammate.', a: 'Pick a real conflict, stay generous about the other person, and focus on what you did to keep the team performing. End with what you learned about communication.' },
-      { q: 'How do you take feedback?', a: 'Athletes are coached every day. Give an example of blunt feedback, how you applied it, and the measurable improvement that followed.' },
-      { q: 'What do you know about our industry?', a: 'Have three facts ready: something about their customers, a recent company news item, and a challenge in their market. Ask a smart follow-up.' },
-      { q: 'Where do you see yourself in five years?', a: 'Show commitment to growing in this field. Mention a skill or certification you plan to build, and tie it to how you’d contribute more over time.' },
+      { q: 'Tell me about yourself.', a: 'Two minutes: what you do now, two achievements with numbers, and why this role fits. Your disability does not need to be part of this answer unless you want it to be.' },
+      { q: 'Can you explain this gap in your résumé?', a: 'Keep it brief and honest without medical detail ("I was managing a health matter, which is resolved / well managed"). Mention anything you learned or did during that time, then pivot to why you are ready for this role.' },
+      { q: 'Can you perform the essential functions of this job?', a: 'Employers may ask this. Answer yes if you can, with or without accommodation, and give an example of how you get similar work done. You do not need to name a diagnosis.' },
+      { q: 'Tell me about a challenge you overcame.', a: 'Use STAR (see below). A work, school or personal challenge all count. Focus on your actions and the result; share only the personal detail you are comfortable with.' },
+      { q: 'How do you stay organized and meet deadlines?', a: 'Describe your actual system: tools, apps, routines or assistive technology. Showing a reliable process is a strength, whatever tools you use.' },
+      { q: 'Why do you want to work here?', a: 'Name something specific you admire about the company and connect it to your skills. If their inclusion work matters to you, say so; it shows you did your research.' },
     ],
     watchOuts: [
-      'Spending the whole interview on your playing career. Aim for no more than 25% sport stories.',
-      'Underselling yourself with "I just played ball." Your daily routine involved real skills, so name them.',
-      'Assuming name recognition will carry the interview. Prepare as if they have never heard of you.',
-      'Vague answers. Swap "I’m a hard worker" for a concrete example with a number in it.',
+      'Apologizing for your disability or your résumé. You are there because your experience earned the interview.',
+      'Over-explaining a gap or a medical history. Short and forward-looking beats long and detailed.',
+      'Generic answers. Swap "I’m a hard worker" for a concrete example with a number in it.',
+      'Forgetting to ask your own questions. Interviews are a two-way decision.',
     ],
   },
-  coach: {
-    label: 'Coaches',
+  disclosure: {
+    label: 'Disclosure',
     story: [
-      'Translate coaching into business language: you recruited talent, developed people, built game plans from data, managed budgets and travel, and reported results to leadership.',
-      'Quantify your program: roster size, staff you managed, budget, win/loss turnaround, graduation or placement rates, dollars raised.',
-      'Frame your move as a choice: "I want to apply the way I build and develop teams to [their mission]." Avoid sounding like you are escaping burnout.',
-      'Bring one example of a system you built, such as a practice plan, scouting process or development tracker, and explain how it improved outcomes.',
+      'Disclosure is your choice. You are not required to tell an employer about a disability, and on NORVARDEN anything you share is optional.',
+      'Timing is up to you: on the application, when you schedule the interview (often the best time if you need an accommodation), at the offer stage, after you start, or never.',
+      'If you disclose, keep it short and practical. Focus on what you need to do your best work, not on medical details: "I have a hearing impairment, so captions on video calls help me participate fully."',
+      'In the U.S., the ADA generally bars employers with 15 or more employees from asking whether you have a disability before a job offer. They can ask whether you can do the essential functions of the job.',
     ],
     questions: [
-      { q: 'How does coaching prepare you for this role?', a: 'Map three coaching duties directly onto the job description (e.g. recruiting = talent acquisition, game planning = strategy, player development = people management) with one example each.' },
-      { q: 'Tell me about a time you managed a budget or resources.', a: 'Give the budget size, the trade-offs you made, and the result: travel savings, equipment upgrades, fundraising totals.' },
-      { q: 'How do you motivate people who are underperforming?', a: 'Walk through a real player or assistant: the conversation, the plan you set together, how you tracked progress, and the outcome.' },
-      { q: 'Describe a time you used data to make a decision.', a: 'Scouting reports, stats or film analysis count. Explain what the data showed, the decision you made, and the result.' },
-      { q: 'How do you handle pressure from leadership or parents?', a: 'Show calm stakeholder management: listening, setting expectations, communicating clearly, and keeping the focus on shared goals.' },
-      { q: 'Why leave coaching now?', a: 'Keep it positive and forward-looking. Focus on what draws you to this role, not what you are leaving behind.' },
+      { q: 'Do you have any disabilities or health conditions?', a: 'Before an offer, this question generally isn’t allowed. Stay calm and redirect: "I’m confident I can do the essential functions of this role. Happy to walk you through how I’d approach them."' },
+      { q: 'Is there anything we should know to make this process work for you?', a: 'This is an invitation, not a trap. Name any accommodation you need for the interview, or simply say "No, thank you, I’m all set."' },
+      { q: 'Why did you leave your last job?', a: 'Keep it positive and brief. If health was a factor, you can say you left to focus on a personal matter that is now managed, without further detail.' },
+      { q: 'How do you work best?', a: 'A natural place to share preferences (written instructions, quiet space, flexible hours) without labeling them, if you choose.' },
     ],
     watchOuts: [
-      'Using coaching jargon ("we ran a 4-3 under") without translating it into what it shows about you.',
-      'Saying "we won" without explaining your specific part in it.',
-      'Sounding negative about athletic departments, administrators or parents.',
-      'Forgetting the admin side of the job: scheduling, compliance, budgets and reporting are real business skills.',
+      'Feeling pressured to share more than you want. "I’d prefer to keep that private" is a complete answer.',
+      'Disclosing at the very end of the process when you needed an interview accommodation from the start. If you need it, ask early.',
+      'Leading with diagnosis instead of solutions. Employers respond best to "here’s what helps me do great work."',
+      'Assuming every interviewer knows the rules. If something feels off, note it and contact HR or the Job Accommodation Network (askjan.org).',
     ],
   },
-  veteran: {
-    label: 'Veterans',
+  accommodations: {
+    label: 'Accommodations',
     story: [
-      'Drop the acronyms. Replace ranks and jargon with civilian terms: "I supervised a 12-person maintenance team," not "I was the NCOIC of the motor pool."',
-      'Say "I" when describing your actions. Military culture trains you to say "we," but interviewers need to know what you personally did.',
-      'Quantify scope: people led, equipment value you were accountable for, budgets, mission success rates, safety records.',
-      'Explain why this company and this role. Connect the mission-focused work you did to their mission and their customers.',
+      'You can ask for accommodations for the interview itself: extra time, a sign-language interpreter, captions, an accessible location, a quiet room, questions in writing, or a different format such as phone, video or in person.',
+      'Ask early and in writing, ideally when you schedule: "To participate fully, I’ll need [accommodation]. Can you confirm that’s available?" Keep a copy of the email.',
+      'For video interviews, test your setup the day before: captions, screen reader, lighting, camera angle and any assistive tech. Have a phone number ready in case the link fails.',
+      'Most workplace accommodations cost little or nothing. Employers on NORVARDEN have pledged to provide them, and many list theirs right in the job post.',
     ],
     questions: [
-      { q: 'Tell me about yourself.', a: 'Give a two-minute arc: your military role in plain language, two achievements with numbers, what you’re looking for next, and why this company fits.' },
-      { q: 'How will you adjust to a less structured environment?', a: 'Give an example of a time you adapted when the plan changed or orders were unclear, and how you created structure for your team.' },
-      { q: 'Describe a time you led a team through a difficult situation.', a: 'Use STAR (see below). Keep classified or sensitive details out; focus on your decisions, how you communicated, and the outcome.' },
-      { q: 'Tell me about a disagreement with a superior.', a: 'Show respectful candor: how you raised the concern through the right channels, then committed to the decision. Avoid any story that sounds like insubordination.' },
-      { q: 'What are your salary expectations?', a: 'Research the civilian range for the role (not your military pay). Give a researched range and say you are flexible on the total package.' },
-      { q: 'Why are you interested in this industry?', a: 'Link specific duties or training (logistics, communications, maintenance, intelligence) to the industry’s problems and show you have studied the company.' },
+      { q: 'What accommodations would you need on the job?', a: 'If you choose to answer, be specific and practical: the tool or change, and how it helps you deliver. "Screen-reader software and documents in accessible formats" is clear and easy to act on.' },
+      { q: 'How would you handle a fast-paced environment?', a: 'Describe the systems that keep you effective (prioritizing, breaks, written task lists, assistive tools) with an example of meeting a tight deadline.' },
+      { q: 'Are you comfortable with the travel or on-site requirements?', a: 'Answer honestly. If you could do it with an adjustment (accessible transport, remote options), say so and frame it as a solution.' },
+      { q: 'Do you have any questions for us?', a: 'A good place to ask how the team supports accommodations or flexible work: "How does the team handle flexible schedules or remote days?"' },
     ],
     watchOuts: [
-      'Acronyms and ranks the interviewer won’t understand.',
-      'Underselling leadership. Leading 20 people at age 24 is rare in civilian life, so say so with numbers.',
-      'Sharing classified, sensitive or graphic combat details. Keep stories professional and outcome-focused.',
-      'Being overly formal or stiff. A warm handshake, eye contact and a little personality help you build rapport.',
+      'Waiting until the interview day to mention an accommodation you need. Give the employer time to arrange it.',
+      'Feeling like you are asking for a favor. Reasonable accommodations are a normal part of hiring.',
+      'Skipping a tech check before a video interview, especially with captions or assistive software.',
+      'Not getting confirmation in writing. A quick reply email avoids surprises on the day.',
     ],
   },
 };
@@ -126,6 +121,7 @@ const CHECKLIST = [
       'Prepare five STAR stories you can adapt to different questions.',
       'Look up your interviewers on LinkedIn.',
       'Do a mock interview with a friend, mentor or teammate.',
+      'Request any interview accommodations in writing and get confirmation.',
     ],
   },
   {
@@ -163,7 +159,7 @@ Best regards,
 [Your name]
 [Phone] | [LinkedIn]`;
 
-const TRACK_ORDER: Track[] = ['athlete', 'coach', 'veteran'];
+const TRACK_ORDER: Track[] = ['story', 'disclosure', 'accommodations'];
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
@@ -194,13 +190,7 @@ function QACard({ item }: { item: QA }) {
 }
 
 export default function InterviewTipsPage() {
-  const { user } = useCurrentUser();
-  const [track, setTrack] = useState<Track>('athlete');
-
-  useEffect(() => {
-    const t = user?.memberType;
-    if (t === 'athlete' || t === 'coach' || t === 'veteran') setTrack(t);
-  }, [user?.memberType]);
+  const [track, setTrack] = useState<Track>('story');
 
   function onTabKey(e: KeyboardEvent<HTMLButtonElement>) {
     if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
@@ -217,7 +207,7 @@ export default function InterviewTipsPage() {
     <>
       <Helmet>
         <title>Interview Tips — NORVARDEN</title>
-        <meta name="description" content="Interview preparation for former people with disabilities: how to tell your story, common questions, the STAR method, and a day-of checklist." />
+        <meta name="description" content="Interview prep for people with disabilities: telling your story, disclosure, requesting accommodations, common questions, the STAR method and a day-of checklist." />
         <link rel="canonical" href={`${siteUrl}/interview-tips`} />
         <meta property="og:title" content="Interview Tips — NORVARDEN" />
         <meta property="og:url" content={`${siteUrl}/interview-tips`} />
@@ -232,14 +222,14 @@ export default function InterviewTipsPage() {
           </h1>
           <div className="mb-6" style={{ width: '64px', height: '1px', background: 'hsl(var(--hero-gold) / 0.6)' }} />
           <p className="font-barlow" style={{ fontSize: '18px', fontWeight: 300, lineHeight: 1.7, color: faded, maxWidth: '62ch' }}>
-            You already know how to prepare, perform under pressure and take coaching. This guide shows you how to turn that into a strong interview, whatever your background.
+            You bring skills, resilience and problem-solving to the table. This guide helps you tell your story, decide what to share, ask for the accommodations you need, and walk in confident.
           </p>
         </section>
 
         {/* Tracks */}
         <section className="px-5 md:px-12 pb-16 mx-auto" style={{ maxWidth: '1100px' }} aria-labelledby="your-background">
-          <H2 id="your-background">Tell your story</H2>
-          <div role="tablist" aria-label="Your background" className="inline-flex flex-wrap gap-1 p-1 mb-8" style={{ border: line, borderRadius: '3px' }}>
+          <H2 id="your-background">Prepare your way</H2>
+          <div role="tablist" aria-label="Interview topics" className="inline-flex flex-wrap gap-1 p-1 mb-8" style={{ border: line, borderRadius: '3px' }}>
             {TRACK_ORDER.map((t) => {
               const active = t === track;
               return (
@@ -264,7 +254,7 @@ export default function InterviewTipsPage() {
 
           <div id={`panel-${track}`} role="tabpanel" aria-labelledby={`tab-${track}`} className="flex flex-col gap-12">
             <div>
-              <Eyebrow>How to tell your story</Eyebrow>
+              <Eyebrow>Key points</Eyebrow>
               <ul className="grid gap-4 md:grid-cols-2">
                 {content.story.map((s) => (
                   <li key={s} className="flex gap-3 p-5" style={{ background: panel, border: line, borderRadius: '3px' }}>
