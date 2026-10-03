@@ -14,6 +14,7 @@ const HERO_PHOTOS: string[] = [
   '/images/hero/network.jpg',
   '/images/hero/chip.jpg',
   '/images/hero/signal.jpg',
+  '/images/hero/globe.jpg',
   '/images/hero/city.jpg',
 ];
 
