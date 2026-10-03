@@ -77,13 +77,15 @@ export default function AboutPage() {
           <section className="flex flex-col gap-6" aria-labelledby="leadership">
             <h2 id="leadership" className="font-barlow-condensed uppercase" style={eyebrow}>Leadership</h2>
             <article className="flex flex-col md:flex-row gap-8 p-6 md:p-8 rounded-md" style={{ background: navyMid, border }}>
-              <div
-                className="shrink-0 w-28 h-28 md:w-36 md:h-36 rounded-full flex items-center justify-center font-bodoni"
-                style={{ border: `1px solid ${gold}`, background: 'hsl(var(--hero-gold) / 0.08)', color: gold, fontSize: '40px' }}
-                aria-hidden="true"
-              >
-                MN
-              </div>
+              <img
+                src="/images/morice-norris.jpg"
+                alt="Morice Norris Jr., Chief Executive Officer of NORVARDEN"
+                width={600}
+                height={600}
+                loading="lazy"
+                className="shrink-0 w-36 h-36 md:w-44 md:h-44 rounded-full object-cover self-start"
+                style={{ border: `2px solid ${gold}` }}
+              />
               <div className="flex flex-col gap-4">
                 <div>
                   <h3 className="font-bodoni" style={{ fontSize: '26px', color: white, lineHeight: 1.2 }}>Morice Norris Jr.</h3>
