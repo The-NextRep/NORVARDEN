@@ -64,6 +64,8 @@ export interface MemberProfile {
   industriesOfInterest: string[] | null;
   skills: string[] | null;
   experienceSummary: string | null;
+  workPreferences?: string | null;
+  shareWorkPreferences?: boolean | null;
   resumeUrl: string | null;
   resumeFileName: string | null;
   linkedinUrl: string | null;

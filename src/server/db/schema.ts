@@ -253,6 +253,8 @@ export const jobPosts = mysqlTable('job_posts', {
 
   // Veteran-ready flag
   isVeteranReady: boolean('is_veteran_ready').default(false),
+  // How the employer supports candidates: interview options, tools, flexibility.
+  accommodations: text('accommodations'),
 
   // Moderation
   status: mysqlEnum('status', ['active', 'paused', 'closed', 'removed']).default('active'),
@@ -393,6 +395,10 @@ export const memberProfiles = mysqlTable('member_profiles', {
   industriesOfInterest: json('industries_of_interest').$type<string[]>(),
   skills: json('skills').$type<string[]>(),
   experienceSummary: text('experience_summary'),
+  // Optional, private: what helps the member do their best work. Shown to a
+  // connected company only if shareWorkPreferences is on.
+  workPreferences: text('work_preferences'),
+  shareWorkPreferences: boolean('share_work_preferences').default(false),
 
   // Resume (uploaded file URL)
   resumeUrl: varchar('resume_url', { length: 512 }),

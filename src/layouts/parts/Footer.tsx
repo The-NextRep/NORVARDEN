@@ -31,6 +31,7 @@ export default function Footer() {
               { to: '/terms',           label: 'Terms' },
               { to: '/community-rules', label: 'Community Rules' },
               { to: '/trust',           label: 'How We Verify' },
+              { to: '/accessibility',   label: 'Accessibility' },
             ].map(({ to, label }) => (
               <Link
                 key={to}

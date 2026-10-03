@@ -15,6 +15,7 @@ const ALLOWED_FIELDS = new Set([
   'firstName', 'lastName', 'headline', 'city', 'state',
   'linkedinUrl', 'bio', 'phone',
   'openTo', 'industriesOfInterest', 'skills', 'experienceSummary',
+  'workPreferences', 'shareWorkPreferences',
   // Athlete
   'sport', 'league', 'yearsActive',
   // Coach
@@ -37,6 +38,12 @@ export default async function handler(req: Request, res: Response) {
   for (const key of Object.keys(body)) {
     if (ALLOWED_FIELDS.has(key)) update[key] = body[key];
   }
+
+  if ('workPreferences' in update) {
+    const v = update['workPreferences'];
+    update['workPreferences'] = typeof v === 'string' && v.trim() ? v.trim().slice(0, 2000) : null;
+  }
+  if ('shareWorkPreferences' in update) update['shareWorkPreferences'] = update['shareWorkPreferences'] === true;
 
   if ('phone' in update) {
     const raw = update['phone'];

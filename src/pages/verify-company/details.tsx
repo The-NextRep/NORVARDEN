@@ -34,6 +34,7 @@ interface FormState {
   militaryDescription: string;
   skillbridgePartnerName: string;
   authorizationConfirmed: boolean;
+  pledgeAccepted: boolean;
 }
 
 const INITIAL: FormState = {
@@ -42,7 +43,7 @@ const INITIAL: FormState = {
   contactPhone: '', contactLinkedin: '', orgType: '',
   registrationNumber: '', registrationState: '', uei: '', staffingClientNames: '',
   ncesId: '', ein: '', governingBodyUrl: '', militaryDescription: '',
-  skillbridgePartnerName: '', authorizationConfirmed: false,
+  skillbridgePartnerName: '', authorizationConfirmed: false, pledgeAccepted: false,
 };
 
 export default function VerifyStep2Page() {
@@ -79,6 +80,7 @@ export default function VerifyStep2Page() {
     setError('');
     if (!form.orgType) { setError('Please select an organization type.'); return; }
     if (!form.authorizationConfirmed) { setError('Please confirm the authorization statement.'); return; }
+    if (!form.pledgeAccepted) { setError('Please accept the accessible-hiring pledge.'); return; }
     setLoading(true);
     try {
       const res = await fetch('/api/company-applications', {
@@ -103,6 +105,7 @@ export default function VerifyStep2Page() {
           staffingClientNames: form.staffingClientNames || undefined,
           skillbridgePartnerName: form.skillbridgePartnerName || undefined,
           authorizationConfirmed: true,
+          accessibleHiringPledge: true,
         }),
       });
       const data = await res.json() as { applicationId?: number; error?: string; message?: string };
@@ -287,15 +290,27 @@ export default function VerifyStep2Page() {
                 )}
 
                 {/* SkillBridge optional */}
-                {orgType && (
-                  <fieldset className="border border-border rounded-lg p-5 flex flex-col gap-3">
-                    <legend className="text-xs font-semibold text-muted-foreground uppercase tracking-wide px-1">SkillBridge (optional)</legend>
-                    <p className="text-xs text-muted-foreground">If you're listed on the <a href="https://skillbridge.osd.mil/locations.htm" target="_blank" rel="noopener noreferrer" className="underline">DoD SkillBridge partner list</a>, enter your name exactly as listed. An admin will confirm before the badge appears.</p>
-                    <Field label="SkillBridge partner name">
-                      <Input value={form.skillbridgePartnerName} onChange={(e) => set('skillbridgePartnerName', e.target.value)} placeholder="Exact name as listed on SkillBridge" />
-                    </Field>
-                  </fieldset>
-                )}
+                {/* Accessible-hiring pledge */}
+                <fieldset className="border border-border rounded-lg p-5 flex flex-col gap-3">
+                  <legend className="text-xs font-semibold text-muted-foreground uppercase tracking-wide px-1">Accessible-hiring pledge</legend>
+                  <p className="text-sm text-foreground">Every employer on NORVARDEN commits to:</p>
+                  <ul className="list-disc pl-5 text-sm text-muted-foreground flex flex-col gap-1.5">
+                    <li>Provide reasonable accommodations during interviews and on the job.</li>
+                    <li>Never ask candidates to disclose or prove a disability.</li>
+                    <li>Keep any health or accommodation information confidential.</li>
+                    <li>Make application steps and interviews accessible, with alternatives on request.</li>
+                    <li>Evaluate candidates on their skills and ability to do the essential functions of the job.</li>
+                  </ul>
+                  <label className="flex items-start gap-3 cursor-pointer mt-1">
+                    <input
+                      type="checkbox"
+                      checked={form.pledgeAccepted}
+                      onChange={(e) => set('pledgeAccepted', e.target.checked)}
+                      className="mt-0.5 accent-primary"
+                    />
+                    <span className="text-sm text-foreground">We accept the NORVARDEN accessible-hiring pledge.</span>
+                  </label>
+                </fieldset>
 
                 {/* Authorization */}
                 <label className="flex items-start gap-3 cursor-pointer">
@@ -312,7 +327,7 @@ export default function VerifyStep2Page() {
 
                 {error && <p className="text-sm text-destructive">{error}</p>}
 
-                <Button onClick={submit} disabled={loading || !form.authorizationConfirmed || !form.orgType} size="lg">
+                <Button onClick={submit} disabled={loading || !form.authorizationConfirmed || !form.pledgeAccepted || !form.orgType} size="lg">
                   {loading ? 'Submitting…' : <span>{verify_company_apply.step2.submitCta}</span>}
                 </Button>
               </div>

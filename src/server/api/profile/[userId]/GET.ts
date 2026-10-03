@@ -96,6 +96,9 @@ export default async function handler(req: Request, res: Response) {
     industriesOfInterest: profile.industriesOfInterest,
     skills:               profile.skills,
     experienceSummary:    profile.experienceSummary,
+    // Private unless the member chose to share it
+    workPreferences:      (ownerView || profile.shareWorkPreferences) ? profile.workPreferences : null,
+    shareWorkPreferences: ownerView ? !!profile.shareWorkPreferences : undefined,
     // resumeUrl in the DB is an internal storage key — expose the download route instead
     resumeUrl:            profile.resumeFileName ? `/api/profile/${encodeURIComponent(userId)}/resume` : null,
     resumeFileName:       profile.resumeFileName,

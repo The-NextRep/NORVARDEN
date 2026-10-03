@@ -26,23 +26,15 @@
       },
       {
         "id": "high_school",
-        "label": "High school or school district"
+        "label": "School or school district"
       },
       {
         "id": "college_university",
         "label": "College or university"
       },
       {
-        "id": "club_academy",
-        "label": "Club or academy"
-      },
-      {
         "id": "nonprofit",
         "label": "Nonprofit"
-      },
-      {
-        "id": "military_affiliated",
-        "label": "Military-affiliated organization"
       }
     ],
     "authCheckbox": "I confirm I'm authorized to hire for this organization, and that we will never charge people with disabilities any fee.",

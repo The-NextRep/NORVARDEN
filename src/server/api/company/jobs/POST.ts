@@ -38,12 +38,12 @@ export default async function handler(req: Request, res: Response) {
     const {
       title, description, location, jobType, industry,
       isRemote, payRangeMin, payRangeMax,
-      isVeteranReady, requiredSkills, applicationDeadline,
+      isVeteranReady, requiredSkills, applicationDeadline, accommodations,
     } = req.body as {
       title: string; description: string; location?: string;
       jobType: JobType; industry?: string; isRemote?: boolean;
       payRangeMin?: number; payRangeMax?: number;
-      isVeteranReady?: boolean; requiredSkills?: string[];
+      isVeteranReady?: boolean; requiredSkills?: string[]; accommodations?: string | null;
       applicationDeadline?: string;
     };
 
@@ -62,6 +62,7 @@ export default async function handler(req: Request, res: Response) {
       payRangeMin: payRangeMin ? Number(payRangeMin) : null,
       payRangeMax: payRangeMax ? Number(payRangeMax) : null,
       isVeteranReady: !!isVeteranReady,
+      accommodations: typeof accommodations === 'string' && accommodations.trim() ? accommodations.trim().slice(0, 4000) : null,
       requiredSkills: Array.isArray(requiredSkills) ? requiredSkills : null,
       applicationDeadline: applicationDeadline ? new Date(applicationDeadline) : null,
       status: 'active',

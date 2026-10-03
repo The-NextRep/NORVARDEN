@@ -37,6 +37,7 @@ interface JobPost {
   payRangeMin: number | null;
   payRangeMax: number | null;
   isVeteranReady: boolean;
+  accommodations: string | null;
   requiredSkills: string[] | null;
   applicationDeadline: string | null;
   status: JobStatus;
@@ -53,6 +54,7 @@ interface FormState {
   payRangeMin: string;
   payRangeMax: string;
   isVeteranReady: boolean;
+  accommodations: string;
   requiredSkills: string[];
   applicationDeadline: string;
 }
@@ -67,6 +69,7 @@ const EMPTY_FORM: FormState = {
   payRangeMin: '',
   payRangeMax: '',
   isVeteranReady: false,
+  accommodations: '',
   requiredSkills: [],
   applicationDeadline: '',
 };
@@ -315,6 +318,7 @@ function JobFormPanel({
         payRangeMin: editPost.payRangeMin?.toString() ?? '',
         payRangeMax: editPost.payRangeMax?.toString() ?? '',
         isVeteranReady: editPost.isVeteranReady,
+        accommodations: editPost.accommodations ?? '',
         requiredSkills: editPost.requiredSkills ?? [],
         applicationDeadline: editPost.applicationDeadline ? editPost.applicationDeadline.slice(0, 10) : '',
       });
@@ -353,6 +357,7 @@ function JobFormPanel({
         payRangeMin: form.payRangeMin ? parseInt(form.payRangeMin, 10) : null,
         payRangeMax: form.payRangeMax ? parseInt(form.payRangeMax, 10) : null,
         isVeteranReady: form.isVeteranReady,
+        accommodations: form.accommodations,
         requiredSkills: form.requiredSkills,
         applicationDeadline: form.applicationDeadline,
       };
@@ -452,6 +457,12 @@ function JobFormPanel({
               </select>
             </Field>
           </div>
+
+          <Field label="Accommodations & support">
+            <textarea value={form.accommodations} onChange={(e) => set('accommodations', e.target.value)}
+              placeholder={'e.g. Interviews by video, phone or in person; captions and ASL interpreters on request; screen-reader-friendly tools; flexible hours and remote days.'}
+              rows={4} maxLength={4000} style={{ ...inputStyle, resize: 'vertical', minHeight: '96px' }} />
+          </Field>
 
           <Field label="Location">
             <input value={form.location} onChange={(e) => set('location', e.target.value)}

@@ -243,6 +243,19 @@ function FullProfileBody({ profile, contactNote = null }: { profile: ProfileView
         </section>
       )}
 
+      {/* Work preferences (private unless shared) */}
+      {profile.workPreferences && (
+        <section>
+          <SectionHeading>Work preferences &amp; accommodations</SectionHeading>
+          <p className="font-barlow" style={{ fontSize: '16px', fontWeight: 300, color: white, lineHeight: 1.75, whiteSpace: 'pre-wrap' }}>
+            {profile.workPreferences}
+          </p>
+          {profile.shareWorkPreferences === false && (
+            <p className="font-barlow mt-2" style={{ fontSize: '13px', color: ice60 }}>Only you can see this.</p>
+          )}
+        </section>
+      )}
+
       {/* LinkedIn */}
       {profile.linkedinUrl && (
         <section>
@@ -522,7 +535,7 @@ export default function ProfilePage() {
                   resumeFileName: null,
                   linkedinUrl: null,
                   openTo: ['full_time', 'contract'],
-                  industriesOfInterest: ['Corporate Leadership', 'Sports Technology'],
+                  industriesOfInterest: ['Technology', 'Data & Analytics'],
                   skills: ['Leadership', 'Team building', 'Strategy'],
                   experienceSummary: 'Full profile available after connection is accepted.',
                 }} />

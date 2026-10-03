@@ -290,6 +290,8 @@ function ProfileEditInner() {
   const [linkedinUrl, setLinkedinUrl]             = useState('');
   const [phone, setPhone]                         = useState('');
   const [experienceSummary, setExperienceSummary] = useState('');
+  const [workPreferences, setWorkPreferences]     = useState('');
+  const [shareWorkPrefs, setShareWorkPrefs]       = useState(false);
   const [openTo, setOpenTo]                       = useState<JobType[]>([]);
   const [industries, setIndustries]               = useState<string[]>([]);
   const [skills, setSkills]                       = useState<string[]>([]);
@@ -324,6 +326,8 @@ function ProfileEditInner() {
           setLinkedinUrl(data.linkedinUrl ?? '');
           setPhone(data.contact?.phone ?? '');
           setExperienceSummary(data.experienceSummary ?? '');
+          setWorkPreferences(data.workPreferences ?? '');
+          setShareWorkPrefs(!!data.shareWorkPreferences);
           setOpenTo((data.openTo as JobType[]) ?? []);
           setIndustries(data.industriesOfInterest ?? []);
           setSkills(data.skills ?? []);
@@ -396,7 +400,7 @@ function ProfileEditInner() {
       const body: Record<string, unknown> = {
         firstName, lastName, headline, city, state: stateVal, linkedinUrl,
         phone: phoneTrimmed || null,
-        experienceSummary, openTo, industriesOfInterest: industries, skills,
+        experienceSummary, workPreferences, shareWorkPreferences: shareWorkPrefs, openTo, industriesOfInterest: industries, skills,
       };
       if (profile?.memberType === 'athlete') Object.assign(body, { sport, league, yearsActive });
       else if (profile?.memberType === 'coach') Object.assign(body, { coachingLevel, coachingSport, yearsCoaching });
@@ -527,6 +531,18 @@ function ProfileEditInner() {
             <FieldLabel htmlFor="summary">Tell employers about your background and what you bring to the table.</FieldLabel>
             <TextArea id="summary" value={experienceSummary} onChange={setExperienceSummary} placeholder="Describe your career, achievements, and what you’re looking for next…" rows={6} />
           </section>
+
+          {memberType !== 'employer' && (
+            <section>
+              <SectionHeading>Work preferences &amp; accommodations</SectionHeading>
+              <FieldLabel htmlFor="workPrefs">Optional and private. Note anything that helps you do your best work, such as remote days, flexible hours, captions, a screen reader or written instructions. You never have to name a disability.</FieldLabel>
+              <TextArea id="workPrefs" value={workPreferences} onChange={setWorkPreferences} placeholder="e.g. I work best with written agendas before meetings and captions on video calls." rows={4} />
+              <label className="flex items-start gap-3 mt-4 cursor-pointer font-barlow" style={{ fontSize: '14px', color: white, lineHeight: 1.5 }}>
+                <input type="checkbox" checked={shareWorkPrefs} onChange={(e) => setShareWorkPrefs(e.target.checked)} className="mt-1" style={{ accentColor: '#C6AC86', width: 18, height: 18 }} />
+                <span>Share this with companies after I accept their connection request. If unchecked, only you can see it.</span>
+              </label>
+            </section>
+          )}
 
           <section>
             <SectionHeading>Resume</SectionHeading>

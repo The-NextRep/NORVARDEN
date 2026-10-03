@@ -24,6 +24,7 @@ export const seoRoutes: SeoRoute[] = [
   { path: "/jobs", changefreq: "daily", priority: 0.9 },
   { path: "/for-companies", changefreq: "monthly", priority: 0.8 },
   { path: "/inclusion-course", changefreq: "monthly", priority: 0.7 },
+  { path: "/accessibility", changefreq: "yearly", priority: 0.5 },
   { path: "/events", changefreq: "daily", priority: 0.8 },
   { path: "/resources", changefreq: "monthly", priority: 0.7 },
   { path: "/interview-tips", changefreq: "monthly", priority: 0.7 },

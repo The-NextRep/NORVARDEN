@@ -25,6 +25,7 @@ export default async function handler(req: Request, res: Response) {
         payRangeMax: jobPosts.payRangeMax,
         payCurrency: jobPosts.payCurrency,
         isVeteranReady: jobPosts.isVeteranReady,
+        accommodations: jobPosts.accommodations,
         requiredSkills: jobPosts.requiredSkills,
         applicationDeadline: jobPosts.applicationDeadline,
         status: jobPosts.status,

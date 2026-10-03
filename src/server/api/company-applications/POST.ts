@@ -26,6 +26,7 @@ export default async function handler(req: Request, res: Response) {
     staffingClientNames?: string;
     skillbridgePartnerName?: string;
     authorizationConfirmed?: boolean;
+    accessibleHiringPledge?: boolean;
   };
 
   const required = ['contactEmail','legalName','website','contactName','contactTitle','orgType'];
@@ -38,6 +39,10 @@ export default async function handler(req: Request, res: Response) {
 
   if (!body.authorizationConfirmed) {
     res.status(400).json({ error: 'Authorization confirmation required.' });
+    return;
+  }
+  if (!body.accessibleHiringPledge) {
+    res.status(400).json({ error: 'Please accept the accessible-hiring pledge.' });
     return;
   }
 
@@ -103,7 +108,7 @@ export default async function handler(req: Request, res: Response) {
     contactPhone: body.contactPhone,
     contactLinkedin: body.contactLinkedin,
     orgType: body.orgType as 'company' | 'staffing_agency' | 'high_school' | 'college_university' | 'club_academy' | 'nonprofit' | 'military_affiliated',
-    proofData: body.proofData as Record<string, unknown> ?? {},
+    proofData: { ...((body.proofData as Record<string, unknown>) ?? {}), accessibleHiringPledgeAt: new Date().toISOString() },
     staffingClientNames: body.staffingClientNames,
     skillbridgePartnerName: body.skillbridgePartnerName,
     authorizationConfirmed: true,

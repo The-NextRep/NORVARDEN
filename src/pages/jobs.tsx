@@ -37,6 +37,7 @@ interface JobSummary {
 
 interface JobDetail extends JobSummary {
   description: string;
+  accommodations: string | null;
   companyWebsite: string | null;
   orgType: string | null;
   missionDiscountUnlocked: boolean | null;
@@ -356,6 +357,24 @@ function JobDetail({
                   {job.description}
                 </div>
               </div>
+
+              {/* Accommodations */}
+              {job.accommodations && (
+                <>
+                  <div style={{ height: '1px', background: goldGradient }} aria-hidden="true" />
+                  <div className="flex flex-col gap-3 p-5" style={{ border: goldBorder35, borderRadius: '3px', background: 'hsl(var(--hero-gold) / 0.06)' }}>
+                    <span
+                      className="font-barlow-condensed uppercase"
+                      style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: gold }}
+                    >
+                      Accommodations & support
+                    </span>
+                    <div className="font-barlow" style={{ fontSize: '16px', fontWeight: 300, lineHeight: 1.75, color: ice, whiteSpace: 'pre-wrap' }}>
+                      {job.accommodations}
+                    </div>
+                  </div>
+                </>
+              )}
 
               {/* Required skills */}
               {job.requiredSkills && job.requiredSkills.length > 0 && (

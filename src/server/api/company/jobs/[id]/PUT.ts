@@ -32,12 +32,12 @@ export default async function handler(req: Request, res: Response) {
     const {
       title, description, location, jobType, industry,
       isRemote, payRangeMin, payRangeMax,
-      isVeteranReady, requiredSkills, applicationDeadline, status,
+      isVeteranReady, requiredSkills, applicationDeadline, status, accommodations,
     } = req.body as {
       title?: string; description?: string; location?: string | null;
       jobType?: JobType; industry?: string | null; isRemote?: boolean;
       payRangeMin?: number; payRangeMax?: number;
-      isVeteranReady?: boolean; requiredSkills?: string[];
+      isVeteranReady?: boolean; requiredSkills?: string[]; accommodations?: string | null;
       applicationDeadline?: string; status?: 'active' | 'paused' | 'closed';
     };
 
@@ -51,6 +51,7 @@ export default async function handler(req: Request, res: Response) {
     if (payRangeMin !== undefined) updates.payRangeMin = payRangeMin ? Number(payRangeMin) : null;
     if (payRangeMax !== undefined) updates.payRangeMax = payRangeMax ? Number(payRangeMax) : null;
     if (isVeteranReady !== undefined) updates.isVeteranReady = !!isVeteranReady;
+    if (accommodations !== undefined) updates.accommodations = typeof accommodations === 'string' && accommodations.trim() ? accommodations.trim().slice(0, 4000) : null;
     if (requiredSkills !== undefined) updates.requiredSkills = Array.isArray(requiredSkills) ? requiredSkills : null;
     if (applicationDeadline !== undefined) updates.applicationDeadline = applicationDeadline ? new Date(applicationDeadline) : null;
     if (status !== undefined && ['active', 'paused', 'closed'].includes(status)) updates.status = status;
