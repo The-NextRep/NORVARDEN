@@ -16,7 +16,9 @@ const faded = 'hsl(var(--hero-ice) / 0.78)';
 const panel = 'hsl(var(--hero-panel-bg))';
 const line  = '1px solid hsl(var(--hero-gold) / 0.28)';
 
-type Track = 'athlete' | 'coach' | 'veteran';
+type Track = 'work' | 'early' | 'break';
+
+const TRACK_LABELS: Record<Track, string> = { work: 'Work experience', early: 'Students & early career', break: 'Career break' };
 
 interface Prefill {
   fullName: string; headline: string; email: string; phone: string; location: string; linkedinUrl: string;
@@ -28,53 +30,45 @@ interface Prefill {
 
 // ─── "Translate your experience" suggestions ────────────────────────────────
 const SUGGESTIONS: Record<Track, string[]> = {
-  athlete: [
-    'Performed under high pressure in front of audiences of [20,000+], consistently executing in time-critical situations',
-    'Collaborated daily within a [50+]-person organization of coaches, trainers, analysts and teammates toward shared performance goals',
-    'Followed a disciplined [6]-day-a-week training, nutrition and recovery program for [8] years, maintaining elite performance standards',
-    'Analyzed game film and performance data with coaching staff to identify weaknesses and implement targeted improvements',
-    'Served as team captain for [2] seasons, mentoring [10+] younger players and acting as liaison between players and coaching staff',
-    'Represented the organization at [30+] community, sponsor and media events, communicating the team’s brand to the public',
-    'Adapted quickly to new systems, roles and coaching staff, learning complex playbooks of [200+] plays under tight timelines',
-    'Recovered from [injury] through a structured [9]-month rehabilitation plan, returning to full competition ahead of schedule',
+  work: [
+    'Delivered [12] projects on time and within budget by building clear plans, tracking milestones and flagging risks early',
+    'Improved a key process, cutting turnaround time by [30%] and reducing errors by [25%]',
+    'Resolved [40+] customer or user requests per week while maintaining a [95%] satisfaction rating',
+    'Analyzed [data/reports] to identify trends and recommend changes that saved [$20,000] a year',
+    'Trained and mentored [5] new team members on tools, workflows and quality standards',
+    'Collaborated with [design, engineering and sales] teams to launch [product/feature] used by [10,000+] people',
+    'Created clear documentation and guides that reduced repeat support questions by [35%]',
+    'Used assistive and productivity technology ([screen reader / speech-to-text / task-management tools]) to manage a high-volume workload accurately',
   ],
-  coach: [
-    'Recruited, developed and managed a roster of [35] athletes, improving team record from [4–8] to [10–2] in [two] seasons',
-    'Supervised and trained a staff of [6] assistant coaches, setting goals and conducting regular performance reviews',
-    'Managed an annual program budget of [$150,000], including travel, equipment and facilities, finishing [under budget]',
-    'Built data-driven game plans using scouting reports, statistics and film analysis to prepare for [12+] opponents per season',
-    'Designed individual development plans for each athlete, resulting in [8] players advancing to [college/professional] level',
-    'Raised [$40,000] through fundraising events, booster relationships and sponsorships',
-    'Coordinated logistics for [20+] away competitions per year, including transportation, lodging and scheduling for [60] people',
-    'Communicated regularly with parents, administrators and compliance staff, maintaining [100%] eligibility and compliance',
+  early: [
+    'Completed a [capstone/class] project in [subject], [building/researching] [what] and presenting results to [audience]',
+    'Earned [certification, e.g. Google IT Support / CompTIA A+] while studying [part-time/full-time]',
+    'Built [an app / website / dashboard] using [tools], now used by [number] people',
+    'Interned at [organization], supporting [team] with [tasks] and delivering [result]',
+    'Led a [club / group project] of [8] people, organizing [events/meetings] and meeting every deadline',
+    'Tutored or mentored [10+] students in [subject], improving their [grades/scores] by [amount]',
+    'Volunteered [100+] hours with [organization], helping [who] with [what]',
+    'Balanced [coursework] with [part-time work / other commitments], maintaining a [3.5] GPA',
   ],
-  veteran: [
-    'Led and supervised a team of [12] personnel, responsible for training, scheduling, performance evaluations and daily operations',
-    'Maintained full accountability for equipment and inventory valued at [$2.5M] with zero losses during [3] annual audits',
-    'Planned and executed [40+] complex operations under tight deadlines and changing conditions, achieving [100%] mission completion',
-    'Trained [150+] team members on safety procedures and technical skills, reducing incidents by [30%]',
-    'Coordinated logistics for [200] personnel, including transportation, supplies and communications across [3] locations',
-    'Managed preventive maintenance program for [25] vehicles/systems, improving operational readiness from [78%] to [95%]',
-    'Prepared written reports and briefings for senior leadership, translating complex technical information into clear recommendations',
-    'Held a [Secret] security clearance and handled sensitive information in accordance with strict protocols',
+  break: [
+    'Career break ([2023–2024]): focused on health and recovery; completed [course/certification] in [skill] during this time',
+    'Managed a complex schedule of appointments, paperwork and benefits, building strong organization and self-advocacy skills',
+    'Completed [online course / bootcamp] in [skill] to stay current while away from full-time work',
+    'Freelanced or volunteered as [role] for [organization], delivering [project/result]',
+    'Served as a caregiver for a family member, coordinating care, budgets and schedules for [number] people',
+    'Learned and became proficient with [assistive technology / software], applying it to [projects/tasks]',
+    'Advocated for accessibility with [organization/community], leading to [change or result]',
+    'Returned to [field] through [returnship / part-time role / project], delivering [result] within [timeframe]',
   ],
 };
 
-const MIL_TERMS: [string, string][] = [
-  ['NCOIC / OIC', 'Supervisor / Manager'],
-  ['Squad leader', 'Team lead (8–12 people)'],
-  ['Platoon sergeant', 'Operations manager (30–50 people)'],
-  ['First sergeant / Sergeant major', 'Senior operations manager / Chief of staff'],
-  ['Company commander', 'Director / General manager'],
-  ['Executive officer (XO)', 'Deputy director / Chief operating officer'],
-  ['Mission', 'Project / Objective'],
-  ['Battalion / Brigade', 'Division / Regional organization'],
-  ['Counseling', 'Coaching / Performance review'],
-  ['Operations order (OPORD)', 'Project plan'],
-  ['PCS', 'Relocation'],
-  ['TDY', 'Business travel / Temporary assignment'],
-  ['Supply sergeant', 'Inventory / Logistics manager'],
-  ['Readiness', 'Operational availability'],
+const BREAK_PHRASES: [string, string][] = [
+  ['Unemployed', 'Career break'],
+  ['Medical leave / disability leave', 'Career break: health and recovery (no further detail needed)'],
+  ['Not working', 'Professional development: [course / certification]'],
+  ['Stayed home', 'Caregiver: managed care, budgets and schedules'],
+  ['Did odd jobs', 'Freelance / contract work: [skill], [result]'],
+  ['Helped out at …', 'Volunteer [role], [organization]'],
 ];
 
 let idCounter = 0;
@@ -90,19 +84,6 @@ function seedFromPrefill(p: Prefill): ResumeData {
   r.location = p.location; r.linkedinUrl = p.linkedinUrl; r.summary = p.summary;
   r.skills = (p.skills ?? []).slice(0, L.skills);
   const exp = blankExperience();
-  if (p.memberType === 'athlete') {
-    exp.title = 'Professional Athlete';
-    exp.organization = [p.league, p.sport].filter(Boolean).join(' · ');
-    exp.start = p.yearsActive ?? '';
-  } else if (p.memberType === 'coach') {
-    exp.title = `${p.coachingSport ? `${p.coachingSport} ` : ''}Coach`;
-    exp.start = p.yearsCoaching ?? '';
-  } else if (p.memberType === 'veteran') {
-    const branch: Record<string, string> = { army: 'U.S. Army', navy: 'U.S. Navy', air_force: 'U.S. Air Force', marines: 'U.S. Marine Corps', coast_guard: 'U.S. Coast Guard', space_force: 'U.S. Space Force' };
-    exp.organization = p.branch ? branch[p.branch] ?? '' : '';
-    exp.title = p.mos ? `[Civilian title for ${p.mos}]` : '';
-    exp.start = p.yearsServed ?? '';
-  }
   r.experience = [exp];
   return r;
 }
@@ -242,7 +223,7 @@ type SaveState = { kind: 'idle' } | { kind: 'saving' } | { kind: 'saved'; at: st
 export default function ResumeBuilderPage() {
   const { user, isPending } = useCurrentUser();
   const [r, setR] = useState<ResumeData | null>(null);
-  const [track, setTrack] = useState<Track>('athlete');
+  const [track, setTrack] = useState<Track>('work');
   const [loadError, setLoadError] = useState<string | null>(null);
   const [save, setSave] = useState<SaveState>({ kind: 'idle' });
   const [targetExp, setTargetExp] = useState<string | null>(null);
@@ -260,8 +241,6 @@ export default function ResumeBuilderPage() {
       .then(async (res) => {
         const d = await res.json().catch(() => ({})) as { resume?: ResumeData | null; updatedAt?: string | null; prefill?: Prefill; error?: string };
         if (!res.ok) throw new Error(d.error ?? 'Could not load your résumé.');
-        const mt = d.prefill?.memberType;
-        if (mt === 'athlete' || mt === 'coach' || mt === 'veteran') setTrack(mt);
         const data = d.resume ?? (d.prefill ? seedFromPrefill(d.prefill) : emptyResume());
         setR(data);
         setTargetExp(data.experience[0]?.id ?? null);
@@ -451,16 +430,16 @@ export default function ResumeBuilderPage() {
             </Section>
 
             {/* Translator */}
-            <Section title="Translate your experience">
+            <Section title="Bullet ideas">
               <p className="font-barlow" style={{ fontSize: '14px', lineHeight: 1.6, color: faded }}>
                 Click a line to add it to the selected job below, then replace the <strong style={{ color: gold }}>[brackets]</strong> with your real numbers.
               </p>
-              <div className="inline-flex flex-wrap gap-1 p-1 self-start" style={{ border: line, borderRadius: '3px' }} role="tablist" aria-label="Background">
-                {(['athlete', 'coach', 'veteran'] as const).map((t) => (
+              <div className="inline-flex flex-wrap gap-1 p-1 self-start" style={{ border: line, borderRadius: '3px' }} role="tablist" aria-label="Experience type">
+                {(['work', 'early', 'break'] as const).map((t) => (
                   <button key={t} type="button" role="tab" aria-selected={track === t} onClick={() => setTrack(t)}
                     className={`font-barlow-condensed uppercase ${track === t ? 'gold-shimmer-bg' : ''}`}
                     style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.2em', padding: '8px 14px', borderRadius: '2px', color: track === t ? navy : faded }}>
-                    {t === 'athlete' ? 'Athlete' : t === 'coach' ? 'Coach' : 'Veteran'}
+                    {TRACK_LABELS[t]}
                   </button>
                 ))}
               </div>
@@ -485,10 +464,10 @@ export default function ResumeBuilderPage() {
                   </li>
                 ))}
               </ul>
-              {track === 'veteran' && (
+              {track === 'break' && (
                 <details className="font-barlow" style={{ fontSize: '14px', color: white }}>
                   <summary className="cursor-pointer font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 600, letterSpacing: '0.2em', color: gold }}>
-                    Military-to-civilian terms
+                    Phrasing career breaks
                   </summary>
                   <table className="w-full mt-3" style={{ borderCollapse: 'collapse' }}>
                     <thead>
@@ -498,7 +477,7 @@ export default function ResumeBuilderPage() {
                       </tr>
                     </thead>
                     <tbody>
-                      {MIL_TERMS.map(([a, b]) => (
+                      {BREAK_PHRASES.map(([a, b]) => (
                         <tr key={a} style={{ borderTop: '1px solid hsl(var(--hero-gold) / 0.15)' }}>
                           <td className="py-1.5 pr-3" style={{ color: faded }}>{a}</td>
                           <td className="py-1.5">{b}</td>
@@ -578,7 +557,7 @@ export default function ResumeBuilderPage() {
             <Section title="Education" action={r.education.length < L.education ? (
               <SmallButton label="Add education" onClick={() => update((d) => ({ ...d, education: [...d.education, { id: newId(), school: '', credential: '', field: '', year: '' } as ResumeEducation] }))}><Plus size={12} /> Add</SmallButton>
             ) : undefined}>
-              {r.education.length === 0 && <p className="font-barlow" style={{ fontSize: '14px', color: faded }}>Add schools, degrees or programs (including military training).</p>}
+              {r.education.length === 0 && <p className="font-barlow" style={{ fontSize: '14px', color: faded }}>Add schools, degrees or programs (including certificates, bootcamps and online courses).</p>}
               {r.education.map((e) => (
                 <div key={e.id} className="grid gap-3 sm:grid-cols-2 p-4 relative" style={{ border: '1px solid hsl(var(--hero-gold) / 0.18)', borderRadius: '3px' }}>
                   <Field label="School" value={e.school} onChange={(v) => update((d) => ({ ...d, education: d.education.map((x) => (x.id === e.id ? { ...x, school: v } : x)) }))} />
