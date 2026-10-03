@@ -16,12 +16,12 @@ import { useState, useEffect } from 'react';
 import { Helmet } from '@dr.pogodin/react-helmet';
 import { Link, useParams, useNavigate } from 'react-router';
 import {
-  Shield, MapPin, Download, ExternalLink, Lock, Eye, EyeOff,
+  MapPin, Download, ExternalLink, Lock, Eye, EyeOff,
   Pencil, CheckCircle, Mail, Phone, MessageSquare,
 } from 'lucide-react';
 import { useCurrentUser } from '@/lib/auth/use-current-user';
 import {
-  JOB_TYPE_LABELS, BRANCH_LABELS, COACHING_LEVEL_LABELS,
+  JOB_TYPE_LABELS,
   type MemberProfile, type JobType,
 } from '@/lib/profile-types';
 
@@ -71,32 +71,6 @@ function VerifiedBadge({ size = 16 }: { size?: number }) {
   );
 }
 
-// ── Veteran seal badge ────────────────────────────────────────────────────────
-function VeteranSeal({ showBranch, branch, showYears, yearsServed }: {
-  showBranch: boolean; branch: string | null;
-  showYears: boolean; yearsServed: string | null;
-}) {
-  return (
-    <div
-      className="inline-flex items-center gap-3 px-4 py-3 rounded-sm"
-      style={{ border: `1px solid ${gold}`, background: 'hsl(var(--hero-gold) / 0.08)' }}
-    >
-      <Shield size={20} style={{ color: gold, flexShrink: 0 }} />
-      <div>
-        <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.22em', color: gold }}>
-          U.S. Military Veteran
-        </p>
-        {(showBranch && branch) || (showYears && yearsServed) ? (
-          <p className="font-barlow mt-0.5" style={{ fontSize: '12px', fontWeight: 300, color: ice60 }}>
-            {showBranch && branch ? BRANCH_LABELS[branch] ?? branch : ''}
-            {showBranch && branch && showYears && yearsServed ? ' · ' : ''}
-            {showYears && yearsServed ? `${yearsServed} years` : ''}
-          </p>
-        ) : null}
-      </div>
-    </div>
-  );
-}
 
 // ── Section heading ───────────────────────────────────────────────────────────
 function SectionHeading({ children }: { children: React.ReactNode }) {
@@ -218,8 +192,6 @@ function ContactBlock({ profile, note }: { profile: ProfileView; note: string | 
 
 // ── Full profile body ─────────────────────────────────────────────────────────
 function FullProfileBody({ profile, contactNote = null }: { profile: ProfileView; contactNote?: string | null }) {
-  const memberType = profile.memberType;
-
   return (
     <div className="space-y-10">
 
@@ -257,29 +229,6 @@ function FullProfileBody({ profile, contactNote = null }: { profile: ProfileView
             {profile.skills.map((skill) => (
               <Chip key={skill} label={skill} />
             ))}
-          </div>
-        </section>
-      )}
-
-      {/* Type-specific background */}
-      {memberType === 'athlete' && (profile.sport || profile.league || profile.yearsActive) && (
-        <section>
-          <SectionHeading>Athletic background</SectionHeading>
-          <div className="flex flex-wrap gap-6">
-            {profile.sport && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Sport</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.sport}</p></div>}
-            {profile.league && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>League / level</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.league}</p></div>}
-            {profile.yearsActive && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Years active</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.yearsActive}</p></div>}
-          </div>
-        </section>
-      )}
-
-      {memberType === 'coach' && (profile.coachingLevel || profile.coachingSport || profile.yearsCoaching) && (
-        <section>
-          <SectionHeading>Coaching background</SectionHeading>
-          <div className="flex flex-wrap gap-6">
-            {profile.coachingLevel && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Level</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{COACHING_LEVEL_LABELS[profile.coachingLevel] ?? profile.coachingLevel}</p></div>}
-            {profile.coachingSport && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Sport</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.coachingSport}</p></div>}
-            {profile.yearsCoaching && <div><p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}>Years coaching</p><p className="font-barlow" style={{ fontSize: '15px', fontWeight: 300, color: white }}>{profile.yearsCoaching}</p></div>}
           </div>
         </section>
       )}
@@ -408,7 +357,7 @@ export default function ProfilePage() {
   }
 
   const memberType = profile.memberType;
-  const pathLabel  = memberType === 'athlete' ? 'ATHLETE' : memberType === 'coach' ? 'COACH' : memberType === 'veteran' ? 'VETERAN' : 'EMPLOYER';
+  const pathLabel  = memberType === 'employer' ? 'EMPLOYER' : 'JOB SEEKER';
   const displayName = profile.firstName && profile.lastName
     ? `${profile.firstName} ${profile.lastName}`
     : profile.firstName ?? profile.name ?? 'Member';
@@ -508,17 +457,6 @@ export default function ProfilePage() {
               </div>
             )}
 
-            {/* Veteran seal */}
-            {memberType === 'veteran' && (
-              <div className="mt-4">
-                <VeteranSeal
-                  showBranch={profile.veteranShowBranch ?? false}
-                  branch={profile.branch}
-                  showYears={profile.veteranShowYears ?? false}
-                  yearsServed={profile.yearsServed}
-                />
-              </div>
-            )}
           </div>
 
           {/* Message (connected company) */}

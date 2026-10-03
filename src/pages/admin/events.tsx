@@ -72,9 +72,6 @@ function FeaturedEmailPanel({ ev, onSent }: { ev: AdminEvent; onSent: () => void
       <Field label="Featured email to" htmlFor={`aud-${ev.id}`}>
         <select id={`aud-${ev.id}`} style={{ ...inputStyle, width: 'auto' }} value={audience} onChange={(e) => { setAudience(e.target.value); setArmed(false); }}>
           <option value="all">All members</option>
-          <option value="athlete">Athletes</option>
-          <option value="coach">Coaches</option>
-          <option value="veteran">Veterans</option>
         </select>
       </Field>
       <Field label="State (optional)" htmlFor={`st-${ev.id}`}>
@@ -168,7 +165,7 @@ function EventForm({ initial, onCancel, onSaved, editId }: {
         <p className="font-bodoni" style={{ fontSize: '22px', color: t.white }}>{editId ? 'Edit event' : 'New event'}</p>
         <ErrorNote message={error} />
         <Field label="Title" htmlFor="ev-title">
-          <input id="ev-title" style={inputStyle} value={form.title} maxLength={200} onChange={(e) => set('title', e.target.value)} placeholder="Veterans hiring night — Dallas" />
+          <input id="ev-title" style={inputStyle} value={form.title} maxLength={200} onChange={(e) => set('title', e.target.value)} placeholder="Inclusive hiring night — Dallas" />
         </Field>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <Field label="Starts" htmlFor="ev-start" hint="Your local time. Visitors see it in theirs.">

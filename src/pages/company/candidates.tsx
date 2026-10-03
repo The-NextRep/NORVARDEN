@@ -94,7 +94,7 @@ function CandidatesInner() {
   const navigate = useNavigate();
 
   const [q, setQ]           = useState('');
-  const [type, setType]     = useState('');
+  const type = '';
   const [applied, setApplied] = useState({ q: '', type: '' });
   const [page, setPage]     = useState(1);
   const [items, setItems]   = useState<Candidate[]>([]);
@@ -161,24 +161,12 @@ function CandidatesInner() {
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder="Name, sport, skill, city, MOS…"
+              placeholder="Name, skill, job title, city…"
               aria-label="Search candidates"
               className="flex-1 bg-transparent outline-none font-barlow py-3"
               style={{ color: white, fontSize: '15px' }}
             />
           </div>
-          <select
-            value={type}
-            onChange={(e) => setType(e.target.value)}
-            aria-label="Member type"
-            className="font-barlow px-4 py-3 rounded-sm"
-            style={{ background: navyMid, color: white, border: '1px solid hsl(var(--hero-gold) / 0.2)', fontSize: '15px' }}
-          >
-            <option value="">All members</option>
-            <option value="athlete">Athletes</option>
-            <option value="coach">Coaches</option>
-            <option value="veteran">Veterans</option>
-          </select>
           <button
             type="submit"
             className="font-barlow-condensed uppercase px-6 py-3 rounded-sm transition-opacity hover:opacity-90"

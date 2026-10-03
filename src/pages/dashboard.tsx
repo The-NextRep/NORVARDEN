@@ -169,8 +169,7 @@ function ProfileCard({
     ? `${profile.firstName} ${profile.lastName}`
     : profile?.firstName ?? 'Member';
   const initial = displayName.charAt(0).toUpperCase();
-  const memberType = profile?.memberType ?? 'member';
-  const pathLabel = memberType === 'athlete' ? 'ATHLETE' : memberType === 'coach' ? 'COACH' : memberType === 'veteran' ? 'VETERAN' : 'MEMBER';
+  const pathLabel = 'JOB SEEKER';
   const isVerified = profile?.verificationStatus === 'verified';
   const location = [profile?.city, profile?.state].filter(Boolean).join(', ');
   const profileComplete = !!(profile?.headline && profile?.city);
@@ -209,11 +208,6 @@ function ProfileCard({
             {isVerified && (
               <span className="inline-flex items-center gap-1 font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
                 <CheckCircle size={12} style={{ color: gold }} /> Verified
-              </span>
-            )}
-            {memberType === 'veteran' && (
-              <span className="inline-flex items-center gap-1 font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
-                <Shield size={12} style={{ color: gold }} /> Veteran
               </span>
             )}
           </div>
@@ -363,8 +357,7 @@ function DashboardInner() {
     );
   }
 
-  const memberType = user?.memberType ?? summary?.profile?.memberType ?? 'member';
-  const pathLabel  = memberType === 'athlete' ? 'Job seeker' : memberType === 'coach' ? 'Coach' : memberType === 'veteran' ? 'Veteran' : 'Member';
+  const pathLabel  = 'Job seeker';
   const firstName  = summary?.profile?.firstName ?? user?.name?.split(' ')[0] ?? null;
 
   return (
@@ -620,12 +613,12 @@ function DashboardInner() {
             </div>
           </section>
 
-          {/* Veteran resources nudge */}
-          {memberType === 'veteran' && (
+          {/* Career resources nudge */}
+          {(
             <section>
-              <SectionHeading>Veteran resources</SectionHeading>
+              <SectionHeading>Career resources</SectionHeading>
               <Link
-                to="/veterans"
+                to="/resources"
                 className="group flex items-center gap-5 transition-all"
                 style={{
                   background: 'hsl(var(--hero-gold) / 0.06)',
@@ -640,10 +633,10 @@ function DashboardInner() {
                 <Shield size={24} style={{ color: gold, flexShrink: 0 }} />
                 <div className="flex-1">
                   <p className="font-barlow-condensed uppercase mb-1" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>
-                    Veteran resources
+                    Career resources
                   </p>
                   <p className="font-barlow" style={{ fontSize: '14px', fontWeight: 300, color: ice60, lineHeight: 1.5 }}>
-                    SkillBridge programs, transition guides, and employer partnerships built for veterans.
+                    Interview tips, the résumé builder, and guidance on disclosure and accommodations.
                   </p>
                 </div>
                 <ArrowRight size={18} style={{ color: gold, flexShrink: 0 }} className="group-hover:translate-x-1 transition-transform" />

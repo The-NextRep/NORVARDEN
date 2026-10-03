@@ -116,9 +116,7 @@ function OverviewInner() {
           </Section>
 
           <Section title="Members">
-            <Stat label="Athletes" value={data.members.athlete} to="/admin/members?type=athlete" />
-            <Stat label="Coaches" value={data.members.coach} to="/admin/members?type=coach" />
-            <Stat label="Veterans" value={data.members.veteran} to="/admin/members?type=veteran" />
+            <Stat label="Job seekers" value={data.members.athlete + data.members.coach + data.members.veteran} to="/admin/members?type=athlete" />
             <Stat
               label="Employer accounts"
               value={data.members.employerAccounts}

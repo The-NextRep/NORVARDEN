@@ -9,7 +9,7 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import { Link, useNavigate } from 'react-router';
 import {
   PlusCircle, X, ChevronRight, Briefcase, MapPin, DollarSign,
-  Clock, Tag, Shield, Wifi, Pencil, Trash2, AlertTriangle,
+  Clock, Tag, Wifi, Pencil, Trash2, AlertTriangle,
   CheckCircle, ChevronLeft, Loader2,
 } from 'lucide-react';
 import { AuthGuard } from '@/components/auth/RouteGuards';
@@ -87,10 +87,9 @@ const STATUS_CONFIG: Record<JobStatus, { label: string; color: string; bg: strin
 };
 
 const INDUSTRIES = [
-  'Athletics / Sports', 'Coaching / Training', 'Sports Medicine',
-  'Fitness & Wellness', 'Sports Media', 'Sports Technology',
-  'Event Management', 'Facility Management', 'Military / Defense',
-  'Education', 'Finance', 'Healthcare', 'Technology', 'Other',
+  'Technology', 'Software & IT', 'Data & Analytics', 'Cybersecurity',
+  'Customer Support', 'Healthcare', 'Finance', 'Education',
+  'Government & Nonprofit', 'Marketing & Media', 'Operations & Logistics', 'Sales', 'Other',
 ];
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -217,12 +216,6 @@ function JobCard({
             style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em', color: ice60 }}>
             {JOB_TYPE_LABELS[post.jobType]}
           </span>
-          {post.isVeteranReady && (
-            <span className="inline-flex items-center gap-1 font-barlow-condensed uppercase"
-              style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.2em', color: gold }}>
-              <Shield size={10} /> Veteran-ready
-            </span>
-          )}
         </div>
         {post.status !== 'removed' && (
           <div className="flex items-center gap-2">
@@ -431,7 +424,7 @@ function JobFormPanel({
         <form onSubmit={(e) => { void handleSubmit(e); }} className="flex-1 px-7 py-6 space-y-5">
           <Field label="Job title" required>
             <input value={form.title} onChange={(e) => set('title', e.target.value)}
-              placeholder="e.g. Head Strength and Conditioning Coach" required style={inputStyle} />
+              placeholder="e.g. Data Analyst" required style={inputStyle} />
           </Field>
 
           <Field label="Description" required>
@@ -444,7 +437,7 @@ function JobFormPanel({
             <Field label="Job type" required>
               <select value={form.jobType} onChange={(e) => set('jobType', e.target.value as JobType)}
                 style={{ ...inputStyle, cursor: 'pointer' }}>
-                {(Object.entries(JOB_TYPE_LABELS) as [JobType, string][]).map(([v, l]) => (
+                {(Object.entries(JOB_TYPE_LABELS) as [JobType, string][]).filter(([v]) => v !== 'skillbridge' || form.jobType === 'skillbridge').map(([v, l]) => (
                   <option key={v} value={v} style={{ background: '#071226' }}>{l}</option>
                 ))}
               </select>
@@ -467,7 +460,6 @@ function JobFormPanel({
 
           <div className="flex flex-col gap-3">
             <Toggle checked={form.isRemote} onChange={(v) => set('isRemote', v)} label="Remote / hybrid OK" />
-            <Toggle checked={form.isVeteranReady} onChange={(v) => set('isVeteranReady', v)} label="Veteran-ready position" />
           </div>
 
           <div className="grid grid-cols-2 gap-4">

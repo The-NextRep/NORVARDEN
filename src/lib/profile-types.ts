@@ -15,26 +15,22 @@ export const JOB_TYPE_LABELS: Record<JobType, string> = {
 };
 
 export const INDUSTRIES = [
-  'Professional Sports',
-  'College Athletics',
-  'High School Athletics',
-  'Sports Media & Broadcasting',
-  'Sports Technology',
-  'Fitness & Wellness',
-  'Sports Marketing',
-  'Coaching & Training',
-  'Sports Medicine',
-  'Military & Defense',
-  'Law Enforcement',
-  'Government & Public Service',
-  'Corporate Leadership',
-  'Finance & Investment',
-  'Real Estate',
   'Technology',
+  'Software & IT',
+  'Data & Analytics',
+  'Cybersecurity',
+  'Customer Support',
   'Healthcare',
+  'Finance & Insurance',
   'Education',
+  'Government & Public Service',
   'Non-Profit',
-  'Entertainment',
+  'Marketing & Media',
+  'Operations & Logistics',
+  'Sales',
+  'Creative & Design',
+  'Retail & Hospitality',
+  'Other',
 ] as const;
 
 export const BRANCH_LABELS: Record<string, string> = {

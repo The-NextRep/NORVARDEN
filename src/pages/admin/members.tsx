@@ -124,9 +124,7 @@ function MembersInner() {
             onChange={(v) => { setType(v); setPage(1); }}
             options={[
               { value: 'all', label: 'All types' },
-              { value: 'athlete', label: 'Athletes' },
-              { value: 'coach', label: 'Coaches' },
-              { value: 'veteran', label: 'Veterans' },
+              { value: 'athlete', label: 'Job seekers' },
               { value: 'employer', label: 'Employers' },
             ]}
           />

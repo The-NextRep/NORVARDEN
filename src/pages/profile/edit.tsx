@@ -5,11 +5,11 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Helmet } from '@dr.pogodin/react-helmet';
 import { Link, useNavigate } from 'react-router';
-import { Shield, Upload, X, Plus, Eye, ChevronRight } from 'lucide-react';
+import { Upload, X, Plus, Eye, ChevronRight } from 'lucide-react';
 import { AuthGuard } from '@/components/auth/RouteGuards';
 import { useCurrentUser } from '@/lib/auth/use-current-user';
 import {
-  JOB_TYPE_LABELS, INDUSTRIES, BRANCH_LABELS, COACHING_LEVEL_LABELS,
+  JOB_TYPE_LABELS, INDUSTRIES,
   type JobType, type MemberProfile,
 } from '@/lib/profile-types';
 import { profile_edit } from 'virtual:content';
@@ -114,41 +114,6 @@ function TextArea({
   );
 }
 
-function SelectInput({
-  id, value, onChange, options, placeholder,
-}: {
-  id?: string; value: string; onChange: (v: string) => void;
-  options: { value: string; label: string }[]; placeholder?: string;
-}) {
-  return (
-    <select
-      id={id}
-      value={value}
-      onChange={(e) => onChange(e.target.value)}
-      className="w-full font-barlow"
-      style={{
-        background: navyMid,
-        border: '1px solid hsl(var(--hero-gold) / 0.22)',
-        borderRadius: '2px',
-        padding: '10px 14px',
-        fontSize: '15px',
-        fontWeight: 300,
-        color: value ? white : ice60,
-        outline: 'none',
-        appearance: 'none',
-        cursor: 'pointer',
-      }}
-    >
-      {placeholder && <option value="" style={{ color: ice60 }}>{placeholder}</option>}
-      {options.map((o) => (
-        <option key={o.value} value={o.value} style={{ background: navy, color: white }}>
-          {o.label}
-        </option>
-      ))}
-    </select>
-  );
-}
-
 function ChipToggle({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
   return (
     <button
@@ -165,24 +130,6 @@ function ChipToggle({ label, active, onClick }: { label: string; active: boolean
     >
       {label}
     </button>
-  );
-}
-
-function Toggle({ id, checked, onChange, label, sublabel }: {
-  id: string; checked: boolean; onChange: (v: boolean) => void; label: string; sublabel?: string;
-}) {
-  return (
-    <label htmlFor={id} className="flex items-start gap-4 cursor-pointer">
-      <div className="relative shrink-0 mt-0.5">
-        <input id={id} type="checkbox" checked={checked} onChange={(e) => onChange(e.target.checked)} className="sr-only" />
-        <div className="w-10 h-5 rounded-full transition-colors" style={{ background: checked ? 'hsl(var(--hero-gold) / 0.8)' : 'hsl(var(--hero-gold) / 0.15)', border: '1px solid hsl(var(--hero-gold) / 0.4)' }} />
-        <div className="absolute top-0.5 w-4 h-4 rounded-full transition-all" style={{ left: checked ? '22px' : '2px', background: checked ? navy : ice60 }} />
-      </div>
-      <div>
-        <p className="font-barlow" style={{ fontSize: '14px', fontWeight: 300, color: white, lineHeight: 1.4 }}>{label}</p>
-        {sublabel && <p className="font-barlow mt-0.5" style={{ fontSize: '12px', fontWeight: 300, color: ice60, lineHeight: 1.5 }}>{sublabel}</p>}
-      </div>
-    </label>
   );
 }
 
@@ -486,7 +433,7 @@ function ProfileEditInner() {
   }
 
   const memberType = profile.memberType;
-  const pathLabel  = memberType === 'athlete' ? 'ATHLETE' : memberType === 'coach' ? 'COACH' : memberType === 'veteran' ? 'VETERAN' : 'EMPLOYER';
+  const pathLabel  = memberType === 'employer' ? 'EMPLOYER' : 'JOB SEEKER';
 
   return (
     <main className="min-h-screen pb-24" style={{ background: navy }}>
@@ -549,58 +496,11 @@ function ProfileEditInner() {
             </div>
           </section>
 
-          {memberType === 'athlete' && (
-            <section>
-              <SectionHeading>Athletic background</SectionHeading>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div><FieldLabel htmlFor="sport">Sport</FieldLabel><TextInput id="sport" value={sport} onChange={setSport} placeholder="e.g. Football" maxLength={100} /></div>
-                <div><FieldLabel htmlFor="league">League / level</FieldLabel><TextInput id="league" value={league} onChange={setLeague} placeholder="e.g. NFL, D1, NWSL" maxLength={100} /></div>
-                <div><FieldLabel htmlFor="yearsActive">Years active</FieldLabel><TextInput id="yearsActive" value={yearsActive} onChange={setYearsActive} placeholder="e.g. 2015–2023" maxLength={50} /></div>
-              </div>
-            </section>
-          )}
-
-          {memberType === 'coach' && (
-            <section>
-              <SectionHeading>Coaching background</SectionHeading>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div><FieldLabel htmlFor="coachingLevel">Level</FieldLabel><SelectInput id="coachingLevel" value={coachingLevel} onChange={setCoachingLevel} placeholder="Select level" options={Object.entries(COACHING_LEVEL_LABELS).map(([v, l]) => ({ value: v, label: l }))} /></div>
-                <div><FieldLabel htmlFor="coachingSport">Sport</FieldLabel><TextInput id="coachingSport" value={coachingSport} onChange={setCoachingSport} placeholder="e.g. Basketball" maxLength={100} /></div>
-                <div><FieldLabel htmlFor="yearsCoaching">Years coaching</FieldLabel><TextInput id="yearsCoaching" value={yearsCoaching} onChange={setYearsCoaching} placeholder="e.g. 8" maxLength={50} /></div>
-              </div>
-            </section>
-          )}
-
-          {memberType === 'veteran' && (
-            <section>
-              <SectionHeading>Military background</SectionHeading>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
-                <div><FieldLabel htmlFor="branch">Branch</FieldLabel><SelectInput id="branch" value={branch} onChange={setBranch} placeholder="Select branch" options={Object.entries(BRANCH_LABELS).map(([v, l]) => ({ value: v, label: l }))} /></div>
-                <div><FieldLabel htmlFor="mos">MOS / Rate / AFSC</FieldLabel><TextInput id="mos" value={mos} onChange={setMos} placeholder="e.g. 11B, HM, 1C2" maxLength={50} /></div>
-                <div><FieldLabel htmlFor="yearsServed">Years served</FieldLabel><TextInput id="yearsServed" value={yearsServed} onChange={setYearsServed} placeholder="e.g. 8" maxLength={50} /></div>
-              </div>
-              <div className="mb-6">
-                <Toggle id="skillbridge" checked={isSkillbridge} onChange={setIsSkillbridge} label="I am SkillBridge eligible" sublabel="You are currently on active duty within 180 days of separation." />
-              </div>
-              <div className="p-5 rounded-sm" style={{ background: 'hsl(var(--hero-gold) / 0.05)', border: '1px solid hsl(var(--hero-gold) / 0.18)' }}>
-                <div className="flex items-center gap-2 mb-4">
-                  <Shield size={14} style={{ color: gold }} />
-                  <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: gold }}>Privacy controls</p>
-                </div>
-                <p className="font-barlow mb-5" style={{ fontSize: '13px', fontWeight: 300, color: ice60, lineHeight: 1.65 }}>By default, only your gold seal badge is shown to employers. You choose what details to share.</p>
-                <div className="space-y-4">
-                  <Toggle id="showBranch" checked={showBranch} onChange={setShowBranch} label="Show branch of service" sublabel="Employers will see your branch (e.g. Army, Navy)." />
-                  <Toggle id="showYears" checked={showYears} onChange={setShowYears} label="Show years of service" sublabel="Employers will see how many years you served." />
-                </div>
-              </div>
-            </section>
-          )}
-
           <section>
             <SectionHeading>Open to</SectionHeading>
             <p className="font-barlow mb-4" style={{ fontSize: '14px', fontWeight: 300, color: ice60, lineHeight: 1.65 }}>What types of opportunities are you looking for?</p>
             <div className="flex flex-wrap gap-2">
-              {(Object.keys(JOB_TYPE_LABELS) as JobType[]).map((type) => (
+              {(Object.keys(JOB_TYPE_LABELS) as JobType[]).filter((t) => t !== 'skillbridge').map((type) => (
                 <ChipToggle key={type} label={JOB_TYPE_LABELS[type]} active={openTo.includes(type)} onClick={() => toggleOpenTo(type)} />
               ))}
             </div>

@@ -576,7 +576,6 @@ function FilterBar({ filters, onChange }: { filters: Filters; onChange: (f: Filt
           <option value="part_time">Part-time</option>
           <option value="contract">Contract</option>
           <option value="internship">Internship</option>
-          <option value="skillbridge">SkillBridge</option>
         </select>
 
         <select

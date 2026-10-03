@@ -27,19 +27,18 @@
     }
   ],
   "industries": [
-    "Sales",
-    "Operations",
-    "Leadership",
-    "Coaching",
     "Technology",
-    "Finance",
-    "Marketing",
-    "Security",
-    "Logistics",
+    "Software & IT",
+    "Data & Analytics",
+    "Cybersecurity",
+    "Customer Support",
     "Healthcare",
+    "Finance",
     "Education",
-    "Government",
-    "Defense",
+    "Government & Nonprofit",
+    "Marketing & Media",
+    "Operations & Logistics",
+    "Sales",
     "Other"
   ]
 }
