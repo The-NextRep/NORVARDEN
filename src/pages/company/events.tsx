@@ -169,16 +169,11 @@ function EventForm({ quote, initial, editId, onDone, onCancel }: {
           {quote.missionDiscount && (
             <p className="font-barlow" style={{ fontSize: '13px', color: gold }}>Your 30% mission discount is already applied.</p>
           )}
-          {quote.plan === 'none' && (
-            <p className="font-barlow" style={{ fontSize: '13px', color: ice60 }}>
-              Hosting often? Plans include event listings, plus job posts and candidate search. <Link to="/pricing" style={{ color: gold }}>See plans</Link>
-            </p>
-          )}
         </div>
       )}
 
       <Field label="Event title" htmlFor="ce-title">
-        <input id="ce-title" style={inputStyle} value={form.title} maxLength={200} onChange={(e) => set('title', e.target.value)} placeholder="Veterans hiring night — Dallas" />
+        <input id="ce-title" style={inputStyle} value={form.title} maxLength={200} onChange={(e) => set('title', e.target.value)} placeholder="Inclusive hiring night — Dallas" />
       </Field>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Field label="Starts" htmlFor="ce-start" hint="Your local time.">

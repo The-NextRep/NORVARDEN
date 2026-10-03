@@ -136,7 +136,7 @@ export default function EventsPage() {
             <div>
               <p className="font-bodoni" style={{ fontSize: '22px', color: white }}>Want to host a career event?</p>
               <p className="font-barlow mt-1" style={{ fontSize: '15px', fontWeight: 300, color: ice60 }}>
-                Verified companies can list events for people with disabilities. Standard listings from $750, included with Scout and Partner plans.
+                Verified companies can list hiring events and workshops for people with disabilities.
               </p>
             </div>
             <Link

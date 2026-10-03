@@ -9,6 +9,7 @@ import { company_account } from 'virtual:content';
 import { AlertCircle, CheckCircle, CreditCard, RefreshCw } from 'lucide-react';
 import { AuthGuard } from '@/components/auth/RouteGuards';
 import { VERIFICATION_MESSAGES, useCompanyBilling } from '@/lib/stripe/billing';
+import { PRICING_ENABLED } from '@/lib/site-meta';
 
 // ── Design tokens (match /company/dashboard) ─────────────────────────────────
 const navy    = 'hsl(var(--hero-navy))';
@@ -166,7 +167,7 @@ function AccountContent() {
           </Card>
         )}
 
-        {status?.verification === 'approved' && !access?.active && (
+        {status?.verification === 'approved' && PRICING_ENABLED && !access?.active && (
           <Card>
             <div className="flex items-start gap-3 mb-6">
               <AlertCircle size={20} style={{ color: gold, flexShrink: 0, marginTop: '2px' }} />
@@ -193,7 +194,17 @@ function AccountContent() {
           </Card>
         )}
 
-        {status?.verification === 'approved' && access?.active && (
+        {status?.verification === 'approved' && !PRICING_ENABLED && (
+          <Card>
+            <p className="font-barlow-condensed uppercase mb-3" style={labelStyle}>Access</p>
+            <p className="font-bodoni mb-4" style={{ fontSize: '2rem', fontWeight: 400, lineHeight: 1.1, color: white }}>Full access</p>
+            <p className="font-barlow" style={bodyStyle}>
+              Your verified company can post jobs, search candidates, send connection requests and list events at no cost.
+            </p>
+          </Card>
+        )}
+
+        {status?.verification === 'approved' && PRICING_ENABLED && access?.active && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <Card>
               <p className="font-barlow-condensed uppercase mb-3" style={labelStyle}>

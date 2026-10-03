@@ -6,7 +6,6 @@ import { AdminGuard } from './components/auth/RouteGuards';
 
 const NotFoundPage = ProdNotFoundPage;
 
-const PricingPage = lazy(() => import('./pages/pricing'));
 const JobsPage = lazy(() => import('./pages/jobs'));
 const ForCompaniesPage = lazy(() => import('./pages/for-companies'));
 const TermsPage          = lazy(() => import('./pages/terms'));
@@ -112,7 +111,7 @@ export const routes: RouteObject[] = [
   { path: '/terms',            element: <TermsPage /> },
   { path: '/privacy',          element: <PrivacyPage /> },
   { path: '/community-rules',  element: <CommunityRulesPage /> },
-  { path: '/pricing', element: <PricingPage /> },
+  { path: '/pricing', element: <Navigate to="/for-companies" replace /> },
   { path: '/company/account', element: <CompanyAccountPage /> },
   { path: '/verify-company', element: <VerifyCompanyStep1 /> },
   { path: '/verify-company/details', element: <VerifyCompanyStep2 /> },

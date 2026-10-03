@@ -112,29 +112,9 @@
         "answer": "We confirm your work email domain matches your company website, look up your business registration or nonprofit status, and verify that the hiring contact is a real employee. Most verifications complete within one business day."
       },
       {
-        "id": "fq2",
-        "question": "Can we post SkillBridge opportunities?",
-        "answer": "Yes. If your organization is an approved SkillBridge partner, we flag your profile so transitioning service members know you're ready to hire. Contact us to add the SkillBridge designation to your account."
-      },
-      {
-        "id": "fq3",
-        "question": "What's the difference between Scout and Partner?",
-        "answer": "Scout gives you full access to post jobs, search profiles, and send connection requests. Partner adds priority job placement, an enhanced company profile, and dedicated support — for companies that want to move faster."
-      },
-      {
-        "id": "fq4",
-        "question": "Do you offer discounts for nonprofits or schools?",
-        "answer": "Yes. Schools, nonprofits, and military-affiliated organizations receive 30% off any plan. We confirm eligibility during verification and the discount is applied automatically at checkout."
-      },
-      {
         "id": "fq5",
         "question": "What happens if we don't pass verification?",
         "answer": "We'll tell you exactly what's missing and give you a chance to provide additional documentation. We don't reject companies without explanation."
-      },
-      {
-        "id": "fq6",
-        "question": "Can we cancel or switch plans?",
-        "answer": "Yes. You can cancel at any time — your access continues through the end of your billing period. Switching plans is prorated."
       }
     ]
   },

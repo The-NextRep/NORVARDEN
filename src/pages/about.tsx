@@ -1,6 +1,6 @@
 /**
  * /about — NORVARDEN's mission, what it stands for, and its accessibility
- * commitment. Leadership section to be added when the client provides it.
+ * commitment, and leadership.
  */
 import { Link } from 'react-router';
 import { Helmet } from '@dr.pogodin/react-helmet';
@@ -74,6 +74,40 @@ export default function AboutPage() {
             </div>
           </section>
 
+          <section className="flex flex-col gap-6" aria-labelledby="leadership">
+            <h2 id="leadership" className="font-barlow-condensed uppercase" style={eyebrow}>Leadership</h2>
+            <article className="flex flex-col md:flex-row gap-8 p-6 md:p-8 rounded-md" style={{ background: navyMid, border }}>
+              <div
+                className="shrink-0 w-28 h-28 md:w-36 md:h-36 rounded-full flex items-center justify-center font-bodoni"
+                style={{ border: `1px solid ${gold}`, background: 'hsl(var(--hero-gold) / 0.08)', color: gold, fontSize: '40px' }}
+                aria-hidden="true"
+              >
+                MN
+              </div>
+              <div className="flex flex-col gap-4">
+                <div>
+                  <h3 className="font-bodoni" style={{ fontSize: '26px', color: white, lineHeight: 1.2 }}>Morice Norris Jr.</h3>
+                  <p className="font-barlow-condensed uppercase mt-1" style={{ ...eyebrow, fontSize: '11px' }}>Chief Executive Officer</p>
+                </div>
+                <p className="font-barlow" style={{ fontSize: '17px', lineHeight: 1.75, color: ice60 }}>
+                  Morice grew up in Fresno, California, and didn’t play organized football until his senior year at Sanger
+                  High School, where he led his team in interceptions. He built his way up from there: Orange Coast College,
+                  a scholarship at Fresno State, and in 2024 a contract with the Detroit Lions as an undrafted free agent.
+                </p>
+                <p className="font-barlow" style={{ fontSize: '17px', lineHeight: 1.75, color: ice60 }}>
+                  In August 2025, a head-on collision in a preseason game sent him off the field on a stretcher and changed the
+                  course of his career. He knows firsthand that a single moment can change how you work, but not what you’re
+                  capable of.
+                </p>
+                <p className="font-barlow" style={{ fontSize: '17px', lineHeight: 1.75, color: ice60 }}>
+                  That experience fuels his passion to give back. Morice wants to open the doors that helped him, and the
+                  ones that stay shut for too many people, so that others get the same chance to prove what they can do. At
+                  NORVARDEN, he leads the mission to make sure talent is measured by ability, not barriers.
+                </p>
+              </div>
+            </article>
+          </section>
+
           <section className="flex flex-col md:flex-row md:items-center justify-between gap-6 pt-10" style={{ borderTop: border }}>
             <p className="font-bodoni" style={{ fontSize: '24px', color: white, lineHeight: 1.3 }}>
               Ready for your next step?
@@ -87,7 +121,7 @@ export default function AboutPage() {
                 Join free <ChevronRight size={14} aria-hidden="true" />
               </Link>
               <Link to="/for-companies" className="font-barlow underline-offset-4 hover:underline" style={{ fontSize: '16px', color: ice60 }}>
-                Hiring? See plans →
+                Hiring? Learn more →
               </Link>
             </div>
           </section>

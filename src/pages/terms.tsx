@@ -65,7 +65,7 @@ NORVARDEN is operated by [Company legal name]. Questions about these Terms of Us
 
 ## Company Plans and Billing
 
-People with disabilities can join NORVARDEN free of charge. Companies that are approved through our verification process may purchase a paid plan (Scout or Partner) to post jobs and send connection requests. Plans are billed in advance every 3 months or every 12 months, depending on the billing length chosen at checkout, and renew automatically at the end of each billing period at the then-current price until cancelled. Payments are processed securely by Stripe; we do not store full card numbers.
+People with disabilities can join NORVARDEN free of charge. Companies that are approved through our verification process can post jobs and send connection requests. If paid plans are introduced, their prices and billing terms will be shown before purchase, and payments will be processed securely by Stripe; we do not store full card numbers.
 
 ## Cancellations
 

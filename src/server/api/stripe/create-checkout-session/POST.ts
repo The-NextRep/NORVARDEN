@@ -8,6 +8,7 @@
  * Stripe Checkout accepts one discount: a valid FOUNDING10 wins, otherwise MISSION30
  * if an admin has unlocked it for the company.
  */
+import { PRICING_ENABLED } from '@/lib/site-meta';
 import type { Request, Response } from 'express';
 import Stripe from 'stripe';
 import { and, desc, eq, isNotNull } from 'drizzle-orm';
@@ -70,6 +71,7 @@ async function ensureMissionCoupon(stripe: Stripe): Promise<Stripe.Coupon> {
 }
 
 export default async function handler(req: Request, res: Response) {
+  if (!PRICING_ENABLED) return res.status(404).json({ error: 'Plans are not available yet.' });
   const stripe = getStripeOrNull();
   if (!stripe) {
     res.status(500).json({ error: 'Payments are not configured yet.' });

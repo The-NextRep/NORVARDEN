@@ -13,3 +13,10 @@ export const siteMeta: SiteMeta = {
  * noindex and robots.txt blocks all crawlers. Set to false at launch.
  */
 export const IS_DRAFT = true;
+
+/**
+ * Paid plans and fees. While false, no prices or plans are shown anywhere and
+ * every verified employer gets full access (unlimited jobs, free events).
+ * Turn on once the client settles pricing.
+ */
+export const PRICING_ENABLED = false;

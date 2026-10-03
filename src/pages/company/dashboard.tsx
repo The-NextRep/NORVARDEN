@@ -337,7 +337,7 @@ function CompanyDashboardInner() {
     <main className="min-h-screen pb-24" style={{ background: navy }}>
       <Helmet>
         <title>Company Dashboard — NORVARDEN</title>
-        <meta name="description" content="Manage your company profile, job postings, candidate connections, and billing on NORVARDEN." />
+        <meta name="description" content="Manage your company profile, job postings, and candidate connections on NORVARDEN." />
         <meta name="robots" content="noindex" />
       </Helmet>
 
@@ -424,8 +424,8 @@ function CompanyDashboardInner() {
               />
               <QuickLink
                 icon={CreditCard}
-                label="Billing"
-                sublabel="Subscription plan, invoices, and payment details"
+                label="Account"
+                sublabel="Your company's access and account details"
                 href="/company/account"
               />
               <QuickLink

@@ -14,6 +14,7 @@ import { and, eq, gte, ne, sql } from 'drizzle-orm';
 import { db } from '@/server/db/client';
 import { events } from '@/server/db/schema';
 import { getCompanyAccess, type EmployerCompany } from '@/server/lib/company-access';
+import { PRICING_ENABLED } from '@/lib/site-meta';
 
 export type EventTier = 'standard' | 'featured';
 export const EVENT_TIERS: readonly EventTier[] = ['standard', 'featured'];
@@ -60,6 +61,10 @@ function discounted(cents: number, mission: boolean): number {
 }
 
 export async function quoteForCompany(company: EmployerCompany): Promise<EventQuote> {
+  if (!PRICING_ENABLED) {
+    const free = { amountCents: 0, included: true, note: 'Free for verified employers' };
+    return { plan: 'partner', missionDiscount: false, standard: free, featured: free };
+  }
   const access = await getCompanyAccess(company);
   const mission = !!company.missionDiscountUnlocked;
   const plan: EventQuote['plan'] = !access.active ? 'none' : access.plan === 'scout' ? 'scout' : 'partner';

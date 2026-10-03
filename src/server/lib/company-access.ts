@@ -9,6 +9,7 @@
  * someone from claiming a company just by signing up with its email first.
  */
 import { and, desc, eq } from 'drizzle-orm';
+import { PRICING_ENABLED } from '@/lib/site-meta';
 import { db } from '@/server/db/client';
 import {
   companyApplications,
@@ -100,6 +101,12 @@ export interface AccessStatus {
 /** Does this company currently have paid access (Stripe subscription or admin-granted)? */
 export async function getCompanyAccess(company: Pick<EmployerCompany, 'id' | 'manualAccessUntil'>): Promise<AccessStatus> {
   const now = new Date();
+  if (!PRICING_ENABLED) {
+    return {
+      active: true, source: 'manual', plan: 'founding', billingCycle: null, status: 'active',
+      currentPeriodEnd: null, cancelAtPeriodEnd: false, stripeSubscriptionId: null,
+    };
+  }
   const subs = await db
     .select()
     .from(companySubscriptions)
