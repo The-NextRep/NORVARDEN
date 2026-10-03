@@ -180,7 +180,7 @@ export default function HomePage() {
                   className="flex flex-col gap-4 p-7"
                   style={{ background: cardBg, backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: goldBorder35, borderRadius: '3px' }}
                 >
-                  <span className="font-bodoni" style={{ fontSize: '2.5rem', fontWeight: 400, lineHeight: 1, color: 'hsl(var(--hero-gold) / 0.25)' }}>
+                  <span className="font-bodoni" aria-hidden="true" style={{ fontSize: '2.5rem', fontWeight: 400, lineHeight: 1, color: 'hsl(var(--hero-gold) / 0.65)' }}>
                     {step.number}
                   </span>
                   <h3 className="font-bodoni" style={{ fontSize: '20px', fontWeight: 400, lineHeight: 1.1, color: white }}>
@@ -355,7 +355,7 @@ export default function HomePage() {
           style={{ borderTop: '1px solid hsl(var(--hero-gold) / 0.20)', borderBottom: '1px solid hsl(var(--hero-gold) / 0.20)' }}
         >
           <div className="flex flex-col gap-2">
-            <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: 'hsl(var(--hero-gold) / 0.60)' }}>
+            <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: 'hsl(var(--hero-gold))' }}>
               <span>{home.forCompaniesBand.eyebrow}</span>
             </p>
             <p className="font-bodoni" style={{ fontSize: 'clamp(1.2rem, 2vw, 1.6rem)', fontWeight: 400, lineHeight: 1.2, color: white }}>

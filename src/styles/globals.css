@@ -350,3 +350,8 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Long-form documents (terms, privacy, rules) on the dark site background. */
+.doc-dark, .doc-dark * { color: hsl(var(--hero-ice) / 0.92); }
+.doc-dark h1, .doc-dark h2, .doc-dark h3, .doc-dark strong { color: hsl(var(--hero-white)); }
+.doc-dark a { color: hsl(var(--hero-gold)); text-decoration: underline; text-underline-offset: 3px; }

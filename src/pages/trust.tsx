@@ -22,9 +22,9 @@ export default function TrustPage() {
         <meta property="og:url" content="https://www.norvarden.com/trust" />
         <meta property="og:type" content="website" />
       </Helmet>
-      <main>
+      <main className="doc-dark pt-16" style={{ background: 'hsl(var(--hero-navy))' }}>
         {/* Hero */}
-        <section className="py-xxl bg-background border-b border-border">
+        <section className="py-xxl border-b border-border">
           <div className="container mx-auto px-4 max-w-content">
             <div className="max-w-2xl">
               <span className="inline-block font-barlow-condensed uppercase mb-4" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.32em', color: 'hsl(var(--hero-gold))' }}>
@@ -41,14 +41,14 @@ export default function TrustPage() {
         </section>
 
         {/* Four checks */}
-        <section className="py-xxl bg-background">
+        <section className="py-xxl">
           <div className="container mx-auto px-4 max-w-content">
             <div className="max-w-2xl flex flex-col gap-10">
               {trust.checks.map((check, idx) => {
                 const Icon = ICON_MAP[check.icon] ?? Shield;
                 return (
                   <div key={check.id} className="flex gap-5">
-                    <div className="shrink-0 flex items-center justify-center w-11 h-11 rounded-xl bg-primary/10 mt-0.5">
+                    <div className="shrink-0 flex items-center justify-center w-11 h-11 rounded-xl bg-[hsl(var(--hero-gold)/0.12)] mt-0.5">
                       <Icon size={22} className="text-primary" />
                     </div>
                     <div>
@@ -67,7 +67,7 @@ export default function TrustPage() {
         </section>
 
         {/* What you should never be asked for */}
-        <section className="py-xxl bg-muted/40 border-y border-border">
+        <section className="py-xxl bg-[hsl(var(--hero-navy-mid))] border-y border-border">
           <div className="container mx-auto px-4 max-w-content">
             <div className="max-w-2xl">
               <div className="flex items-center gap-3 mb-6">
@@ -92,7 +92,7 @@ export default function TrustPage() {
         </section>
 
         {/* Report section */}
-        <section className="py-xxl bg-background">
+        <section className="py-xxl">
           <div className="container mx-auto px-4 max-w-content">
             <div className="max-w-2xl">
               <div className="flex items-center gap-3 mb-4">
@@ -122,7 +122,7 @@ export default function TrustPage() {
         </section>
 
         {/* Disclaimer */}
-        <section className="py-lg bg-muted/40 border-t border-border">
+        <section className="py-lg bg-[hsl(var(--hero-navy-mid))] border-t border-border">
           <div className="container mx-auto px-4 max-w-content">
             <p className="text-xs text-muted-foreground max-w-2xl">
               <span>{trust.disclaimer}</span>

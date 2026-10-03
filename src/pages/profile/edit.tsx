@@ -217,7 +217,7 @@ function PhotoUpload({ currentUrl, onUpload }: { currentUrl: string | null; onUp
         </button>
         <p className="font-barlow mt-2" style={{ fontSize: '12px', fontWeight: 300, color: ice60 }}>Optional. JPEG, PNG or WebP, max 5 MB.</p>
         {uploadError && <p role="alert" className="font-barlow mt-1" style={{ fontSize: '12px', fontWeight: 300, color: 'hsl(var(--destructive))' }}>{uploadError}</p>}
-        <input ref={inputRef} type="file" accept="image/jpeg,image/png,image/webp" className="sr-only"
+        <input ref={inputRef} type="file" accept="image/jpeg,image/png,image/webp" className="sr-only" aria-label="Upload profile photo"
           onChange={(e) => { const f = e.target.files?.[0]; if (f) handleFile(f); }} />
       </div>
     </div>
@@ -265,7 +265,7 @@ function ResumeUpload({ currentFileName, onUpload }: { currentFileName: string |
       {uploading && <span className="font-barlow" style={{ fontSize: '13px', fontWeight: 300, color: ice60 }}>Uploading…</span>}
       <p className="w-full font-barlow" style={{ fontSize: '12px', fontWeight: 300, color: ice60 }}>PDF, DOCX or DOC, max 10 MB. Stored privately — only shared with a company after you accept its connection request.</p>
       {uploadError && <p role="alert" className="w-full font-barlow" style={{ fontSize: '12px', fontWeight: 300, color: 'hsl(var(--destructive))' }}>{uploadError}</p>}
-      <input ref={inputRef} type="file" accept=".pdf,.docx,.doc,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword" className="sr-only"
+      <input ref={inputRef} type="file" accept=".pdf,.docx,.doc,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword" className="sr-only" aria-label="Upload résumé"
         onChange={(e) => { const f = e.target.files?.[0]; if (f) handleFile(f); }} />
     </div>
   );

@@ -365,7 +365,7 @@ export default function ResumeBuilderPage() {
           <h1 className="font-bodoni mb-3" style={{ fontSize: 'clamp(2.2rem, 5vw, 3.4rem)', fontWeight: 400, lineHeight: 1.05 }}>Résumé builder</h1>
           <p className="font-barlow mb-6" style={{ fontSize: '16px', fontWeight: 300, lineHeight: 1.7, color: faded, maxWidth: '70ch' }}>
             Turn what you did on the field, the sideline or in uniform into a résumé hiring managers understand. Your work saves automatically.
-            When it&rsquo;s ready, download the PDF and upload it on your <Link to="/profile/edit" style={{ color: gold }}>profile</Link> so companies you connect with can see it.
+            When it&rsquo;s ready, download the PDF and upload it on your <Link to="/profile/edit" className="underline underline-offset-4" style={{ color: gold }}>profile</Link> so companies you connect with can see it.
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <button type="button" onClick={() => { if (timer.current) clearTimeout(timer.current); void doSave(r); }}

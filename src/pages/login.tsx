@@ -221,7 +221,7 @@ function ForgotPasswordModal({ onClose }: { onClose: () => void }) {
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 transition-opacity hover:opacity-60"
+          className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center transition-opacity hover:opacity-60"
           style={{ color: ice60 }}
           aria-label="Close"
         >
@@ -709,7 +709,7 @@ const [searchParams] = useSearchParams();
                       <button
                         type="button"
                         onClick={() => setShowPw((s) => !s)}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 transition-opacity hover:opacity-70"
+                        className="absolute right-1.5 top-1/2 -translate-y-1/2 w-9 h-9 flex items-center justify-center transition-opacity hover:opacity-70"
                         style={{ color: ice60 }}
                         aria-label={showPw ? 'Hide password' : 'Show password'}
                       >

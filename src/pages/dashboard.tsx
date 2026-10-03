@@ -221,7 +221,7 @@ function ProfileCard({
               {profile.headline}
             </p>
           ) : (
-            <p className="font-barlow mb-1" style={{ fontSize: '13px', fontWeight: 300, color: 'hsl(var(--hero-gold) / 0.5)', fontStyle: 'italic' }}>
+            <p className="font-barlow mb-1" style={{ fontSize: '13px', fontWeight: 300, color: 'hsl(var(--hero-gold))', fontStyle: 'italic' }}>
               Add a headline to your profile
             </p>
           )}
@@ -259,7 +259,7 @@ function ProfileCard({
           <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: gold, flexShrink: 0 }} />
           <p className="font-barlow" style={{ fontSize: '13px', fontWeight: 300, color: ice60, lineHeight: 1.5 }}>
             Complete your profile to appear in employer searches.{' '}
-            <Link to="/profile/edit" style={{ color: gold, textDecoration: 'none' }}>Finish now →</Link>
+            <Link to="/profile/edit" className="underline underline-offset-4" style={{ color: gold }}>Finish now →</Link>
           </p>
         </div>
       )}

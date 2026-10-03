@@ -40,7 +40,7 @@ export default function CommunityRulesPage() {
           {/* Last updated */}
           <p
             className="font-barlow-condensed uppercase mb-8"
-            style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: 'hsl(var(--hero-gold) / 0.60)' }}
+            style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.32em', color: 'hsl(var(--hero-gold))' }}
           >
             Last updated: <span>{community_rules.lastUpdated}</span>
           </p>

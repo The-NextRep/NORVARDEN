@@ -103,7 +103,7 @@ const ROUTE_PATH = '/terms';
 export default function TermsPage() {
   const canonicalHref = `https://www.norvarden.com${ROUTE_PATH}`;
   return (
-    <div className="container mx-auto px-4 py-12 max-w-4xl">
+    <div className="doc-dark container mx-auto px-4 pt-28 pb-16 max-w-4xl">
       <Helmet>
         <title>{PAGE_TITLE}</title>
         <meta name="description" content={META_DESCRIPTION} />

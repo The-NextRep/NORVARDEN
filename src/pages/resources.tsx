@@ -99,7 +99,7 @@ export default function ResourcesPage() {
           {!signedIn && (
             <p className="font-barlow mt-10" style={{ fontSize: '15px', fontWeight: 300, color: ice60 }}>
               The résumé builder and saved jobs need a free member account.{' '}
-              <Link to="/signup" style={{ color: gold }}>Join free</Link>
+              <Link to="/signup" className="underline underline-offset-4" style={{ color: gold }}>Join free</Link>
             </p>
           )}
         </div>

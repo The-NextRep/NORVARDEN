@@ -621,7 +621,7 @@ function MessagesInner() {
           ) : (
             <div className="flex flex-col items-center justify-center h-full gap-4 text-center px-8">
               <MessageSquare size={40} style={{ color: 'hsl(var(--hero-gold) / 0.2)' }} />
-              <p className="font-bodoni" style={{ fontSize: '24px', fontWeight: 400, color: 'hsl(var(--hero-white) / 0.3)' }}>
+              <p className="font-bodoni" style={{ fontSize: '24px', fontWeight: 400, color: 'hsl(var(--hero-white) / 0.7)' }}>
                 Select a conversation
               </p>
             </div>

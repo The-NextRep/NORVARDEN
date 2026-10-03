@@ -128,7 +128,7 @@ export default function ForCompaniesPage() {
                   className="flex flex-col gap-5 p-8"
                   style={{ background: cardBg, backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }}
                 >
-                  <span className="font-bodoni" style={{ fontSize: '3rem', fontWeight: 400, lineHeight: 1, color: 'hsl(var(--hero-gold) / 0.25)' }}>
+                  <span className="font-bodoni" aria-hidden="true" style={{ fontSize: '3rem', fontWeight: 400, lineHeight: 1, color: 'hsl(var(--hero-gold) / 0.65)' }}>
                     {step.number}
                   </span>
                   <div style={{ height: '1px', background: 'hsl(var(--hero-gold) / 0.25)' }} aria-hidden="true" />
