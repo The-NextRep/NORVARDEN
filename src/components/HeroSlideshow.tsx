@@ -9,7 +9,13 @@ import { useEffect, useState } from 'react';
 import { Pause, Play } from 'lucide-react';
 
 // Files live in public/images/hero/. Order = slideshow order.
-const HERO_PHOTOS: string[] = [];
+const HERO_PHOTOS: string[] = [
+  '/images/hero/rise.jpg',
+  '/images/hero/network.jpg',
+  '/images/hero/chip.jpg',
+  '/images/hero/signal.jpg',
+  '/images/hero/city.jpg',
+];
 
 const SLIDE_MS = 7000;
 
@@ -44,7 +50,7 @@ export default function HeroSlideshow({ photos = HERO_PHOTOS }: { photos?: strin
             <img
               src={src}
               alt=""
-              className="nv-slide-img absolute inset-0 w-full h-full object-cover"
+              className="nv-slide-img absolute inset-0 w-full h-full object-cover object-[72%_center]"
               style={{ animationPlayState: paused ? 'paused' : 'running' }}
               loading={i === 0 ? 'eager' : 'lazy'}
               fetchPriority={i === 0 ? 'high' : 'low'}
