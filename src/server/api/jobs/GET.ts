@@ -12,6 +12,7 @@ export default async function handler(req: Request, res: Response) {
       industry,
       remote,
       veteranReady,
+      inclusionCertified,
       payMin,
       payMax,
       skills,
@@ -43,6 +44,9 @@ export default async function handler(req: Request, res: Response) {
     }
     if (remote === 'true') {
       conditions.push(eq(jobPosts.isRemote, true));
+    }
+    if (inclusionCertified === 'true') {
+      conditions.push(gte(verifiedCompanies.inclusionCertifiedAt, new Date(Date.now() - 365 * 86_400_000)) as SQL);
     }
     if (veteranReady === 'true') {
       conditions.push(eq(jobPosts.isVeteranReady, true));

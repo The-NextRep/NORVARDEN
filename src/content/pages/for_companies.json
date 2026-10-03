@@ -32,24 +32,24 @@
   },
   "whoYoullMeet": {
     "eyebrow": "Who you'll meet",
-    "headline": "People who know how to",
-    "headlineGold": "win.",
-    "body": "Every member on NORVARDEN has been manually verified. Athletes who competed at the collegiate or professional level. Coaches with documented records. Veterans with honorable service. No self-reported credentials — our team confirms every one.",
+    "headline": "Talent most hiring processes",
+    "headlineGold": "miss.",
+    "body": "Every member on NORVARDEN is a real person with a verified account. Disability is self-identified and never required: you meet candidates by their skills, experience and goals.",
     "profiles": [
       {
         "id": "p1",
-        "label": "Athletes",
-        "body": "Collegiate and professional competitors across all major sports. Disciplined, coachable, and used to performing under pressure."
+        "label": "Experienced professionals",
+        "body": "Engineers, analysts, designers, operators and leaders who bring deep experience and creative problem-solving to every role."
       },
       {
         "id": "p2",
-        "label": "Coaches",
-        "body": "Documented coaching careers at the high school, collegiate, and professional level. Leaders who develop talent and drive results."
+        "label": "Students & early career",
+        "body": "Graduates and interns ready to grow, looking for employers who invest in mentorship and accommodations."
       },
       {
         "id": "p3",
-        "label": "Veterans",
-        "body": "Military service members and veterans with honorable discharge. Mission-focused, team-oriented, and trained to execute."
+        "label": "Career changers",
+        "body": "People moving into new fields after an injury, diagnosis or life change, with transferable skills and fresh perspective."
       }
     ]
   },

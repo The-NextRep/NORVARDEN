@@ -236,61 +236,6 @@ export default function ForCompaniesPage() {
           <Hairline />
         </div>
 
-        {/* ── VETERAN HIRING ────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden" aria-label="Veteran hiring">
-          <div
-            className="bg-photo active"
-            role="img"
-            aria-label="Fighter jet taking off from airfield"
-            style={{ backgroundImage: 'url(/images/jet-takeoff.jpg)' }}
-          />
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{ background: `linear-gradient(to right, hsl(var(--hero-navy-90)) 0%, hsl(var(--hero-navy-75)) 60%, hsl(var(--hero-navy-55)) 100%)` }}
-            aria-hidden="true"
-          />
-
-          <div className="relative z-10 px-6 md:px-12 lg:px-16 py-24 max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="flex flex-col gap-6">
-                <p className="font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.36em', color: gold }}>
-                  <span>{for_companies.veteranHiring.eyebrow}</span>
-                </p>
-                <Hairline className="w-24" />
-                <h2 className="font-bodoni" style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 400, lineHeight: 1.05, letterSpacing: '-0.01em', color: white }}>
-                  <span>{for_companies.veteranHiring.headline}</span>
-                </h2>
-                <p className="font-barlow" style={{ fontSize: '17px', fontWeight: 300, lineHeight: 1.75, color: ice60, maxWidth: '480px' }}>
-                  <span>{for_companies.veteranHiring.body}</span>
-                </p>
-                <a
-                  href="https://skillbridge.osd.mil"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-barlow-condensed uppercase inline-flex items-center gap-2 transition-colors hover:opacity-80 self-start"
-                  style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.28em', color: ice60 }}
-                >
-                  <span>{for_companies.veteranHiring.cta}</span>
-                  <ChevronRight size={11} />
-                </a>
-              </div>
-
-              <ContentListContext field="for_companies.veteranHiring.points">
-                <div className="flex flex-col gap-4">
-                  {for_companies.veteranHiring.points.map((point) => (
-                    <div key={point.id} className="flex items-start gap-4">
-                      <CheckCircle size={16} style={{ color: gold, flexShrink: 0, marginTop: '3px' }} />
-                      <span className="font-barlow" style={{ fontSize: '16px', fontWeight: 300, lineHeight: 1.6, color: ice }}>
-                        {point.text}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </ContentListContext>
-            </div>
-          </div>
-        </section>
-
         {/* ── INCLUSION COURSE ──────────────────────────────────────────── */}
         <section className="px-6 md:px-12 lg:px-16 pt-24 max-w-7xl mx-auto" aria-label="Inclusion course">
           <div

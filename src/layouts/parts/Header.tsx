@@ -13,7 +13,6 @@ import BrandMark from '@/components/BrandMark';
 
 const NAV_ITEMS = [
   { href: '/jobs',          label: 'Jobs' },
-  { href: '/veterans',      label: 'Veterans' },
   { href: '/resources',     label: 'Resources' },
   { href: '/events',        label: 'Events' },
   { href: '/for-companies', label: 'Employers' },

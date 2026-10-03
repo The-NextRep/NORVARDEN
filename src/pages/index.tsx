@@ -6,7 +6,7 @@ import { ContentListContext } from '@airo/content';
 import { Shield, ChevronRight, ChevronDown } from 'lucide-react';
 import BrandMark from '@/components/BrandMark';
 import TechBackdrop from '@/components/TechBackdrop';
-import HeroMarquee from '@/components/HeroMarquee';
+import HeroSlideshow from '@/components/HeroSlideshow';
 import UpcomingEvents from '@/components/UpcomingEvents';
 
 const siteUrl = 'https://www.norvarden.com';
@@ -28,7 +28,6 @@ function Hairline({ className = '' }: { className?: string }) {
 
 // ─── Main page ────────────────────────────────────────────────────────────
 export default function HomePage() {
-  const [paused, setPaused]             = useState(false);
   const [faqOpen, setFaqOpen]           = useState<Record<string, boolean>>({});
 
   const jsonLd = {
@@ -64,6 +63,7 @@ export default function HomePage() {
         <section className="relative overflow-hidden flex flex-col" style={{ minHeight: '100vh' }} aria-label="Hero">
 
           <TechBackdrop />
+          <HeroSlideshow />
 
           <div
             className="absolute bottom-0 left-0 right-0 pointer-events-none"
@@ -72,7 +72,7 @@ export default function HomePage() {
           />
 
           {/* Content grid */}
-          <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center gap-12 px-6 md:px-12 lg:px-16 pt-28 pb-10 max-w-7xl mx-auto w-full">
+          <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center gap-12 px-6 md:px-12 lg:px-16 pt-32 pb-20 max-w-7xl mx-auto w-full">
 
             {/* Left: headline + CTA */}
             <div className="flex-1 flex flex-col gap-6 max-w-xl">
@@ -130,9 +130,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative z-10 pb-6">
-            <HeroMarquee paused={paused} onTogglePause={() => setPaused((p) => !p)} />
-          </div>
         </section>
 
         <UpcomingEvents />
@@ -345,49 +342,6 @@ export default function HomePage() {
                 style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.32em', paddingTop: '16px', paddingBottom: '16px', paddingLeft: '36px', paddingRight: '36px', borderRadius: '3px', border: goldBorder35, color: ice, outlineColor: gold }}
               >
                 <span>{home.coachesBand.cta}</span>
-                <ChevronRight size={13} />
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* ── VETERANS BAND ─────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden" aria-label="Veterans">
-          <div
-            className="absolute inset-0"
-            aria-hidden="true"
-            style={{
-              backgroundImage: 'linear-gradient(hsl(210 30% 80% / 0.06) 1px, transparent 1px), linear-gradient(90deg, hsl(210 30% 80% / 0.06) 1px, transparent 1px), radial-gradient(ellipse 60% 80% at 85% 50%, hsl(36 40% 66% / 0.12), transparent 70%)',
-              backgroundSize: '48px 48px, 48px 48px, 100% 100%',
-              background: undefined,
-            }}
-          />
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{ background: `linear-gradient(to right, hsl(var(--hero-navy-85)) 0%, hsl(var(--hero-navy-72)) 60%, hsl(var(--hero-navy-55)) 100%)` }}
-            aria-hidden="true"
-          />
-          <div className="relative z-10 px-6 md:px-12 lg:px-16 py-24 max-w-7xl mx-auto">
-            <div className="max-w-xl flex flex-col gap-6">
-              <p className="font-barlow-condensed uppercase" style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.36em', color: gold }}>
-                <span>{home.veteransBand.eyebrow}</span>
-              </p>
-              <Hairline className="w-24" />
-              <h2 className="font-bodoni" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', fontWeight: 400, lineHeight: 1.05, letterSpacing: '-0.01em', color: white }}>
-                <span>{home.veteransBand.headline}</span>{' '}
-                <em className="gold-shimmer" style={{ fontStyle: 'italic' }}>
-                  <span>{home.veteransBand.headlineGold}</span>
-                </em>
-              </h2>
-              <p className="font-barlow" style={{ fontSize: '17px', fontWeight: 300, lineHeight: 1.8, color: ice60 }}>
-                <span>{home.veteransBand.body}</span>
-              </p>
-              <Link
-                to="/veterans"
-                className="font-barlow-condensed uppercase inline-flex items-center gap-2 self-start transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-                style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '0.32em', paddingTop: '16px', paddingBottom: '16px', paddingLeft: '36px', paddingRight: '36px', borderRadius: '3px', border: goldBorder35, color: ice, outlineColor: gold }}
-              >
-                <span>{home.veteransBand.cta}</span>
                 <ChevronRight size={13} />
               </Link>
             </div>

@@ -32,7 +32,7 @@ interface Candidate {
 }
 
 const TYPE_LABELS: Record<Candidate['memberType'], string> = {
-  athlete: 'Athlete',
+  athlete: 'Job seeker',
   coach: 'Coach',
   veteran: 'Veteran',
 };

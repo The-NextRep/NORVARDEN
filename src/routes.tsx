@@ -1,4 +1,4 @@
-import { RouteObject } from 'react-router';
+import { Navigate, RouteObject } from 'react-router';
 import { lazy } from 'react';
 import HomePage from './pages/index';
 import ProdNotFoundPage from './pages/_404';
@@ -9,7 +9,6 @@ const NotFoundPage = ProdNotFoundPage;
 const PricingPage = lazy(() => import('./pages/pricing'));
 const JobsPage = lazy(() => import('./pages/jobs'));
 const ForCompaniesPage = lazy(() => import('./pages/for-companies'));
-const VeteransPage = lazy(() => import('./pages/veterans'));
 const TermsPage          = lazy(() => import('./pages/terms'));
 const PrivacyPage        = lazy(() => import('./pages/privacy'));
 const CommunityRulesPage = lazy(() => import('./pages/community-rules'));
@@ -18,8 +17,6 @@ const VerifyCompanyStep1 = lazy(() => import('./pages/verify-company/index'));
 const VerifyCompanyStep2 = lazy(() => import('./pages/verify-company/details'));
 const AdminCompaniesPage = lazy(() => import('./pages/admin/companies'));
 const TrustPage = lazy(() => import('./pages/trust'));
-const AthletesPage = lazy(() => import('./pages/athletes'));
-const CoachesPage  = lazy(() => import('./pages/coaches'));
 const SignupPage    = lazy(() => import('./pages/signup'));
 const LoginPage        = lazy(() => import('./pages/login'));
 const ForgotPasswordPage = lazy(() => import('./pages/forgot-password'));
@@ -111,7 +108,7 @@ export const routes: RouteObject[] = [
   { path: '/admin/events', element: <AdminEventsPage /> },
   { path: '/company/events', element: <CompanyEventsPage /> },
   { path: '/for-companies', element: <ForCompaniesPage /> },
-  { path: '/veterans', element: <VeteransPage /> },
+  { path: '/veterans', element: <Navigate to="/jobs" replace /> },
   { path: '/terms',            element: <TermsPage /> },
   { path: '/privacy',          element: <PrivacyPage /> },
   { path: '/community-rules',  element: <CommunityRulesPage /> },
@@ -121,8 +118,8 @@ export const routes: RouteObject[] = [
   { path: '/verify-company/details', element: <VerifyCompanyStep2 /> },
   { path: '/admin/companies', element: <AdminGuard><AdminCompaniesPage /></AdminGuard> },
   { path: '/trust', element: <TrustPage /> },
-  { path: '/athletes', element: <AthletesPage /> },
-  { path: '/coaches',  element: <CoachesPage /> },
+  { path: '/athletes', element: <Navigate to="/jobs" replace /> },
+  { path: '/coaches', element: <Navigate to="/jobs" replace /> },
   { path: '/signup',    element: <SignupPage /> },
   { path: '/login',          element: <LoginPage /> },
   { path: '/forgot-password', element: <ForgotPasswordPage /> },

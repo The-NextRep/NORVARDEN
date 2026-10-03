@@ -323,7 +323,6 @@ function JobDetail({
                   { label: 'Pay',       value: pay ?? '—' },
                   { label: 'Posted',    value: timeAgo(job.postedAt) },
                   ...(job.applicationDeadline ? [{ label: 'Deadline', value: new Date(job.applicationDeadline).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }] : []),
-                  ...(job.isVeteranReady ? [{ label: 'Veteran-ready', value: 'Yes' }] : []),
                 ].map(({ label, value }) => (
                   <div key={label} className="flex flex-col gap-1">
                     <span
@@ -495,7 +494,7 @@ interface Filters {
   jobType: string;
   industry: string;
   remote: boolean;
-  veteranReady: boolean;
+  inclusionCertified: boolean;
   payMin: string;
   payMax: string;
   skills: string;
@@ -603,11 +602,11 @@ function FilterBar({ filters, onChange }: { filters: Filters; onChange: (f: Filt
         </button>
 
         <button
-          onClick={() => set('veteranReady', !filters.veteranReady)}
-          style={toggleStyle(filters.veteranReady)}
-          aria-pressed={filters.veteranReady}
+          onClick={() => set('inclusionCertified', !filters.inclusionCertified)}
+          style={toggleStyle(filters.inclusionCertified)}
+          aria-pressed={filters.inclusionCertified}
         >
-          Veteran-ready employers
+          Inclusion certified employers
         </button>
 
       {/* Row 3: salary range + skills */}
@@ -647,9 +646,9 @@ function FilterBar({ filters, onChange }: { filters: Filters; onChange: (f: Filt
         </div>
       </div>
 
-        {(filters.search || filters.location || filters.jobType || filters.industry || filters.remote || filters.veteranReady || filters.payMin || filters.payMax || filters.skills) && (
+        {(filters.search || filters.location || filters.jobType || filters.industry || filters.remote || filters.inclusionCertified || filters.payMin || filters.payMax || filters.skills) && (
           <button
-            onClick={() => onChange({ search: '', location: '', jobType: '', industry: '', remote: false, veteranReady: false, payMin: '', payMax: '', skills: '' })}
+            onClick={() => onChange({ search: '', location: '', jobType: '', industry: '', remote: false, inclusionCertified: false, payMin: '', payMax: '', skills: '' })}
             className="inline-flex items-center gap-1.5 font-barlow-condensed uppercase transition-colors hover:opacity-80"
             style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.22em', color: ice60 }}
           >
@@ -671,7 +670,7 @@ export default function JobsPage() {
   const [fetchError, setFetchError]   = useState<string | null>(null);
   const [selectedId, setSelectedId]   = useState<number | null>(null);
   const [filters, setFilters]         = useState<Filters>({
-    search: '', location: '', jobType: '', industry: '', remote: false, veteranReady: false,
+    search: '', location: '', jobType: '', industry: '', remote: false, inclusionCertified: false,
     payMin: '', payMax: '', skills: '',
   });
 
@@ -736,7 +735,7 @@ export default function JobsPage() {
     if (f.jobType)      params.set('jobType', f.jobType);
     if (f.industry)     params.set('industry', f.industry);
     if (f.remote)       params.set('remote', 'true');
-    if (f.veteranReady) params.set('veteranReady', 'true');
+    if (f.inclusionCertified) params.set('inclusionCertified', 'true');
     if (f.payMin)       params.set('payMin', f.payMin);
     if (f.payMax)       params.set('payMax', f.payMax);
     if (f.skills)       params.set('skills', f.skills);
@@ -1077,18 +1076,6 @@ export default function JobsPage() {
                           </div>
                         </div>
 
-                        {/* Veteran-ready tag */}
-                        {job.isVeteranReady && (
-                          <div
-                            className="inline-flex items-center gap-1.5 self-start font-barlow-condensed uppercase"
-                            style={{
-                              fontSize: '11px', fontWeight: 500, letterSpacing: '0.22em',
-                              padding: '3px 8px', border: goldBorder35, borderRadius: '2px', color: gold,
-                            }}
-                          >
-                            Veteran-ready employer
-                          </div>
-                        )}
                       </div>
                     </button>
                     </div>

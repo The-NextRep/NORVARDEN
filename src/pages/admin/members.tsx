@@ -48,7 +48,7 @@ interface MemberRow {
 
 interface ListResponse { members: MemberRow[]; total: number; page: number; pageSize: number }
 
-const TYPE_LABELS: Record<string, string> = { athlete: 'Athlete', coach: 'Coach', veteran: 'Veteran', employer: 'Employer' };
+const TYPE_LABELS: Record<string, string> = { athlete: 'Job seeker', coach: 'Coach', veteran: 'Veteran', employer: 'Employer' };
 const TYPE_TONES: Record<string, PillTone> = { athlete: 'gold', coach: 'info', veteran: 'success', employer: 'muted' };
 const TYPES: TypeFilter[] = ['all', 'athlete', 'coach', 'veteran', 'employer'];
 

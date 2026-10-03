@@ -364,7 +364,7 @@ function DashboardInner() {
   }
 
   const memberType = user?.memberType ?? summary?.profile?.memberType ?? 'member';
-  const pathLabel  = memberType === 'athlete' ? 'Athlete' : memberType === 'coach' ? 'Coach' : memberType === 'veteran' ? 'Veteran' : 'Member';
+  const pathLabel  = memberType === 'athlete' ? 'Job seeker' : memberType === 'coach' ? 'Coach' : memberType === 'veteran' ? 'Veteran' : 'Member';
   const firstName  = summary?.profile?.firstName ?? user?.name?.split(' ')[0] ?? null;
 
   return (

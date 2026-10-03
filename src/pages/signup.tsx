@@ -199,9 +199,8 @@ function StepDots({ step, total }: { step: number; total: number }) {
 
 // ─── Member type cards ────────────────────────────────────────────────────
 const MEMBER_TYPES: { type: MemberType; label: string; description: string; href: string }[] = [
-  { type: 'athlete',  label: 'Athlete',  description: 'Current or former professional athlete', href: '/athletes' },
-  { type: 'coach',    label: 'Coach',    description: 'Coach at any level, from youth to pro',  href: '/coaches' },
-  { type: 'veteran',  label: 'Veteran',  description: 'Military veteran or active SkillBridge', href: '/veterans' },
+  // Job seekers are stored as 'athlete' until the member types are renamed in the database.
+  { type: 'athlete',  label: 'Job seeker', description: 'Looking for work, an internship or your next role', href: '/jobs' },
   { type: 'employer', label: 'Employer', description: 'Hiring manager or recruiter at a verified company', href: '/for-companies' },
 ];
 
@@ -317,7 +316,7 @@ export default function SignupPage() {
     <>
       <Helmet>
         <title>Join free — NORVARDEN</title>
-        <meta name="description" content="Create your free account on NORVARDEN. Athletes, coaches, veterans and employers — verified, private, always free for candidates." />
+        <meta name="description" content="Create your free account on NORVARDEN. Free for job seekers with disabilities; verified, inclusive employers. Private by design." />
         <link rel="canonical" href={pageUrl} />
         <meta name="robots" content="noindex" />
       </Helmet>
@@ -611,28 +610,6 @@ export default function SignupPage() {
                     <FieldLabel>Short bio</FieldLabel>
                     <TextareaInput value={form.bio} onChange={(v) => set('bio', v)} placeholder="A sentence or two about your background…" rows={3} />
                   </div>
-
-                  {/* ── Athlete fields ── */}
-                  {form.memberType === 'athlete' && (
-                    <>
-                      <Hairline />
-                      <p className="font-barlow-condensed uppercase" style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '0.30em', color: gold }}>
-                        Athletic background
-                      </p>
-                      <div>
-                        <FieldLabel>Sport</FieldLabel>
-                        <TextInput value={form.sport} onChange={(v) => set('sport', v)} placeholder="e.g. Basketball, Football, Soccer" />
-                      </div>
-                      <div>
-                        <FieldLabel>League or level</FieldLabel>
-                        <TextInput value={form.league} onChange={(v) => set('league', v)} placeholder="e.g. NBA, NFL, NCAA Division I" />
-                      </div>
-                      <div>
-                        <FieldLabel>Years active</FieldLabel>
-                        <TextInput value={form.yearsActive} onChange={(v) => set('yearsActive', v)} placeholder="e.g. 2015–2023" />
-                      </div>
-                    </>
-                  )}
 
                   {/* ── Coach fields ── */}
                   {form.memberType === 'coach' && (
